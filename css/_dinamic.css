@@ -1,0 +1,23 @@
+.hide-offers-maps .content .offers div.expand ~ * {
+    display: none;
+}
+
+.hide-offers-maps #map {
+    display: none;
+}
+
+.hide-offers-maps #content-map {
+    display: none;
+}
+
+.content .offers.fix-menu .delta-margin {
+    margin-bottom: 45px;
+}
+
+.content .offers.fix-menu .menu-wrapper {
+    top: 40px;
+    left: 2px;
+    z-index: 20;
+    position: fixed;
+
+}

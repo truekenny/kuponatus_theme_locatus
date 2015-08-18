@@ -1,0 +1,86 @@
+.offer {
+    padding: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+    .offer .supplier.hover,
+    .offer .supplier:hover {
+        box-shadow: -2px 0 0 white, -4px 0 0 #FE0070;
+    }
+
+    .offer .top {
+        display: block;
+
+        text-decoration: none;
+    }
+
+        .offer .top img {
+            margin-right: 15px;
+            margin-bottom: 15px;
+
+            width: 200px;
+        }
+
+        .offer .top h1 {
+            margin: 0;
+            margin-bottom: 15px;
+
+            display: inline;
+
+            color: #000000;
+            font-size: 18px;
+            font-weight: 300;
+            border-bottom: 1px solid transparent;
+            line-height: 22px;
+        }
+
+        .offer .top:hover h1 {
+            border-bottom-color: grey;
+        }
+
+        .offer .top h1 + p {
+            padding-top: 10px;
+        }
+
+        .offer p {
+            margin: 0;
+
+            font-size: 13px;
+            line-height: 14px;
+        }
+
+        .offer p.grey {
+            margin-bottom: 5px;
+
+            color: #7F7F7F;
+        }
+
+        .offer p.black {
+            margin-bottom: 15px;
+
+            color: #000;
+            line-height: 1.5;
+
+        }
+
+            .offer p.black a {
+                padding-left: 5px;
+
+                color: #000;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+                .offer p.black a.comma:after {
+                    content: ',';
+                    color: #777;
+                }
+
+                .offer p.black a.padding {
+                    padding-left: 10px;
+                }
+
+            .offer p.black a:hover {
+                text-decoration: underline;
+            }

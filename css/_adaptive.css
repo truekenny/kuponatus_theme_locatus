@@ -1,0 +1,115 @@
+@media (max-width: 1312px) { /* 1282 + 30 (максимальный размер скролла) */
+    .view-full {
+        display: none;
+    }
+    .view-mini {
+        display: inline;
+    }
+
+    .right {
+        width: 270px;
+    }
+
+    .header .title {
+        width: 125%;
+    }
+
+    .content {
+        width: 960px;
+    }
+
+    .header .header-map .wrapper-map #map {
+        width: 254px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 990px) { /* 960 + 30 (максимальный размер скролла) */
+    .view-mini {
+        display: none;
+    }
+    .view-pad {
+        display: inline;
+    }
+
+    .header #map,
+    .content .right {
+        display: none;
+    }
+
+    .content {
+        width: 690px;
+    }
+
+    .content #content-map {
+        display: block;
+    }
+
+    .header .title {
+        width: 80%;
+    }
+
+    .header .right {
+        float: none;
+        position: absolute;
+        left: 415px;
+    }
+}
+
+@media (max-width: 690px) {
+    .view-pad {
+        display: none;
+    }
+    .view-phone {
+        display: inline;
+    }
+
+    .middle {
+        width: 313px;
+    }
+
+    .content {
+        width: 465px;
+    }
+
+    .content .offers {
+        width: 465px;
+    }
+
+    .content .offers div.expand div {
+        margin-left: 85px;
+        margin-bottom: 20px;
+    }
+
+
+    .content .header-wrapper {
+        width: 465px;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .content .menu-wrapper {
+        width: 460px;
+    }
+
+    .content .fast-filter .type-3 {
+        width: 454px;
+    }
+
+    .header .menu > li:first-child {
+        /*margin-left: 7px;*/
+    }
+
+    .header .title {
+        /*padding-left: 10px;*/
+    }
+
+    .header .right {
+        left: 189px;
+    }
+
+    .offer .top img {
+        width: 140px;
+    }
+}

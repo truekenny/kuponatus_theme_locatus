@@ -1,0 +1,36 @@
+.left {
+    width: 150px;
+}
+
+.middle {
+    width: 540px;
+}
+
+.right {
+    width: 592px; /*270+322*/
+}
+
+
+.stick-footer {
+    height: 99%;
+    width: 100%;
+}
+
+.stick-footer > tbody > tr > td {
+    height: 1%;
+
+    vertical-align: top;
+}
+
+.stick-footer > tbody > tr:first-child td {
+    height: 100%;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+
+    height: 50px;
+
+    background-color: white;
+}

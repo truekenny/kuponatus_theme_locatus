@@ -1,0 +1,95 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    padding-bottom: 0px;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 465px;
+
+    background-color: #ffffff;
+}
+
+    .header > div {
+        float: left;
+    }
+
+        .header .logo {
+            margin: 7px 0 0 10px;
+        }
+
+            .header .logo a {
+                color: #2B7B3C;
+                font-size: 22px;
+                text-decoration: none;
+                font-weight: 300;
+            }
+
+        .header .middle .logo {
+            float: left;
+            padding-left: 10px;
+
+            display: none;
+            width: 50%;
+
+            text-align: left;
+        }
+
+        .header .middle .city {
+            float: right;
+            margin: 16px 16px 8px 0;
+
+            display: none;
+            width: 40%;
+        }
+
+        .header .title {
+            position: relative;
+            left: -40px;
+            margin-top: 13px;
+            margin-bottom: 4px;
+
+            width: 180%;
+            height: 22px;
+            display: block;
+            z-index: 20;
+
+            color: #555;
+            font-size: 18px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+            .header .title:hover span {
+                text-decoration: underline;
+            }
+
+        .header .header-map {
+            position: relative;
+            left: 540px;
+        }
+
+            .header .header-map .wrapper-map {
+                width: 2000px;
+                height: 1300px;
+
+                background-color: #EFEFEF;
+            }
+
+
+                .header .header-map .wrapper-map #map {
+                    width: 576px;
+                    height: 350px;
+                }
+
+        .header .city {
+            margin-top: 14px;
+
+            color: #444444;
+            font-size: 13px;
+            text-align: right;
+        }
+
+
