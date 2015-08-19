@@ -39,7 +39,7 @@ function refreshTable() {
  * Управляет таблицами, управляющими видимостью списка предложений
  */
 function expandTables() {
-    $('table.expand a').click(function (e) {
+    $('table.expand td + td a').click(function (e) {
         e.preventDefault();
 
         $(this).parents('table.expand').css('display', 'none');
