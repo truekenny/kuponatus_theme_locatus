@@ -36,15 +36,23 @@ function refreshTable() {
 }
 
 /**
- * Управляет видимостью строк в таблице
+ * Управляет таблицами, управляющими видимостью списка предложений
  */
-function onClickExpandTable() {
+function expandTables() {
     $('table.expand a').click(function (e) {
         e.preventDefault();
 
         $(this).parents('table.expand').css('display', 'none');
         $(this).parents('table.expand').next().css('display', 'table');
     });
+
+    //
+    $('table.expand').each(function() {
+        // После текущего элемента есть только одна таблица
+        if(!$(this).next('table').next('table').size()) {
+            $(this).find('tr:last-child').hide();
+        }
+    })
 }
 
 $(document).ready(function () {
@@ -53,5 +61,5 @@ $(document).ready(function () {
     });
 
     refreshTable();
-    onClickExpandTable();
+    expandTables();
 });

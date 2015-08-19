@@ -29,4 +29,6 @@
         <? require '_supplier_table_example.php'; ?>
     <? endif; ?>
 
+    <? require '_supplier_table.php'; ?>
+
 </div>
