@@ -143,6 +143,10 @@
             box-sizing: border-box;
             border-bottom: 1px solid #BEBEBE;
             text-align: center;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .content .fast-filter .type-3 .blocks div.border-right {
