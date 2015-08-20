@@ -70,7 +70,7 @@ function init() {
     contentMap = new ymaps.Map("content-map", mapInit);
 
     // Пример
-    // addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»');
+    //addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»');
 
     browsePoints();
 }
