@@ -183,6 +183,13 @@
             border-right: 1px solid #BEBEBE;
         }
 
+        .content .fast-filter .type-3 .others div:last-child {
+            float: right;
+
+            border-right: none;
+            border-left: 1px solid #BEBEBE;
+        }
+
             .content .fast-filter .type-3 .others div img {
                 vertical-align: middle;
             }
