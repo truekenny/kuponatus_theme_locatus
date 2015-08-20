@@ -148,6 +148,11 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+            .content .fast-filter .type-3 .blocks.sized div {
+                height: 39px;
+
+                line-height: 30px;
+            }
 
         .content .fast-filter .type-3 .blocks div.border-right {
             border-right: 1px solid #BEBEBE;

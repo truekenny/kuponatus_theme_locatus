@@ -79,7 +79,7 @@
                             <p class="line-<?= $i ?>">Выберите класс Вашего автомобиля (<?= $i ?>)</p>
                         <? endfor; ?>
                     </div>
-                    <div class="blocks">
+                    <div class="blocks sized-EXAMPLE">
                         <? for ($i = 1; $i <= 5; $i++): ?>
                         <? foreach (['Мото', 'Внедорожник Внедорожник', 'Легковой', 'Минивен', 'Микроавтобус'] as $text): ?>
                             <div class="block-<?= $i ?>"><a href=".">
