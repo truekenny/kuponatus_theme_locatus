@@ -64,13 +64,13 @@ function setColorPoint(index, color) {
 }
 
 function init() {
-    var mapInit = {center: [55.76, 37.64], zoom: 9};
+    var mapInit = {center: [55.76, 37.64], zoom: 9, controls: ['zoomControl', 'geolocationControl', 'fullscreenControl']};
 
     map = new ymaps.Map("map", mapInit);
     contentMap = new ymaps.Map("content-map", mapInit);
 
     // Пример
-    addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»');
+    // addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»');
 
     browsePoints();
 }
