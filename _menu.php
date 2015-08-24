@@ -79,14 +79,16 @@
                             <p class="line-<?= $i ?>">Выберите класс Вашего автомобиля (<?= $i ?>)</p>
                         <? endfor; ?>
                     </div>
-                    <div class="blocks sized-EXAMPLE">
+                    <div class="blocks">
                         <? for ($i = 1; $i <= 5; $i++): ?>
                         <? foreach (['Мото', 'Внедорожник Внедорожник', 'Легковой', 'Минивен', 'Микроавтобус'] as $text): ?>
                             <div class="block-<?= $i ?>"><a href=".">
 
+                                <? if (rand(1, 2) == 1): ?>
                                     <!-- Если картинка не нужна, то убрать теги img и br -->
                                     <img src="images/_DELME_image.jpg" alt=""><br>
-                                    <?= $text ?> (<?= $i ?>) <span>от 100 рублей</span>
+                                <? endif; ?>
+                                <?= $text ?> (<?= $i ?>) <span>от 100 рублей</span>
 
                                 </a></div>
                         <? endforeach; ?>

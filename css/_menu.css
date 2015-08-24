@@ -135,28 +135,41 @@
     }
 
         .content .fast-filter .type-3 .blocks div {
-            padding-top: 7px;
-
             float: left;
             width: 227px;
+            height: 150px;
 
             box-sizing: border-box;
             border-bottom: 1px solid #BEBEBE;
             text-align: center;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            line-height: 30px;
         }
-            .content .fast-filter .type-3 .blocks.sized div {
-                height: 39px;
-
-                line-height: 30px;
-            }
 
         .content .fast-filter .type-3 .blocks div.border-right {
             border-right: 1px solid #BEBEBE;
         }
+
+            .content .fast-filter .type-3 .blocks div a {
+                padding-top: 7px;
+
+                display: block;
+                height: 100%;
+                width: 100%;
+
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+                .content .fast-filter .type-3 .blocks div span {
+                    line-height: 135px;
+                }
+
+                .content .fast-filter .type-3 .blocks div img ~ span {
+                    line-height: 30px;
+                }
 
     .content .fast-filter .type-3 .others-wrapper {
         overflow: hidden;
