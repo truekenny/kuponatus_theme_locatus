@@ -11,13 +11,7 @@
             </span>
         </a>
 
-        <div class="zero">
-            <div class="header-map">
-                <div class="wrapper-map">
-                    <div id="map"></div>
-                </div>
-            </div>
-        </div>
+        <div id="map"></div>
     </div>
     <div class="right">
         <p class="city">
