@@ -73,14 +73,18 @@
             <?
             elseif ($type == 3): ?>
 
+
+                <? $countFilters = 10; ?>
+
+
                 <div class="type-3">
                     <div class="lines">
-                        <? for ($i = 1; $i <= 7; $i++): ?>
+                        <? for ($i = 1; $i <= $countFilters; $i++): ?>
                             <p class="line-<?= $i ?>">Выберите класс Вашего автомобиля (<?= $i ?>)</p>
                         <? endfor; ?>
                     </div>
                     <div class="blocks">
-                        <? for ($i = 1; $i <= 7; $i++): ?>
+                        <? for ($i = 1; $i <= $countFilters; $i++): ?>
                         <? foreach (['Мото', 'Внедорожник Внедорожник', 'Легковой', 'Минивен', 'Микроавтобус'] as $text): ?>
                             <div class="block-<?= $i ?>"><a href=".">
 
@@ -99,7 +103,7 @@
                     </div>
                     <div class="others-wrapper">
                         <div class="others">
-                            <? for ($i = 1; $i <= 6; $i++): ?><div data-id="<?= $i ?>" class="other-<?= $i ?>"><img src="images/_DELME_32.gif"> Пример <?= $i ?></div><? endfor; ?>
+                            <? for ($i = 1; $i <= $countFilters - 1; $i++): ?><div data-id="<?= $i ?>" class="other-<?= $i ?>"><img src="images/_DELME_32.gif"> Пример <?= $i ?></div><? endfor; ?>
                         </div>
                         <div data-id="<?= $i ?>" class="other-last other-<?= $i ?>">
                             <img src="images/_DELME_32.gif"> Цена

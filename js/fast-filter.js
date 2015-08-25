@@ -38,11 +38,13 @@ function freshBorder(id) {
     });
 }
 
+var niceFastFiler;
+
 /**
  * Включает прокрутку для быстрого фильтра
  */
 function enableFastFilterScroll() {
-    var nice = $('.content .fast-filter .type-3 .others').niceScroll({
+    niceFastFiler = $('.content .fast-filter .type-3 .others').niceScroll({
         touchbehavior: true, // передвигать левой кнопкой мыши
         cursorcolor: '#999999',
         cursorwidth: '1px',
@@ -51,6 +53,49 @@ function enableFastFilterScroll() {
         railvalign: "top"
     });
 }
+
+var timerMoving;
+
+/**
+ * Инициализирует перемещение линии меню к выбранному фильтру
+ * @param other
+ */
+function scrollTo(other) {
+    if (!other.parent().hasClass('others')) {
+
+        return;
+    }
+
+    clearTimeout(timerMoving);
+    moveTo(other);
+}
+
+/**
+ * Перемещает линию фильтра к выбранному меню
+ * @param other
+ */
+function moveTo(other) {
+    timerMoving = null;
+    var sleep = 10;
+    var offset = other.offset().left;
+    var step = offset / 5 + ((offset > 0) ? 1 : -1);
+
+    if (Math.abs(offset - step) < 1) {
+        niceFastFiler.scrollLeft(niceFastFiler.scrollLeft() + offset);
+
+        return;
+    }
+
+    niceFastFiler.scrollLeft(niceFastFiler.scrollLeft() + step);
+
+    if (offset != other.offset().left) {
+        timerMoving = setTimeout(function () {
+            moveTo(other)
+        }, sleep);
+    }
+}
+
+
 
 $(document).ready(function () {
     $('.content .fast-filter .type-3 [class*="other-"]').click(function () {
@@ -64,6 +109,8 @@ $(document).ready(function () {
 
         $('.content .fast-filter .blocks > div').css('display', 'none');
         $('.content .fast-filter .blocks > div.block-' + id).css('display', 'block');
+
+        scrollTo($(this));
 
         freshBorder(id);
     });
