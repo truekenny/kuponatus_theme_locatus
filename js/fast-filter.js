@@ -38,9 +38,23 @@ function freshBorder(id) {
     });
 }
 
+/**
+ * Включает прокрутку для быстрого фильтра
+ */
+function enableFastFilterScroll() {
+    var nice = $('.content .fast-filter .type-3 .others').niceScroll({
+        touchbehavior: true, // передвигать левой кнопкой мыши
+        cursorcolor: '#999999',
+        cursorwidth: '1px',
+        cursoropacitymax: 0.0,
+        autohidemode: "leave", // скролл видим, если курсок внутри меню
+        railvalign: "top"
+    });
+}
+
 $(document).ready(function () {
-    $('.content .fast-filter .type-3 .others div').click(function () {
-        $('.content .fast-filter .type-3 .others div').removeClass('selected');
+    $('.content .fast-filter .type-3 [class*="other-"]').click(function () {
+        $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
         $(this).addClass('selected');
 
         var id = $(this).data('id');
@@ -56,9 +70,10 @@ $(document).ready(function () {
 
 
     $(window).resize(function () {
-        var id = $('.content .fast-filter .type-3 .others div.selected').data('id');
+        var id = $('.content .fast-filter .type-3 .selected[class*="other-"]').data('id');
         freshBorder(id);
     });
 
     resetFastFilter();
+    enableFastFilterScroll();
 });

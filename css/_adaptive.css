@@ -97,6 +97,10 @@
         width: 454px;
     }
 
+    .content .fast-filter .type-3 .others {
+        width: 350px;
+    }
+
     .header .menu > li:first-child {
         /*margin-left: 7px;*/
     }

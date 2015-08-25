@@ -174,43 +174,58 @@
     .content .fast-filter .type-3 .others-wrapper {
         overflow: hidden;
         height: 52px;
+
+        border-bottom: 1px solid #BEBEBE;
     }
 
     .content .fast-filter .type-3 .others {
         overflow: visible;
-        height: 50px;
+        height: 52px;
+        width: 575px;
+        float: left;
 
-        border-top: 1px solid #BEBEBE;
-        border-bottom: 1px solid #BEBEBE;
+        border-right: 1px solid #BEBEBE;
+        white-space: nowrap;
     }
 
-        .content .fast-filter .type-3 .others div {
+        .content .fast-filter .type-3 .others div,
+        .content .fast-filter .type-3 .other-last {
             padding: 4px;
 
             height: 100%;
-            float: left;
+            display: inline-block;
 
             cursor: pointer;
             line-height: 42px;
             box-sizing: border-box;
+            border-top: 1px solid #BEBEBE;
             border-right: 1px solid #BEBEBE;
         }
 
         .content .fast-filter .type-3 .others div:last-child {
-            float: right;
-
             border-right: none;
-            border-left: 1px solid #BEBEBE;
         }
 
-            .content .fast-filter .type-3 .others div img {
+            .content .fast-filter .type-3 .others div img,
+            .content .fast-filter .type-3 .other-last img {
                 vertical-align: middle;
             }
 
         .content .fast-filter .type-3 .others div:hover,
-        .content .fast-filter .type-3 .others div.selected {
-            box-shadow: 0 -2px 0 white;
+        .content .fast-filter .type-3 .others div.selected,
+        .content .fast-filter .type-3 .other-last:hover,
+        .content .fast-filter .type-3 .other-last.selected {
+            border-top-color: white;
         }
+
+    .content .fast-filter .type-3 .other-last {
+        float: right;
+        width: 100px;
+
+        border-right: none;
+        border-left: 1px solid #BEBEBE;
+    }
+
 
     .content .fast-filter .lines > p {
         display: none;
