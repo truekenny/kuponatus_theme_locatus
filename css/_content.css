@@ -64,15 +64,15 @@
             }
 
             .content .offers div.expand div:first-of-type {
-                margin-left: 85px;
+                margin-left: 250px;
             }
 
             .content .offers div.expand div {
                 float: left;
-                padding: 5px;
-                margin-left: 5px;
+                padding: 15px 0;
+                margin-left: -1px;
 
-                width: 250px;
+                width: 90px;
 
                 font-size: 15px;
                 border: 1px solid #7F7F7F;

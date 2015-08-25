@@ -8,14 +8,14 @@
 
         <!-- Если выдавать следующий блок, то предложения и карты будут скрыты -->
         <div class="expand">
-            <h3>Автомойка: найдено 364 организации</h3>
+            <h3>Показать все 453 автомойки:</h3>
 
             <div>
-                <img src="images/icon_list.png"> Показать список (364 шт)
+                <img src="images/icon_list.png"> Списком
             </div>
 
             <div>
-                <img src="images/icon_marker.png"> Показать на карте (364 шт)
+                <img src="images/icon_marker.png"> На карте
             </div>
         </div>
 

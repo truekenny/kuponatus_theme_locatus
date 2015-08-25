@@ -76,9 +76,8 @@
         width: 465px;
     }
 
-    .content .offers div.expand div {
-        margin-left: 85px;
-        margin-bottom: 20px;
+    .content .offers div.expand div:first-of-type {
+        margin-left: 145px;
     }
 
 
