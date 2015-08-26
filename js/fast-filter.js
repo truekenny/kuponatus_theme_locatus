@@ -95,10 +95,18 @@ function moveTo(other) {
     }
 }
 
-
+var pageX = -1;
 
 $(document).ready(function () {
-    $('.content .fast-filter .type-3 [class*="other-"]').click(function () {
+    $('.content .fast-filter .type-3 [class*="other-"]').mousedown(function (e) {
+        pageX = e.pageX;
+    })
+    .mouseup(function (e) {
+        if((Math.abs(pageX - e.pageX) > 5) && (pageX != -1)) {
+
+            return;
+        }
+
         $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
         $(this).addClass('selected');
 

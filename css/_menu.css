@@ -218,6 +218,11 @@
             border-top-color: white;
         }
 
+        .content .fast-filter .type-3 .others div.selected,
+        .content .fast-filter .type-3 .other-last.selected {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.03) 100%);
+        }
+
     .content .fast-filter .type-3 .other-last {
         float: right;
         width: 100px;
