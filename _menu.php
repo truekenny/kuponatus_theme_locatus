@@ -77,6 +77,16 @@
                 <? $countFilters = 10; ?>
 
 
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        /**
+                         * В следующей строке указать класс блока, который нужно выбрать после загрузке.
+                         * Удалить строку или закомментировать, если надо оставить выбранным первый блок.
+                         */
+                        $('.other-2').click();
+                    });
+                </script>
+
                 <div class="type-3">
                     <div class="lines">
                         <? for ($i = 1; $i <= $countFilters; $i++): ?>
