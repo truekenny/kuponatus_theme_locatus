@@ -1,12 +1,12 @@
 <div class="supplier">
 
-    <script type="text/javascript">
-        document.writeln(
-            "<div class='point' data-point-x='" + rand(55.7522 - .1, 55.7522 + .1)
-            + "' data-point-y='"+ rand(37.6155 - .1, 37.6155 + .1)
-            +"' data-point-name='Все прокаты автомобилей'></div>");
-
-    </script>
+    <!-- По следующему блоку создаётся точка на карте -->
+    <div class='point'
+         data-point-x='<?= NumberHelper::rand(55.7522 - .1, 55.7522 + .1) ?>'
+         data-point-y='<?= NumberHelper::rand(37.6155 - .1, 37.6155 + .1) ?>'
+         data-point-name='Все прокаты автомобилей'
+         data-point-url="http://ya.ru/"
+        ></div>
 
     <a href="." class="top">
         <img src="images/_DELME_image.jpg" alt="" align="right">

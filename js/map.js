@@ -10,7 +10,7 @@ var contentPoints = [];
  */
 function browsePoints() {
     $('.point').each(function () {
-        var id = addPoint([$(this).data('point-x'), $(this).data('point-y')], $(this).data('point-name'));
+        var id = addPoint([$(this).data('point-x'), $(this).data('point-y')], $(this).data('point-name'), $(this).data('point-url'));
 
         $(this).attr('data-point-id', id);
         $(this).parent('div.supplier').addClass('point-id-' + id);
@@ -21,9 +21,10 @@ function browsePoints() {
  * Добавляет точку на карты
  * @param coords Координаты
  * @param hint Подсказка
+ * @param url Ссылка
  * @returns {Number} Индекс точки
  */
-function addPoint(coords, hint) {
+function addPoint(coords, hint, url) {
     $([[map, points], [contentMap, contentPoints]]).each(function (index) {
         var placemark = new ymaps.Placemark(coords, {hintContent: hint}, {iconColor: 'red'});
 
@@ -32,6 +33,12 @@ function addPoint(coords, hint) {
 
         // Сохраняю для точки ID
         placemark.options.set({id: this[1].length});
+        // Сохраняю для точки url
+        placemark.options.set({url: url});
+
+        placemark.events.add(['click'], function (e) {
+            location = placemark.options.get('url');
+        });
 
         placemark.events.add(['mouseenter'], function (e) {
             var id = placemark.options.get('id');

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Locatus</title>
 
+    <? require 'components/NumberHelper.php' ?>
     <? require 'components/MobileDetect.php' ?>
     <? $detect = new MobileDetect; ?>
 
