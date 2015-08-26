@@ -5,7 +5,7 @@ function onClickExpandOffers() {
     $('.content .offers div.expand div').click(function () {
         $('body').removeClass('hide-offers-maps');
 
-        $(this).parents('div.expand').hide();
+        $('.content .offers div.expand').hide();
     });
 }
 

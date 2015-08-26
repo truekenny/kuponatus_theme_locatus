@@ -1,11 +1,6 @@
-.hide-offers-maps .content .offers div.expand ~ * {
-    display: none;
-}
-
-.hide-offers-maps #map {
-    display: none;
-}
-
+.hide-offers-maps .content .offers .offer,
+.hide-offers-maps .content .offers a.more-offers,
+.hide-offers-maps #map,
 .hide-offers-maps #content-map {
     display: none;
 }
