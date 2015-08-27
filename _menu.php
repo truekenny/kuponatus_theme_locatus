@@ -56,7 +56,7 @@
 
                 <p>Выберите класс Вашего автомобиля</p>
                 <!-- Три ячейки на строку выглядят наиболее приемлемо -->
-                <table>
+                <table class="fast-filter-table">
                     <? foreach ([['Мото', 'Внедорожник', 'Легковой'], ['Минивен', 'Микроавтобус']] as $texts): ?>
                         <tr>
                             <? foreach ($texts as $text): ?>
@@ -102,16 +102,15 @@
                     </div>
                     <div class="blocks">
                         <? for ($i = 1; $i <= $countFilters; $i++): ?>
-                        <? foreach (['Мото', 'Внедорожник Внедорожник', 'Легковой', 'Минивен', 'Микроавтобус'] as $text): ?>
-                            <div class="block-<?= $i ?>"><a href=".">
-
-                                <? if (rand(1, 2) == 1): ?>
+                        <? foreach ([str_repeat('Мото ', 10), str_repeat('Внедорожник ', 24), str_repeat('Легковой ', 10), 'Минивен', 'Микроавтобус'] as $text): ?>
+                            <? $withImage = rand(1, 2) == 1; ?>
+                            <div class="block-<?= $i ?> <?= $withImage ? "" : "wrap" ?>"><a href=".">
+                                <? if ($withImage): ?>
                                     <!-- Если картинка не нужна, то убрать теги img и br -->
                                     <img src="images/_DELME_image.jpg" alt=""><br>
                                 <? endif; ?>
                                 <?= $text ?> (<?= $i ?>) <span>от 100 рублей</span>
-
-                                </a></div>
+                            </a></div>
                         <? endforeach; ?>
                         <? endfor; ?>
                     </div>

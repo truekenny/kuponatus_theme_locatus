@@ -82,13 +82,13 @@
         text-align: center;
     }
 
-.content .fast-filter table {
+.content .fast-filter table.fast-filter-table {
     margin: 0 10px 10px;
 
     width: 97%;
     border-collapse: collapse;
 }
-    .content .fast-filter table td {
+    .content .fast-filter table.fast-filter-table td {
         padding: 8px;
 
         border: 1px solid #BEBEBE;
@@ -151,6 +151,12 @@
             line-height: 30px;
         }
 
+        .content .fast-filter .type-3 .blocks div.wrap {
+            white-space: normal;
+            line-height: 20px;
+            overflow: hidden;
+        }
+
         .content .fast-filter .type-3 .blocks div.border-right {
             border-right: 1px solid #BEBEBE;
         }
@@ -169,8 +175,18 @@
                 white-space: nowrap;
             }
 
+            .content .fast-filter .type-3 .blocks div.wrap a {
+                display: inline;
+
+                white-space: normal;
+            }
+
                 .content .fast-filter .type-3 .blocks div span {
                     line-height: 135px;
+                }
+
+                .content .fast-filter .type-3 .blocks div.wrap span {
+                    line-height: 1;
                 }
 
                 .content .fast-filter .type-3 .blocks div img ~ span {

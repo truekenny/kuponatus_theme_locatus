@@ -120,6 +120,22 @@ function layoutFastFilterBorders() {
     }
 }
 
+/**
+ * Устанавливает для значения быстрого фильтра необходимый отступ, чтобы текст был вертикально центрирован
+ */
+function calcFastFilterValuesVerticalAlign() {
+    $('.content .fast-filter .blocks > .wrap').each(function () {
+        $(this).css('padding-top', 0);
+
+        console.log($(this).height());
+        console.log($(this).find('a').height());
+        var padding = parseInt(($(this).height() - $(this).find('a').height()) / 2);
+
+        padding = Math.max(8, padding);
+        $(this).css('padding-top', padding + 'px');
+    });
+}
+
 var pageX = -1;
 
 $(document).ready(function () {
@@ -144,6 +160,8 @@ $(document).ready(function () {
             scrollTo($(this));
 
             freshBorder(id);
+
+            calcFastFilterValuesVerticalAlign();
         });
 
 
@@ -155,4 +173,5 @@ $(document).ready(function () {
     resetFastFilter();
     enableFastFilterScroll();
     layoutFastFilterBorders();
+    calcFastFilterValuesVerticalAlign();
 });
