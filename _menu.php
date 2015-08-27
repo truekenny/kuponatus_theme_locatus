@@ -104,7 +104,7 @@
                         <? for ($i = 1; $i <= $countFilters; $i++): ?>
                         <? foreach ([str_repeat('Мото ', 10), str_repeat('Внедорожник ', 24), str_repeat('Легковой ', 10), 'Минивен', 'Микроавтобус'] as $text): ?>
                             <? $withImage = rand(1, 2) == 1; ?>
-                            <div class="block-<?= $i ?> <?= $withImage ? "" : "wrap" ?>"><a href=".">
+                            <div class="block-<?= $i ?>"><a href=".">
                                 <? if ($withImage): ?>
                                     <!-- Если картинка не нужна, то убрать теги img и br -->
                                     <img src="images/_DELME_image.jpg" alt=""><br>

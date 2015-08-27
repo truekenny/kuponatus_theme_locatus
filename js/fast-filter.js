@@ -121,14 +121,23 @@ function layoutFastFilterBorders() {
 }
 
 /**
+ * Разделяет блоки быстрого фильтра на «с картинкой» и «без картинки»
+ */
+function fastFilterValuesWithoutImage() {
+    $('.content .fast-filter .blocks > div').each(function () {
+        if (!$(this).find('img').size()) {
+            $(this).addClass('wrap');
+        }
+    });
+}
+
+/**
  * Устанавливает для значения быстрого фильтра необходимый отступ, чтобы текст был вертикально центрирован
  */
 function calcFastFilterValuesVerticalAlign() {
     $('.content .fast-filter .blocks > .wrap').each(function () {
         $(this).css('padding-top', 0);
 
-        console.log($(this).height());
-        console.log($(this).find('a').height());
         var padding = parseInt(($(this).height() - $(this).find('a').height()) / 2);
 
         padding = Math.max(8, padding);
@@ -173,5 +182,6 @@ $(document).ready(function () {
     resetFastFilter();
     enableFastFilterScroll();
     layoutFastFilterBorders();
+    fastFilterValuesWithoutImage();
     calcFastFilterValuesVerticalAlign();
 });
