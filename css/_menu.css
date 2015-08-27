@@ -48,6 +48,12 @@
                 position: relative;
                 left: -52px;
             }
+            
+            .content .persona .voice > img {
+                margin: 3px;
+
+                max-height: 100px;
+            }
 
 /* fast filter */
 .content .fast-filter p {
