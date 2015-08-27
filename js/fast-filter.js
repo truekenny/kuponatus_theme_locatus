@@ -95,33 +95,56 @@ function moveTo(other) {
     }
 }
 
+/**
+ * Скрывает значения фильтров
+ */
+function hideFastFilterValues() {
+    $('.content .fast-filter .lines > p').css('display', 'none');
+    $('.content .fast-filter .blocks > div').css('display', 'none');
+}
+
+/**
+ * Выбирает указанную страницу быстрых фильтров
+ * @param num
+ */
+function selectFastFilterPage(num) {
+    $('.other-' + num).mouseup();
+}
+
+/**
+ * В зависимости от размера прокручиваемого блока устанавливает бордюр
+ */
+function layoutFastFilterBorders() {
+    if ($('.content .fast-filter .type-3 .others').width() >= niceFastFiler.getContentSize().w) {
+        $('.content .fast-filter .type-3').addClass('border');
+    }
+}
+
 var pageX = -1;
 
 $(document).ready(function () {
     $('.content .fast-filter .type-3 [class*="other-"]').mousedown(function (e) {
         pageX = e.pageX;
     })
-    .mouseup(function (e) {
-        if((Math.abs(pageX - e.pageX) > 5) && (pageX != -1)) {
+        .mouseup(function (e) {
+            if ((Math.abs(pageX - e.pageX) > 5) && (pageX != -1)) {
 
-            return;
-        }
+                return;
+            }
 
-        $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
-        $(this).addClass('selected');
+            $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
+            $(this).addClass('selected');
 
-        var id = $(this).data('id');
+            hideFastFilterValues();
 
-        $('.content .fast-filter .lines > p').css('display', 'none');
-        $('.content .fast-filter .lines > p.line-' + id).css('display', 'block');
+            var id = $(this).data('id');
+            $('.content .fast-filter .lines > p.line-' + id).css('display', 'block');
+            $('.content .fast-filter .blocks > div.block-' + id).css('display', 'block');
 
-        $('.content .fast-filter .blocks > div').css('display', 'none');
-        $('.content .fast-filter .blocks > div.block-' + id).css('display', 'block');
+            scrollTo($(this));
 
-        scrollTo($(this));
-
-        freshBorder(id);
-    });
+            freshBorder(id);
+        });
 
 
     $(window).resize(function () {
@@ -131,4 +154,5 @@ $(document).ready(function () {
 
     resetFastFilter();
     enableFastFilterScroll();
+    layoutFastFilterBorders();
 });

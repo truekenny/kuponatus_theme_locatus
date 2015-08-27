@@ -194,6 +194,10 @@
         white-space: nowrap;
     }
 
+    .content .fast-filter .type-3.border .others {
+        border-right-color: white;
+    }
+
         .content .fast-filter .type-3 .others div,
         .content .fast-filter .type-3 .other-last {
             padding: 4px;
@@ -210,6 +214,10 @@
 
         .content .fast-filter .type-3 .others div:last-child {
             border-right: none;
+        }
+
+        .content .fast-filter .type-3.border .others div:last-child {
+            border-right: 1px solid #BEBEBE;
         }
 
             .content .fast-filter .type-3 .others div img,
