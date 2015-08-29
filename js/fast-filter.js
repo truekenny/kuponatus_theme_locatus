@@ -1,13 +1,12 @@
 /**
- * Отображение для мобильной версии
- * @returns {boolean}
+ * @returns {boolean} Мобильная вёрстка
  */
 function isMobile() {
     return $('.content .fast-filter .type-3').width() < 500;
 }
 
 /**
- * Сбрасывает фильтр
+ * Сбрасывает быстрый фильтр
  */
 function resetFastFilter() {
     $('.content .fast-filter .type-3 .others div').removeClass('selected');
@@ -19,8 +18,8 @@ function resetFastFilter() {
 }
 
 /**
- * Устанавливает для элементов закладки id границу (border)
- * @param id
+ * Устанавливает для элементов закладки правые границы (border)
+ * @param {Number} id Номер закладки
  */
 function freshBorder(id) {
     var _isMobile = isMobile();
@@ -58,7 +57,7 @@ var timerMoving;
 
 /**
  * Инициализирует перемещение линии меню к выбранному фильтру
- * @param other
+ * @param {object} other jQuery элемент
  */
 function scrollTo(other) {
     if (!other.parent().hasClass('others')) {
@@ -72,7 +71,7 @@ function scrollTo(other) {
 
 /**
  * Перемещает линию фильтра к выбранному меню
- * @param other
+ * @param {object} other jQuery элемент
  */
 function moveTo(other) {
     timerMoving = null;
@@ -104,8 +103,8 @@ function hideFastFilterValues() {
 }
 
 /**
- * Выбирает указанную страницу быстрых фильтров
- * @param num
+ * Выбирает указанную закладку быстрых фильтров
+ * @param {Number} num Номер закладки
  */
 function selectFastFilterPage(num) {
     $('.other-' + num).mouseup();
@@ -149,7 +148,10 @@ function calcFastFilterValuesVerticalAlign() {
 
 var pageX = -1;
 
-$(document).ready(function () {
+/**
+ * Переключает страницы быстрого фильтра
+ */
+function changePageFastFilter() {
     $('.content .fast-filter .type-3 [class*="other-"]').mousedown(function (e) {
         pageX = e.pageX;
     })
@@ -174,7 +176,10 @@ $(document).ready(function () {
 
             calcFastFilterValuesVerticalAlign();
         });
+}
 
+$(document).ready(function () {
+    changePageFastFilter();
 
     $(window).resize(function () {
         var id = $('.content .fast-filter .type-3 .selected[class*="other-"]').data('id');

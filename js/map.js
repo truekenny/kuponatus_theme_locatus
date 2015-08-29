@@ -19,9 +19,9 @@ function browsePoints() {
 
 /**
  * Добавляет точку на карты
- * @param coords Координаты
- * @param hint Подсказка
- * @param url Ссылка
+ * @param {Array} coords Координаты
+ * @param {string} hint Подсказка
+ * @param {string} url Ссылка
  * @returns {Number} Индекс точки
  */
 function addPoint(coords, hint, url) {
@@ -37,7 +37,11 @@ function addPoint(coords, hint, url) {
         placemark.options.set({url: url});
 
         placemark.events.add(['click'], function (e) {
-            location = placemark.options.get('url');
+            var url = placemark.options.get('url');
+
+            if (url) {
+                location = url;
+            }
         });
 
         placemark.events.add(['mouseenter'], function (e) {
@@ -61,8 +65,8 @@ function addPoint(coords, hint, url) {
 
 /**
  * Устанавливает новый цвет для точки
- * @param index Индекс точки
- * @param color Цвет
+ * @param {Number} index Индекс точки
+ * @param {string} color Цвет
  */
 function setColorPoint(index, color) {
     $([points, contentPoints]).each(function () {
@@ -77,7 +81,7 @@ function init() {
     contentMap = new ymaps.Map("content-map", mapInit);
 
     // Пример
-    //addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»');
+    //addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»', 'http://ya.ru');
 
     browsePoints();
 }

@@ -1,5 +1,5 @@
 /**
- * Управляет отображением предложений и карт
+ * Управляет видимостью предложений и карт
  */
 function onClickExpandOffers() {
     $('.content .offers div.expand div').click(function () {

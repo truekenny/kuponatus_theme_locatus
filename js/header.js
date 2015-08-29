@@ -1,6 +1,5 @@
 /**
- * Устанавливает позицию меню
- * @param scroll
+ * Устанавливает позицию fixed меню
  */
 function fixMenu() {
     var offers = $('.offers');

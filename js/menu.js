@@ -1,4 +1,7 @@
-$(document).ready(function () {
+/**
+ * Инициализирует меню
+ */
+function initMenu() {
     $('.menu > li').click(function () {
         // Хак включает li:hover в iOS; в iOS не работает li:hover в данном конкретном случае.
 
@@ -31,5 +34,8 @@ $(document).ready(function () {
 
         return page;
     }
+}
 
+$(document).ready(function () {
+    initMenu();
 });
