@@ -10,7 +10,7 @@ Locatus.FastFilter = (function ($) {
     /**
      * Сбрасывает быстрый фильтр
      */
-    function resetFastFilter() {
+    function reset() {
         $('.content .fast-filter .type-3 .others div').removeClass('selected');
         $('.content .fast-filter .type-3 .others div.other-1').addClass('selected');
 
@@ -39,13 +39,13 @@ Locatus.FastFilter = (function ($) {
         });
     }
 
-    var niceFastFiler;
+    var nice;
 
     /**
      * Включает прокрутку для быстрого фильтра
      */
-    function enableFastFilterScroll() {
-        niceFastFiler = $('.content .fast-filter .type-3 .others').niceScroll({
+    function enableScroll() {
+        nice = $('.content .fast-filter .type-3 .others').niceScroll({
             touchbehavior: true, // передвигать левой кнопкой мыши
             cursorcolor: '#999999',
             cursorwidth: '1px',
@@ -82,12 +82,12 @@ Locatus.FastFilter = (function ($) {
         var step = offset / 5 + ((offset > 0) ? 1 : -1);
 
         if (Math.abs(offset - step) < 1) {
-            niceFastFiler.scrollLeft(niceFastFiler.scrollLeft() + offset);
+            nice.scrollLeft(nice.scrollLeft() + offset);
 
             return;
         }
 
-        niceFastFiler.scrollLeft(niceFastFiler.scrollLeft() + step);
+        nice.scrollLeft(nice.scrollLeft() + step);
 
         if (offset != other.offset().left) {
             timerMoving = setTimeout(function () {
@@ -98,26 +98,26 @@ Locatus.FastFilter = (function ($) {
 
     /**
      * Скрывает значения фильтров
-     * @param {boolean} withTimer
      */
-    function hideFastFilterValues(withoutTimer) {
-        if(withoutTimer === true) {
-            $('.content .fast-filter .lines > p').css('display', 'none');
-            $('.content .fast-filter .blocks > div').css('display', 'none');
-        }
-        else{
-            setTimeout(function () {
-                $('.content .fast-filter .lines > p').css('display', 'none');
-                $('.content .fast-filter .blocks > div').css('display', 'none');
-            }, 1);
-        }
+    function hideValues() {
+        $('.content .fast-filter .lines > p').css('display', 'none');
+        $('.content .fast-filter .blocks > div').css('display', 'none');
+    }
+
+    /**
+     * Скрывает значения фильтров
+     */
+    function hideValuesAsynchronous() {
+        setTimeout(function () {
+            hideValues()
+        }, 1);
     }
 
     /**
      * Выбирает указанную закладку быстрых фильтров
      * @param {Number} num Номер закладки
      */
-    function selectFastFilterPage(num) {
+    function selectPageAsynchronous(num) {
         setTimeout(function () {
             $('.other-' + num).mouseup();
         }, 1);
@@ -126,18 +126,18 @@ Locatus.FastFilter = (function ($) {
     /**
      * В зависимости от размера прокручиваемого блока устанавливает бордюр
      */
-    function layoutFastFilterBorders() {
+    function layoutBorders() {
         setTimeout(function () {
-            if ($('.content .fast-filter .type-3 .others').width() >= niceFastFiler.getContentSize().w) {
+            if ($('.content .fast-filter .type-3 .others').width() >= nice.getContentSize().w) {
                 $('.content .fast-filter .type-3').addClass('border');
             }
-        }, 1); // Без задержки не успевает отработать niceScroll (niceFastFiler.getContentSize().w даёт неверное значение)
+        }, 1); // Без задержки не успевает отработать niceScroll (nice.getContentSize().w даёт неверное значение)
     }
 
     /**
      * Разделяет блоки быстрого фильтра на «с картинкой» и «без картинки»
      */
-    function fastFilterValuesWithoutImage() {
+    function valuesWithoutImage() {
         $('.content .fast-filter .blocks > div').each(function () {
             if (!$(this).find('img').size()) {
                 $(this).addClass('wrap');
@@ -148,7 +148,7 @@ Locatus.FastFilter = (function ($) {
     /**
      * Устанавливает для значения быстрого фильтра необходимый отступ, чтобы текст был вертикально центрирован
      */
-    function calcFastFilterValuesVerticalAlign() {
+    function calcValuesVerticalAlign() {
         $('.content .fast-filter .blocks > .wrap').each(function () {
             $(this).css('padding-top', 0);
 
@@ -164,7 +164,7 @@ Locatus.FastFilter = (function ($) {
     /**
      * Переключает страницы быстрого фильтра
      */
-    function changePageFastFilter() {
+    function changePage() {
         $('.content .fast-filter .type-3 [class*="other-"]').mousedown(function (e) {
             pageX = e.pageX;
         })
@@ -177,7 +177,7 @@ Locatus.FastFilter = (function ($) {
                 $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
                 $(this).addClass('selected');
 
-                hideFastFilterValues(true);
+                hideValues();
 
                 var id = $(this).data('id');
                 $('.content .fast-filter .lines > p.line-' + id).css('display', 'block');
@@ -187,28 +187,28 @@ Locatus.FastFilter = (function ($) {
 
                 freshBorder(id);
 
-                calcFastFilterValuesVerticalAlign();
+                calcValuesVerticalAlign();
             });
     }
 
     function init() {
-        changePageFastFilter();
+        changePage();
 
         $(window).resize(function () {
             var id = $('.content .fast-filter .type-3 .selected[class*="other-"]').data('id');
             freshBorder(id);
         });
 
-        resetFastFilter();
-        enableFastFilterScroll();
-        layoutFastFilterBorders();
-        fastFilterValuesWithoutImage();
-        calcFastFilterValuesVerticalAlign();
+        reset();
+        enableScroll();
+        layoutBorders();
+        valuesWithoutImage();
+        calcValuesVerticalAlign();
     }
 
     return {
         init: init,
-        selectFastFilterPage: selectFastFilterPage,
-        hideFastFilterValues: hideFastFilterValues
+        selectPage: selectPageAsynchronous,
+        hideValues: hideValuesAsynchronous
     }
 })(jQuery);
