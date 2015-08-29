@@ -1,6 +1,7 @@
 <div class="supplier">
 
-    <!-- По следующему блоку создаётся точка на карте -->
+    <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика
+         Этот блок должен быть внутри блока с клоссом supplier -->
     <div class='point'
          data-point-x='<?= NumberHelper::rand(55.7522 - .1, 55.7522 + .1) ?>'
          data-point-y='<?= NumberHelper::rand(37.6155 - .1, 37.6155 + .1) ?>'
@@ -9,7 +10,8 @@
         ></div>
 
     <script type="text/javascript">
-        // Locatus.Map.addPoint([55.75, 37.61], 'text', './?url');
+        /* Пример добавления точки без зависомости от поставщика
+           Locatus.Map.addPoint([55.75, 37.61], 'text', './?url'); */
     </script>
 
     <a href="." class="top">
