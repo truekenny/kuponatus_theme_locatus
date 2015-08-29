@@ -115,9 +115,11 @@ function selectFastFilterPage(num) {
  * В зависимости от размера прокручиваемого блока устанавливает бордюр
  */
 function layoutFastFilterBorders() {
-    if ($('.content .fast-filter .type-3 .others').width() >= niceFastFiler.getContentSize().w) {
-        $('.content .fast-filter .type-3').addClass('border');
-    }
+    setTimeout(function () {
+        if ($('.content .fast-filter .type-3 .others').width() >= niceFastFiler.getContentSize().w) {
+            $('.content .fast-filter .type-3').addClass('border');
+        }
+    }, 1); // Без задержки не успевает отработать niceScroll (niceFastFiler.getContentSize().w даёт неверное значение)
 }
 
 /**
