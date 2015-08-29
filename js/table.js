@@ -2,7 +2,7 @@ Locatus.Table = (function ($) {
     /**
      * Обновляет размеры ячеек таблицы
      */
-    function refreshTable() {
+    function refreshColumnSize() {
         var offerWidth = $('.offers').width() - 50; // 50 – за счёт отступов
 
         $('.offers table').each(function () {
@@ -39,7 +39,7 @@ Locatus.Table = (function ($) {
     /**
      * Управляет таблицами, управляющими видимостью списка предложений
      */
-    function expandTables() {
+    function expandRow() {
         $('table.expand td + td a').click(function (e) {
             e.preventDefault();
 
@@ -58,11 +58,11 @@ Locatus.Table = (function ($) {
 
     function init() {
         $(window).resize(function () {
-            refreshTable();
+            refreshColumnSize();
         });
 
-        refreshTable();
-        expandTables();
+        refreshColumnSize();
+        expandRow();
     }
 
     return {
