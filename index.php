@@ -29,8 +29,11 @@
 
     <script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
-
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var Locatus = {};
+    </script>
     <script type="text/javascript" src="js/map.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/table.js"></script>
@@ -39,6 +42,19 @@
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/supplier.js"></script>
     <script type="text/javascript" src="js/fast-filter.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Locatus.Map.init();
+            Locatus.Menu.init();
+            Locatus.Table.init();
+            Locatus.Header.init();
+            Locatus.Content.init();
+            Locatus.Functions.init();
+            Locatus.Supplier.init();
+            Locatus.FastFilter.init();
+        });
+    </script>
+
 
 </head>
 

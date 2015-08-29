@@ -1,18 +1,24 @@
-/**
- * Обеспечиает подсетку маркера, который соответствует поставщику, на карте
- */
-$(document).ready(function () {
-    var suppliers = $('div.supplier');
+Locatus.Supplier = (function ($) {
+    /**
+     * Обеспечиает подсетку маркера, который соответствует поставщику, на карте
+     */
+    function init() {
+        var suppliers = $('div.supplier');
 
-    suppliers.mouseenter(function () {
-        var point = $(this).find('.point');
+        suppliers.mouseenter(function () {
+            var point = $(this).find('.point');
 
-        setColorPoint($(point).data('point-id'), 'green');
-    });
+            Locatus.Map.setColorPoint($(point).data('point-id'), 'green');
+        });
 
-    suppliers.mouseleave(function () {
-        var point = $(this).find('.point');
+        suppliers.mouseleave(function () {
+            var point = $(this).find('.point');
 
-        setColorPoint($(point).data('point-id'), 'red');
-    });
-});
+            Locatus.Map.setColorPoint($(point).data('point-id'), 'red');
+        });
+    }
+
+    return {
+        init: init
+    }
+})(jQuery);
