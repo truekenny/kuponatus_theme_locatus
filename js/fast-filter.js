@@ -98,10 +98,19 @@ Locatus.FastFilter = (function ($) {
 
     /**
      * Скрывает значения фильтров
+     * @param {boolean} withTimer
      */
-    function hideFastFilterValues() {
-        $('.content .fast-filter .lines > p').css('display', 'none');
-        $('.content .fast-filter .blocks > div').css('display', 'none');
+    function hideFastFilterValues(withoutTimer) {
+        if(withoutTimer === true) {
+            $('.content .fast-filter .lines > p').css('display', 'none');
+            $('.content .fast-filter .blocks > div').css('display', 'none');
+        }
+        else{
+            setTimeout(function () {
+                $('.content .fast-filter .lines > p').css('display', 'none');
+                $('.content .fast-filter .blocks > div').css('display', 'none');
+            }, 1);
+        }
     }
 
     /**
@@ -109,7 +118,9 @@ Locatus.FastFilter = (function ($) {
      * @param {Number} num Номер закладки
      */
     function selectFastFilterPage(num) {
-        $('.other-' + num).mouseup();
+        setTimeout(function () {
+            $('.other-' + num).mouseup();
+        }, 1);
     }
 
     /**
@@ -166,7 +177,7 @@ Locatus.FastFilter = (function ($) {
                 $('.content .fast-filter .type-3 [class*="other-"]').removeClass('selected');
                 $(this).addClass('selected');
 
-                hideFastFilterValues();
+                hideFastFilterValues(true);
 
                 var id = $(this).data('id');
                 $('.content .fast-filter .lines > p.line-' + id).css('display', 'block');
@@ -196,6 +207,8 @@ Locatus.FastFilter = (function ($) {
     }
 
     return {
-        init: init
+        init: init,
+        selectFastFilterPage: selectFastFilterPage,
+        hideFastFilterValues: hideFastFilterValues
     }
 })(jQuery);

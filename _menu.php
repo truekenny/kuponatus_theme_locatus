@@ -85,12 +85,12 @@
                          * В следующей строке указать класс блока, который нужно выбрать после загрузке.
                          * Удалить строку или закомментировать, если надо оставить выбранным первый блок.
                          */
-                        // selectFastFilterPage(2);
+                        // Locatus.FastFilter.selectFastFilterPage(2);
 
                         /**
                          * Следущая строка скрывает значения быстрых фильтров
                          */
-                        // hideFastFilterValues();
+                        // Locatus.FastFilter.hideFastFilterValues();
                     });
                 </script>
 

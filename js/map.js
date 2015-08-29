@@ -5,6 +5,8 @@ Locatus.Map = (function ($) {
     var points = [];
     var contentPoints = [];
 
+    ymaps.ready(initMap);
+
     /**
      * Ищет точки для карты
      */
@@ -25,6 +27,7 @@ Locatus.Map = (function ($) {
      * @returns {Number} Индекс точки
      */
     function addPoint(coords, hint, url) {
+        console.log(ymaps);
         $([[map, points], [contentMap, contentPoints]]).each(function (index) {
             var placemark = new ymaps.Placemark(coords, {hintContent: hint}, {iconColor: 'red'});
 
@@ -64,6 +67,19 @@ Locatus.Map = (function ($) {
     }
 
     /**
+     * Добавляет точку на карты
+     * @param {Array} coords Координаты
+     * @param {string} hint Подсказка
+     * @param {string} url Ссылка
+     */
+    function addPointAsynchronous(coords, hint, url) {
+        ymaps.ready(function() {
+            console.log('addPointAsynchronous');
+            addPoint(coords, hint, url);
+        });
+    }
+
+    /**
      * Устанавливает новый цвет для точки
      * @param {Number} index Индекс точки
      * @param {string} color Цвет
@@ -78,6 +94,8 @@ Locatus.Map = (function ($) {
      * Инициализирует карту
      */
     function initMap() {
+        console.log('initMap');
+
         var mapInit = {
             center: [55.76, 37.64],
             zoom: 9,
@@ -94,11 +112,11 @@ Locatus.Map = (function ($) {
     }
 
     function init() {
-        ymaps.ready(initMap);
     }
 
     return {
         init: init,
-        setColorPoint: setColorPoint
+        setColorPoint: setColorPoint,
+        addPoint: addPointAsynchronous
     }
 })(jQuery);

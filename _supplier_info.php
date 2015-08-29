@@ -8,6 +8,10 @@
          data-point-url="http://ya.ru/"
         ></div>
 
+    <script type="text/javascript">
+        // Locatus.Map.addPoint([55.75, 37.61], 'text', './?url');
+    </script>
+
     <a href="." class="top">
         <img src="images/_DELME_image.jpg" alt="" align="right">
 
