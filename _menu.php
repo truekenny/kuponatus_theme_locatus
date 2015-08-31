@@ -20,7 +20,7 @@
                     </td>
                     <td>
                         <div class="voice">
-                            <div class="zero"><img src="images/voice.png"></div>
+                            <div class="zero"><img src="images/voice.svg"></div>
                             Существуют две основные <b>трактовки</b> понятия «текст»: «имманентная» (расширенная,
                             философски нагруженная) и «репрезентативная» (более частная). Имманентный подход
                             <!-- <img align="bottom | left | middle | right | top"> -->
