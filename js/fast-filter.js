@@ -139,7 +139,7 @@ Locatus.FastFilter = (function ($) {
      */
     function valuesWithoutImage() {
         $('.content .fast-filter .blocks > div').each(function () {
-            if (!$(this).find('img').size()) {
+            if (!$(this).find('img, .img').size()) {
                 $(this).addClass('wrap');
             }
         });

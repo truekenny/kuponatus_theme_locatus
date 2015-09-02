@@ -15,7 +15,7 @@
     </script>
 
     <a href="." class="top">
-        <img src="images/_DELME_image.jpg" alt="" align="right">
+        <img src="images/_DELME_image_1.jpg" alt="" align="right">
 
         <h1>
             <? foreach (range(1, rand(1, 3)) as $i): ?>

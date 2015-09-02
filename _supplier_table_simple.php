@@ -7,7 +7,7 @@
 
         <tr class="line top-EXAMPLE">
             <td class="top">
-                <img src="images/_DELME_image.jpg" alt="">
+                <img src="images/_DELME_image_1.jpg" alt="">
             </td>
             <td class="wrap"><a href="." target="_blank">
                     Механическое транспортное средство, используемое обычно для перевозки по дорогам людей или грузов

@@ -105,6 +105,17 @@
         height: 100px;
     }
 
+    .content .fast-filter a .img {
+        margin: 0 auto;
+
+        height: 115px;
+        width: 90%;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
     .content .fast-filter a span {
         font-size: 70%;
     }
@@ -140,7 +151,7 @@
         padding-bottom: 15px;
     }
 
-        .content .fast-filter .type-3 .blocks div {
+        .content .fast-filter .type-3 .blocks > div {
             float: left;
             width: 227px;
             height: 150px;
@@ -189,7 +200,7 @@
                     line-height: 1;
                 }
 
-                .content .fast-filter .type-3 .blocks div img ~ span {
+                .content .fast-filter .type-3 .blocks div .img ~ span {
                     line-height: 30px;
                 }
 

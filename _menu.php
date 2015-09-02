@@ -24,7 +24,7 @@
                             Существуют две основные <b>трактовки</b> понятия «текст»: «имманентная» (расширенная,
                             философски нагруженная) и «репрезентативная» (более частная). Имманентный подход
                             <!-- <img align="bottom | left | middle | right | top"> -->
-                            <img src="images/_DELME_image.jpg" align="right">
+                            <img src="images/_DELME_image_1.jpg" align="right">
                             подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его
                             внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления
                             знаний о внешней тексту действительности.
@@ -45,7 +45,7 @@
                         <li><a href=".">
 
                                 <!-- Если картинка не нужна, то убрать теги img и br -->
-                                <img src="images/_DELME_image.jpg" alt=""><br>
+                                <img src="images/_DELME_image_1.jpg" alt=""><br>
                                 <?= $text ?> <span>от 100 рублей</span>
 
                             </a></li>
@@ -63,7 +63,7 @@
                                 <td><a href=".">
 
                                         <!-- Если картинка не нужна, то убрать теги img и br -->
-                                        <img src="images/_DELME_image.jpg" alt=""><br>
+                                        <img src="images/_DELME_image_1.jpg" alt=""><br>
                                         <?= $text ?> <span>от 100 рублей</span>
 
                                     </a></td>
@@ -106,8 +106,8 @@
                             <? $withImage = rand(1, 2) == 1; ?>
                             <div class="block-<?= $i ?>"><a href=".">
                                 <? if ($withImage): ?>
-                                    <!-- Если картинка не нужна, то убрать теги img и br -->
-                                    <img src="images/_DELME_image.jpg" alt=""><br>
+                                    <!-- Если картинка не нужна, то убрать следующий тэг -->
+                                    <div style="background-image: url(images/_DELME_image_<?= rand(1, 3) ?>.jpg)" class="img"></div>
                                 <? endif; ?>
                                 <?= $text ?> (<?= $i ?>) <span>от 100 рублей</span>
                             </a></div>
