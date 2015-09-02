@@ -10,8 +10,10 @@
         ></div>
 
     <script type="text/javascript">
-        /* Пример добавления точки без зависомости от поставщика
-           Locatus.Map.addPoint([55.75, 37.61], 'text', './?url'); */
+        /**
+         *  Пример добавления точки без зависомости от поставщика
+         */
+         Locatus.Map.addPoint([55.75, 37.61], 'TEST', './?url');
     </script>
 
     <a href="." class="top">
