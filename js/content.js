@@ -13,7 +13,7 @@ Locatus.Content = (function ($) {
     function init() {
         var expand = $('.content .offers div.expand');
 
-        if (expand) {
+        if (expand.size()) {
             $('body').addClass('hide-offers-maps');
         }
 

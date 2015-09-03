@@ -84,6 +84,10 @@ Locatus.Map = (function ($) {
      */
     function setColorPoint(index, color) {
         $([points, contentPoints]).each(function () {
+            if(typeof this[index-1] == "undefined") {
+                return;
+            }
+
             this[index - 1].options.set({iconColor: color});
         });
     }
