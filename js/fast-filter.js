@@ -127,6 +127,11 @@ Locatus.FastFilter = (function ($) {
      * В зависимости от размера прокручиваемого блока устанавливает бордюр
      */
     function layoutBorders() {
+        if(typeof nice.getContentSize == "undefined") {
+
+            return;
+        }
+
         setTimeout(function () {
             if ($('.content .fast-filter .type-3 .others').width() >= nice.getContentSize().w) {
                 $('.content .fast-filter .type-3').addClass('border');

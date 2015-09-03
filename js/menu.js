@@ -1,5 +1,14 @@
 Locatus.Menu = (function ($) {
     /**
+     * Скрывает рамку, если меню пустое
+     */
+    function hideEmpty() {
+        if(!$('.menu-wrapper ul').size()) {
+            $('.menu-wrapper').hide();
+        }
+    }
+
+    /**
      * Инициализирует меню
      */
     function init() {
@@ -35,6 +44,8 @@ Locatus.Menu = (function ($) {
 
             return page;
         }
+
+        hideEmpty();
     }
 
     return {

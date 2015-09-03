@@ -3,6 +3,11 @@ Locatus.Header = (function ($) {
      * Устанавливает позицию fixed меню
      */
     function fixMenu() {
+        if(!$('.menu-wrapper ul').size()) {
+
+            return;
+        }
+
         var offers = $('.offers');
 
         if (
