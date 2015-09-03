@@ -1,10 +1,41 @@
 Locatus.Menu = (function ($) {
+    var nice;
+
     /**
      * Скрывает рамку, если меню пустое
      */
     function hideEmpty() {
         if(!$('.menu-wrapper ul').size()) {
             $('.menu-wrapper').hide();
+        }
+    }
+
+    /**
+     * Скрывает вертикальную прокрутку в блоке меню
+     */
+    function hideVerticalScroll() {
+        // Хак отключает вертикальную прокрутку меню
+        var _super = nice.getContentSize;
+        nice.getContentSize = function () {
+            var page = _super.call(nice);
+            page.h = nice.win.height();
+
+            return page;
+        }
+    }
+
+    /**
+     * Двигает подменю при скроле меню
+     * Для браузеров, которые не могут это сделать автоматически
+     */
+    function moveSubmenu() {
+        var isFF = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+        if (!isFF) {
+            // Хак смещает подменю при скролле меню; в FF смещение подменю происходит само.
+            nice.scrollend(function (e) {
+                $(".menu.scroll ul").css('margin-left', (-e.current.x - 11) + 'px'); // .header .menu ul margin-left
+            });
         }
     }
 
@@ -18,7 +49,7 @@ Locatus.Menu = (function ($) {
             return true;
         });
 
-        var nice = $('.menu.scroll').niceScroll({
+        nice = $('.menu.scroll').niceScroll({
             touchbehavior: true, // передвигать левой кнопкой мыши
             cursorcolor: '#999999',
             cursorwidth: '1px',
@@ -27,22 +58,9 @@ Locatus.Menu = (function ($) {
             railvalign: "top"
         });
 
-        var isFF = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
-        if (!isFF) {
-            // Хак смещает подменю при скролле меню; в FF смещение подменю происходит само.
-            nice.scrollend(function (e) {
-                $(".menu.scroll ul").css('margin-left', (-e.current.x - 11) + 'px'); // .header .menu ul margin-left
-            });
-        }
-
-        // Хак отключает вертикальную прокрутку меню
-        var _super = nice.getContentSize;
-        nice.getContentSize = function () {
-            var page = _super.call(nice);
-            page.h = nice.win.height();
-
-            return page;
+        if(typeof nice.getContentSize != "undefined") {
+            moveSubmenu();
+            hideVerticalScroll();
         }
 
         hideEmpty();
