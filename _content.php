@@ -7,17 +7,19 @@
         <div id="content-map"></div>
 
         <!-- Если выдавать следующий блок, то предложения и карты будут скрыты -->
-        <div class="expand">
-            <h3>Показать все 453 автомойки:</h3>
+        <? if(rand(1, 2) == 1): ?>
+            <div class="expand">
+                <h3>Показать все 453 автомойки:</h3>
 
-            <div>
-                <img src="images/icon_list.png"> Списком
-            </div>
+                <div>
+                    <img src="images/icon_list.png"> Списком
+                </div>
 
-            <div>
-                <img src="images/icon_marker.png"> На карте
+                <div>
+                    <img src="images/icon_marker.png"> На карте
+                </div>
             </div>
-        </div>
+        <? endif; ?>
 
         <? if (!isset($_GET['offer'])): ?>
             <? foreach(range(1, 4) as $i): ?>
