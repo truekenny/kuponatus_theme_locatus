@@ -12,10 +12,17 @@ Locatus.Map = (function ($) {
      */
     function browsePoints() {
         $('.point').each(function () {
-            var id = addPoint([$(this).data('point-x'), $(this).data('point-y')], $(this).data('point-name'), $(this).data('point-url'));
+            var id = addPoint(
+                [$(this).data('x'), $(this).data('y')],
+                $(this).data('name'),
+                $(this).data('url'),
+                $(this).data('cluster'),
+                $(this).data('caption'),
+                $(this).data('body')
+            );
 
-            $(this).attr('data-point-id', id);
-            $(this).parent('div.supplier').addClass('point-id-' + id);
+            $(this).attr('data-id', id);
+            $(this).parent('div.supplier').addClass('id-' + id);
         });
     }
 
@@ -24,17 +31,31 @@ Locatus.Map = (function ($) {
      * @param {Array} coords Координаты
      * @param {string} hint Подсказка
      * @param {string} url Ссылка
+     * @param {string} cluster Название кластера
+     * @param {string} clusterCaption Краткое название точки во всплывающем окне кластера
+     * @param {string} clusterBalloonContentBody Описание точки во всплывающем окне кластера
      * @returns {Number} Индекс точки
+     *
+     * @see Всплывающее окно: https://yastatic.net/doccenter/images/tech-ru/maps/doc/freeze/S66wiqr3L7kQMQRrk8hTvp3iKUM.png
      */
-    function addPoint(coords, hint, url) {
-        $([[map, points], [contentMap, contentPoints]]).each(function (index) {
-            var placemark = new ymaps.Placemark(coords, {hintContent: hint}, {iconColor: 'red'});
+    function addPoint(coords, hint, url, cluster, clusterCaption, clusterBalloonContentBody) {
+        clusterBalloonContentBody = clusterBalloonContentBody || '';
+        var escapeUrl = Locatus.Functions.escapeHtml(url);
+
+        $([[map, points], [contentMap, contentPoints]]).each(function () {
+            var placemark = new ymaps.Placemark(coords, {
+                hintContent: hint,
+                clusterCaption: clusterCaption ? clusterCaption : hint,
+                balloonContentBody: clusterBalloonContentBody + "<br><a href='" + escapeUrl + "'>" + escapeUrl + "</a>"
+            }, {iconColor: 'red'});
 
             this[0].geoObjects.add(placemark);
             this[1].push(placemark);
 
             // Сохраняю для точки ID
             placemark.options.set({id: this[1].length});
+            // Сохраняю для точки cluster
+            placemark.options.set({cluster: cluster});
             // Сохраняю для точки url
             placemark.options.set({url: url});
 
@@ -50,14 +71,14 @@ Locatus.Map = (function ($) {
                 var id = placemark.options.get('id');
 
                 setColorPoint(id, 'green');
-                $('.supplier.point-id-' + id).addClass('hover');
+                $('.supplier.id-' + id).addClass('hover');
             });
 
             placemark.events.add(['mouseleave'], function (e) {
                 var id = placemark.options.get('id');
 
                 setColorPoint(id, 'red');
-                $('.supplier.point-id-' + id).removeClass('hover');
+                $('.supplier.id-' + id).removeClass('hover');
             });
 
         });
@@ -74,6 +95,36 @@ Locatus.Map = (function ($) {
     function addPointAsynchronous(coords, hint, url) {
         ymaps.ready(function() {
             addPoint(coords, hint, url);
+        });
+    }
+
+    /**
+     * Определяет для точек кластеры
+     */
+    function browseClusters() {
+        $([[map, points], [contentMap, contentPoints]]).each(function () {
+            var clusters = {};
+
+            var map = this[0];
+            var points = this[1];
+
+            $(points).each(function () {
+                var cluster = this.options.get('cluster');
+
+                if(typeof cluster == "undefined" || cluster == '') {
+                    return;
+                }
+
+                if (typeof clusters[cluster] == "undefined") {
+                    clusters[cluster] = new ymaps.Clusterer();
+                }
+
+                clusters[cluster].add(this);
+            });
+
+            for(var key in clusters) {
+                map.geoObjects.add(clusters[key]);
+            }
         });
     }
 
@@ -98,7 +149,7 @@ Locatus.Map = (function ($) {
     function initMap() {
         var mapInit = {
             center: [55.76, 37.64],
-            zoom: 9,
+            zoom: 11,
             controls: ['zoomControl', 'geolocationControl', 'fullscreenControl']
         };
 
@@ -106,9 +157,14 @@ Locatus.Map = (function ($) {
         contentMap = new ymaps.Map("content-map", mapInit);
 
         // Пример
-        //addPoint([55.7522200, 37.6155600], 'ПРИМЕР: Автомойка «ГарЭкс»', 'http://ya.ru');
+        /*
+        addPoint([55.7512200, 37.6155600], '1 ПРИМЕР: Автомойка «ГарЭкс»', 'http://ya.ru', 'cluster1');
+        addPoint([55.7522200, 37.6155600], '2 ПРИМЕР: Автомойка «ГарЭкс»', 'http://ya.ru', 'cluster1');
+        addPoint([55.7532200, 37.6155600], '3 ПРИМЕР: Автомойка «ГарЭкс»', 'http://ya.ru', 'cluster1');
+        */
 
         browsePoints();
+        browseClusters();
     }
 
     function init() {

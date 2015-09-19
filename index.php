@@ -85,5 +85,7 @@
             </td>
         </tr>
     </table>
+
+    <? require '_points.php'; ?>
 </body>
 </html>
