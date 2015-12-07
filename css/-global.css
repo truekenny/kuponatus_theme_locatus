@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto';
+}
+
+.-right {
+    float: right !important;
+}
+
+.-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.-center {
+    text-align: center;
+}
+
+/* Все кнопки зеленого цвета */
+.-green {
+    background-color: #86CF55;
+    color: white;
+}
