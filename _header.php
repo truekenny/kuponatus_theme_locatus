@@ -6,7 +6,7 @@
         Л<img src="images/logo.png" alt="">катус
     </a>
 
-    <form class="search">
+    <form class="search -box">
         <input class="-box" placeholder="Найти">
         <button class="-box -green" type="submit"><img src="images/search.png" alt=""></button>
     </form>

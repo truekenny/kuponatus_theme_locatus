@@ -1,16 +1,10 @@
 body {
+    min-width: 1400px;
+
     background-color: #ddd;
+    font-family: 'Roboto';
 }
 
-.Л____катус {
-    font-size: 21px;
-    font-family: "Code";
-    color: rgb(66, 66, 66);
-    font-weight: bold;
-    line-height: 1.333;
-    text-align: center;
-    position: absolute;
-    left: 1105.486px;
-    top: 2101.861px;
-    z-index: 927;
+body, body a {
+    color: #404040;
 }

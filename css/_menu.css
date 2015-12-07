@@ -1,0 +1,183 @@
+#menu {
+    width: 234px;
+    float: left;
+
+    background-color: white;
+}
+
+    #menu .block {
+        padding: 25px 20px;
+
+        border-top: 1px solid #ECECEC;
+    }
+
+        #menu .block h4 {
+            margin: 0 0 20px;
+
+            font-size: 12px;
+            color: #686868;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            background-image: url("../images/hide.png");
+            background-position: 99.5% center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        #menu .block p {
+            margin-bottom: 0;
+        }
+
+        #menu .block input[type=text] {
+            padding: 0 15px;
+
+            height: 41px;
+
+            border: 1px solid #CECECE;
+            border-radius: 3px;
+            background-color: #fcfcfc;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    #menu .active {
+        background-color: #F7F7F7;
+        background-image: url("../images/close.png");
+        background-position: 204px center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #menu input.maxi {
+        width: 100%;
+
+        background-image: url("../images/clear.png");
+        background-position: 94% center;
+        background-repeat: no-repeat;
+    }
+
+    #menu input.mini {
+        width: 24%;
+    }
+
+    #menu .between {
+        white-space: nowrap;
+        overflow: visible;
+        text-align: right;
+    }
+
+    #menu .checkbox input[type=checkbox] {
+        display: none;
+    }
+
+        #menu .checkbox input[type=checkbox] + label {
+            cursor: pointer;
+        }
+
+        #menu .checkbox input[type=checkbox]:not(checked) + label:before {
+            margin-right: 5px;
+
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+
+            content: ' ';
+            background-color: #86CF55;
+
+            border-radius: 3px;
+            box-shadow: inset 0 1px 1px #4AC042;
+        }
+
+        #menu .checkbox input[type=checkbox]:checked + label:before {
+            background-image: url("../images/checked.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+    #menu .list {
+        margin-bottom: -10px !important;
+
+        overflow: hidden;
+    }
+
+        #menu .list > a {
+            padding: 6px;
+            margin: 0 10px 10px 0;
+
+            float: left;
+            display: block;
+
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #menu .list.of-buttons > a {
+            border: 1px solid #E3E3E3;
+        }
+
+            #menu .list.of-buttons > a.checked {
+                border-color: transparent;
+                box-shadow: inset 0 1px 1px #4AC042;
+            }
+
+            #menu .list.of-buttons.big > a {
+                padding: 0;
+                margin: 0 4px 4px 0;
+
+                width: 42px;
+                height: 42px;
+
+                line-height: 64px;
+                text-align: center;
+            }
+
+                #menu .list.of-buttons.big > a.checked img {
+                    filter: brightness(30);
+                }
+
+        #menu .list.of-circles > a {
+            width: 16px;
+            height: 16px;
+
+            border-radius: 25px;
+        }
+
+            #menu .list.of-circles > a.checked {
+                background-image: url("../images/checkmark.png");
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+        #menu .list.of-texts > a {
+            padding: 0;
+            margin: 0 0 10px 0;
+
+            width: 50%;
+        }
+
+            #menu .list.of-texts > a.checked {
+                font-weight: bold;
+            }
+
+                #menu .list.of-texts.line > a {
+                    width: 100%;
+                }
+
+                    #menu .list.of-texts.line > a span {
+                        color: #9E9E9E;
+                    }
+
+                        #menu .list.of-texts > a.checked span {
+                            font-weight: normal;
+                        }
+
+    #menu .block .dashed a {
+        text-decoration: none;
+        border-bottom: 1px dashed #9E9E9E;
+    }
