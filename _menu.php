@@ -4,16 +4,16 @@
     </div>
     <div class="block">
         <h4>Рисунок</h4>
-        <input class="maxi -box" type="text" value="Горох">
+        <input class="maxi -input -box" type="text" value="Горох">
     </div>
     <div class="block">
         <h4>Цена, руб.</h4>
         <p class="between -small">
-            от <input class="mini" type="text">
-            до <input class="mini" type="text">
+            от <input class="mini -input" type="text">
+            до <input class="mini -input" type="text">
         </p>
-        <p class="checkbox">
-            <input type="checkbox" id="UniqueID"><label for="UniqueID">В наличии</label>
+        <p>
+            <input class="-checkbox" type="checkbox" id="UniqueID"><label for="UniqueID">В наличии</label>
         </p>
     </div>
     <div class="block">
