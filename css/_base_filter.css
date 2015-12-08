@@ -64,7 +64,7 @@
     }
 
     #base-filter .row {
-        padding: 3px;
+        /*padding: 3px;*/
 
         overflow: hidden;
     }
@@ -75,7 +75,7 @@
     }
 
     #base-filter .row div.margin {
-        margin-left: 16px;
+        margin-left: 20px;
     }
 
     #base-filter .row div.double {
@@ -163,4 +163,43 @@
             padding-left: 5px;
             text-decoration: none;
         }
+
+    #base-filter .block .no-margin-bottom {
+        margin-bottom: -20px;
+    }
+
+    #base-filter .block .image {
+        margin-bottom: 20px;
+
+        height: 124px;
+
+        background-color: #999;
+        border-radius: 3px;
+
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+        #base-filter .block .image:nth-child(3n),
+        #base-filter .block .image:nth-child(3n + 2) {
+            margin-left: 20px;
+        }
+
+            #base-filter .block .image p {
+                margin-top: 69px;
+                margin-bottom: 0;
+
+                font-size: 14px;
+                color: #ffffff;
+                font-weight: bold;
+                text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black;
+            }
+
+            #base-filter .block .image p + p {
+                margin-top: 7px;
+                font-weight: normal;
+            }
 

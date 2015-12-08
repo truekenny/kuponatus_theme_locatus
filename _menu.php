@@ -9,8 +9,8 @@
     <div class="block">
         <h4>Цена, руб.</h4>
         <p class="between -small">
-            от <input class="mini -input" type="text">
-            до <input class="mini -input" type="text">
+            от <input class="mini -input" type="text" value="100">
+            до <input class="mini -input" type="text" value="15000">
         </p>
         <p>
             <input class="-checkbox" type="checkbox" id="UniqueID"><label for="UniqueID">В наличии</label>

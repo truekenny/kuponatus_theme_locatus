@@ -14,8 +14,8 @@
     <div class="block">
         <h4>Цена, руб.</h4>
         <div class="row -small">
-            <div>от <input class="mini -box -input" type="text"></div>
-            <div class="margin -aright">до <input class="mini -box -input" type="text"></div>
+            <div>от <input class="mini -box -input" type="text" value="100"></div>
+            <div class="margin -aright">до <input class="mini -box -input" type="text" value="500"></div>
             <div class="double margin">
                 <select class="-box -input">
                     <option>Время работы</option>
@@ -86,6 +86,33 @@
         <div class="wide-line">
             <a href="#">Увропейский маникюр</a>
             <a class="-right" href="#">от 3 до 500 руб.</a>
+        </div>
+    </div>
+
+    <div class="block">
+        <h4>Выберите класс автомобиля</h4>
+        <div class="row no-margin-bottom">
+            <? foreach(range(1, 6) as $i): ?>
+                <div class="image double" style="background-image: url('/images/_DELME_image.jpg')">
+                    <p class="-center">VIP-класс</p>
+                    <p class="-center">от 1 200 руб.</p>
+                </div>
+            <? endforeach; ?>
+        </div>
+    </div>
+
+    <div class="block">
+        <h4>Рисунок</h4>
+
+        <div class="row">
+            <div class="double">
+                <select class="-box -input">
+                    <option>Производитель</option>
+                    <option>Sony</option>
+                    <option>Samsung</option>
+                    <option>Nike</option>
+                </select>
+            </div>
         </div>
     </div>
 </div>
