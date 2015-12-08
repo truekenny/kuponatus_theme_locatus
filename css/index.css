@@ -1,10 +1,13 @@
-body {
-    min-width: 1400px;
-
+#body {
     background-color: #ddd;
     font-family: 'Roboto';
 }
 
-body, body a {
+#body,
+#body a {
     color: #404040;
+}
+
+#body > .content {
+    margin-top: 67px;
 }

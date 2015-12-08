@@ -1,6 +1,8 @@
 #header {
     width: 100%;
     height: 67px;
+    position: fixed;
+    top: 0;
 
     line-height: 67px;
     background-color: white;
