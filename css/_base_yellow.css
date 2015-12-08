@@ -1,0 +1,39 @@
+#yellow {
+    margin: 20px;
+    padding: 30px;
+
+    height: 176px;
+
+    border: 1px solid #6A7A82;
+    border-radius: 3px;
+    font-weight: 200;
+}
+
+    #yellow > * {
+        margin: 0 auto;
+
+        width: 400px;
+        display: block;
+    }
+
+    #yellow p {
+        color: #ffffff;
+    }
+
+        #yellow p span {
+            font-weight: 400;
+        }
+
+    #yellow a {
+        margin-top: 17px;
+
+        height: 62px;
+
+        color: #424242;
+        background-color: #FFDC57;
+        border-bottom: 3px solid #FFB630;
+        border-radius: 3px;
+        font-size: 19px;
+        line-height: 62px;
+        text-decoration: none;
+    }
