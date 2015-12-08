@@ -136,3 +136,31 @@
                     #base-filter .list.of-texts > a.checked span {
                         font-weight: normal;
                     }
+
+    #base-filter .block .wide-line {
+        margin-bottom: 16px;
+
+        overflow: hidden;
+        white-space: nowrap;
+
+        background-image: url("../images/dot.png");
+        background-position: 0 80%;
+        background-repeat: repeat-x;
+    }
+
+        #base-filter .block .wide-line a {
+            padding-right: 5px;
+
+            float: left;
+            display: inline-block;
+
+            font-weight: 200;
+            background-color: #ffffff;
+        }
+
+        #base-filter .block .wide-line a + a {
+            padding-right: 0;
+            padding-left: 5px;
+            text-decoration: none;
+        }
+

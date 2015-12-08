@@ -1,4 +1,4 @@
-<div id="base-filter">
+<div id="base-filter" xmlns="http://www.w3.org/1999/html">
     <div class="block active">
         Активные фильтры <a class="dashed" href="#">Сброс</a>
     </div>
@@ -47,7 +47,7 @@
                     <a href="#">Больше</a>
                 </p>
             </div>
-            <div class="double">
+            <div class="double margin">
                 <h4 class="no-hide">Размер дисплея</h4>
                 <p class="list of-buttons">
                     <a class="-small" href="#">2.5 дюйма</a>
@@ -58,7 +58,7 @@
                     <a class="-small" href="#">8 дюймов</a>
                 </p>
             </div>
-            <div class="double">
+            <div class="double margin">
                 <h4 class="no-hide">Размер дисплея</h4>
                 <p>
                     <input class="-checkbox" type="checkbox" id="UniqueID1" checked="checked"><label for="UniqueID1">Дизайн</label><br>
@@ -66,6 +66,26 @@
                     <input class="-checkbox" type="checkbox" id="UniqueID3"><label for="UniqueID3">Маникюр-педикюр</label><br>
                 </p>
             </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h4>Виды маникюра</h4>
+        <div class="wide-line">
+            <a href="#">СПА-маникюр</a>
+            <a class="-right" href="#">от 300 до 4 500 руб.</a>
+        </div>
+        <div class="wide-line">
+            <a href="#">Горячий маникюр</a>
+            <a class="-right" href="#">от 30 до 4 500 руб.</a>
+        </div>
+        <div class="wide-line">
+            <a href="#">Аппаратный маникюр</a>
+            <a class="-right" href="#">от 3 000 до 4 500 руб.</a>
+        </div>
+        <div class="wide-line">
+            <a href="#">Увропейский маникюр</a>
+            <a class="-right" href="#">от 3 до 500 руб.</a>
         </div>
     </div>
 </div>
