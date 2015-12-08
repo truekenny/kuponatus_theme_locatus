@@ -1,0 +1,96 @@
+#base-filter {
+    margin: 20px;
+
+    background-color: white;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+    #base-filter .block {
+        padding: 25px 20px;
+
+        border-top: 1px solid #ECECEC;
+    }
+
+    #base-filter .active {
+        background-color: #F7F7F7;
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+        #base-filter .active a.dashed {
+            margin-left: 20px;
+
+            border-bottom: 1px dashed #9E9E9E;
+            font-weight: 200;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+    #base-filter .block h4 {
+        margin: 0 0 20px;
+
+        font-size: 12px;
+        color: #686868;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        background-image: url("../images/hide.png");
+        background-position: 99.5% center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    #base-filter .block input[type=text],
+    #base-filter .block select {
+        padding: 0 15px;
+
+        height: 41px;
+
+        border: 1px solid #CECECE;
+        border-radius: 3px;
+        background-color: #fcfcfc;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #base-filter .block select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background-image: url("../images/arrow.png");
+        background-position: 90% center;
+        background-repeat: no-repeat;
+    }
+
+    #base-filter input.maxi {
+        width: 194px;
+
+        background-image: url("../images/clear.png");
+        background-position: 94% center;
+        background-repeat: no-repeat;
+    }
+
+    #base-filter input.mini {
+        width: 63px;
+    }
+
+    #base-filter .between span {
+        width: 88px;
+        display: inline-block;
+    }
+
+    #base-filter .between span.margin {
+        margin-left: 16px;
+    }
+
+    #base-filter .between span.double {
+        width: 192px;
+    }
+
+        #base-filter .between span.double select{
+            width: 100%;
+        }

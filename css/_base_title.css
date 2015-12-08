@@ -1,0 +1,61 @@
+#base-title {
+    height: 549px;
+
+    background-image: url("../images/_DELME_title.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+    #base-title .bread {
+        padding-left: 40px;
+
+        height: 67px;
+
+        background-color: rgba(67, 87, 98, 0.7);
+        border-bottom: 1px solid #3D484E;
+        line-height: 67px;
+    }
+
+        #base-title .bread a {
+            padding: 4px 6px;
+
+            border: 1px solid #636B71;
+            border-radius: 3px;
+            color: white;
+            text-decoration: none;
+        }
+
+            #base-title .bread a + a {
+                margin-left: 40px;
+            }
+
+    #base-title .pure {
+        height: 244px;
+    }
+
+    #base-title .text {
+        padding: 40px;
+
+        height: 238px;
+
+        background: linear-gradient(to bottom, rgba(67, 87, 98, 0.7) 0%, rgb(67, 87, 98) 65%, rgb(67, 87, 98) 100%);
+    }
+
+        #base-title .text h1 {
+            margin: -5px 0 0;
+
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 100;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        #base-title .text p {
+            color: white;
+            font-size: 15px;
+            font-weight: 200;
+            line-height: 1.4;
+            letter-spacing: 0.5px; /* Стоит заменить на что-нибудь более валидное */
+        }
+

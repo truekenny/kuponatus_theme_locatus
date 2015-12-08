@@ -1,7 +1,90 @@
+/*
+ * Справка по соответствию веса и названию шрифта
+ *
+ * black   900
+ * bold    700
+ * medium  600
+ * regular 400
+ * light   200
+ * thin    100
+ */
+
+/* Roboto Под Наклоном */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-BlackItalic.ttf");
+    font-weight: 900;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-BoldItalic.ttf");
+    font-weight: bold; /* 700 */
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-MediumItalic.ttf");
+    font-weight: 600;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-LightItalic.ttf');
+    font-weight: 200;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic, oblique;
+}
+
+/* Roboto Обычный */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Black.ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.ttf");
+    font-weight: bold; /* 700 */
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.ttf");
+    font-weight: 600;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('/fonts/Roboto-Regular.ttf');
+    font-weight: normal; /* 400 */
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Light.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Thin.ttf');
+    font-weight: 100;
+}
+
+/* Code Обычный */
 
 @font-face {
     font-family: 'Code';

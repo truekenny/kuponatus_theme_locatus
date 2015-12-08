@@ -2,6 +2,10 @@
     float: right !important;
 }
 
+.-aright {
+    text-align: right;
+}
+
 .-box {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
