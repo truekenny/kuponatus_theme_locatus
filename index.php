@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/_base.css">
     <link rel="stylesheet" type="text/css" href="css/_base_title.css">
     <link rel="stylesheet" type="text/css" href="css/_base_filter.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_h1.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card.css">
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 

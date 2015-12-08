@@ -1,0 +1,100 @@
+#card {
+    margin: 20px;
+    padding: 20px 0 0;
+
+    background-color: #ffffff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+    #card .header {
+        min-height: 174px;
+        padding: 0 20px;
+    }
+
+        #card .header img {
+            max-width: 196px;
+
+            border-radius: 3px;
+        }
+
+        #card .header h2 {
+            margin: 0 0 14px;
+
+            font-size: 25px;
+            font-weight: 200;
+            color: #424242;
+        }
+
+        #card .header a {
+
+            font-size: 16px;
+            font-weight: 200;
+            color: #5a5a5a;
+        }
+
+        #card .header p {
+            margin: 14px 0 0;
+            padding-left: 26px;
+
+            font-size: 20px;
+            font-weight: 200;
+            color: #424242;
+
+            background-image: url("../images/card.png");
+            background-position: 0 center;
+            background-repeat: no-repeat;
+        }
+
+    #card .line {
+        padding: 8px 20px;
+
+        border-top: 1px solid #EDEDED;
+        overflow: hidden;
+        font-weight: 200;
+        line-height: 35px;
+    }
+
+    #card .line:hover {
+        background-color: #F7F7F7;
+    }
+
+        #card .line > div {
+            float: left;
+        }
+
+        #card .line .name,
+        #card .line .more {
+            width: 150px;
+        }
+
+            #card .line .more a {
+                text-decoration-style: dashed;
+            }
+
+        #card .line .price {
+            width: 320px;
+        }
+
+            #card .line .price span:first-child {
+                font-weight: bold;
+            }
+
+            #card .line .price span.button {
+                padding: 0 6px;
+                margin-left: 30px;
+
+                height: 35px;
+                display: inline-block;
+
+                border: 1px solid #E6E6E6;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            #card .line .price span.button:hover {
+                background-color: #52d048;
+                border-color: transparent;
+                color: #ffffff;
+            }
+

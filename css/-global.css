@@ -18,6 +18,7 @@
 /* Все кнопки зеленого цвета */
 .-green {
     background-color: #52D048;
+    border-color: transparent !important;
     color: white;
 }
 
