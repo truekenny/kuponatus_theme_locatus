@@ -28,7 +28,7 @@
             Locatus.Map.init();
 
             $('a').click(function(e) {
-                alert('Ссылки в макете отключены');
+                alert('Это ссылка, но в макете она никуда не ведет');
                 e.preventDefault();
             })
         });
