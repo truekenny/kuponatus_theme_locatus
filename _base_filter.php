@@ -93,7 +93,7 @@
         <h4>Выберите класс автомобиля</h4>
         <div class="row no-margin-bottom">
             <? foreach(range(1, 6) as $i): ?>
-                <div class="image double" style="background-image: url('images/_DELME_image.jpg')">
+                <div class="image double" style="background-image: url('images/_DELME_example_<?= $i ?>.jpg')">
                     <p class="-center">VIP-класс</p>
                     <p class="-center">от 1 200 руб.</p>
                 </div>

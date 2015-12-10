@@ -1,6 +1,6 @@
 <div id="card_high">
     <div class="header">
-        <img src="images/_DELME_card.jpg" alt="" align="right">
+        <img src="images/_DELME_card_2.jpg" alt="" align="right">
         <h2>Эконом класс от <span>149 руб.</span></h2>
         <p>Renault Logan, Kia Rio, Hyundai Solar</p>
     </div>
