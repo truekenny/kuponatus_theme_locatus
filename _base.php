@@ -5,4 +5,5 @@
     <? require '_base_card.php'; ?>
     <? require '_base_yellow.php'; ?>
     <? require '_base_card_high.php'; ?>
+    <? require '_base_card_full.php'; ?>
 </div>

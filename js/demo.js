@@ -6,7 +6,15 @@ Locatus.Demo = (function ($) {
         $('a').click(function(e) {
             alert('Это ссылка, но в макете она никуда не ведет');
             e.preventDefault();
-        })
+        });
+    }
+
+    /**
+     * Страница отображается в режиме разработки
+     * @returns {boolean}
+     */
+    function isDevelop() {
+        return (location.hostname.indexOf('.loc') != -1);
     }
 
     function init() {
@@ -14,6 +22,7 @@ Locatus.Demo = (function ($) {
     }
 
     return {
-        init: init
+        init: init,
+        isDevelop: isDevelop
     }
 })(jQuery);

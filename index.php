@@ -17,11 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/_base_card.css">
     <link rel="stylesheet" type="text/css" href="css/_base_yellow.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_high.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card_full.css">
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
-    <script type="text/javascript" src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+
     <script type="text/javascript">var Locatus = {};</script>
     <script src="js/demo.js" type="text/javascript"></script>
     <script src="js/map.js" type="text/javascript"></script>
