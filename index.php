@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="css/_base_yellow.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_high.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_full.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card_half.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card_third.css">
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
