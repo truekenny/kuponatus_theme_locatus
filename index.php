@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<?
+    require_once 'classes/HelperDeveloper.php';
+?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -22,15 +25,22 @@
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!--<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+
+    <? if(!HelperDeveloper::isDevelop()): ?>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>>
+    <? endif; ?>
 
     <script type="text/javascript">var Locatus = {};</script>
     <script src="js/demo.js" type="text/javascript"></script>
-    <script src="js/map.js" type="text/javascript"></script>
+    <? if(!HelperDeveloper::isDevelop()): ?>
+        <script src="js/map.js" type="text/javascript"></script>
+    <? endif; ?>
     <script type="text/javascript">
         $(document).ready(function () {
             Locatus.Demo.init();
-            Locatus.Map.init();
+            <? if(!HelperDeveloper::isDevelop()): ?>
+                Locatus.Map.init();
+            <? endif; ?>
         });
     </script></head>
 

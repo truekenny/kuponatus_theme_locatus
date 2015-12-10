@@ -9,20 +9,11 @@ Locatus.Demo = (function ($) {
         });
     }
 
-    /**
-     * Страница отображается в режиме разработки
-     * @returns {boolean}
-     */
-    function isDevelop() {
-        return (location.hostname.indexOf('.loc') != -1);
-    }
-
     function init() {
         disableLinks();
     }
 
     return {
-        init: init,
-        isDevelop: isDevelop
+        init: init
     }
 })(jQuery);

@@ -1,8 +1,6 @@
 Locatus.Map = (function ($) {
     var map;
-    if(!Locatus.Demo.isDevelop()) {
-        ymaps.ready(initMap);
-    }
+    ymaps.ready(initMap);
 
     /**
      * Инициализирует карту
