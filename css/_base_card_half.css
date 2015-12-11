@@ -83,32 +83,44 @@
             cursor: pointer;
         }
 
-        #card_half .card .cost {
-            padding-left: 20px;
+        #card_half .card .lower {
+            margin-top: -20px;
+            padding-top: 20px;
 
-            font-size: 19px;
+            height: 100px;
         }
 
-        #card_half .card .buttons {
-            margin-top: 6px;
-        }
-
-            #card_half .card .buttons > a {
-                margin-left: 10px;
-                padding: 0 6px;
-
-                display: inline-block;
-                height: 35px;
-
-                border: 1px solid #e6e6e6;
-                border-radius: 3px;
-                cursor: pointer;
-                font-weight: 200;
-                line-height: 35px;
-                text-decoration: none;
-
+            #card_half .card .lower:hover {
+                background-color: #F7F7F7;
             }
 
-            #card_half .card .buttons > a:first-child {
-                margin-left: 20px;
+
+            #card_half .card .lower .cost {
+                padding-left: 20px;
+
+                font-size: 19px;
             }
+
+            #card_half .card .lower .buttons {
+                margin-top: 6px;
+            }
+
+                #card_half .card .lower .buttons > a {
+                    margin-left: 10px;
+                    padding: 0 6px;
+
+                    display: inline-block;
+                    height: 35px;
+
+                    border: 1px solid #e6e6e6;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-weight: 200;
+                    line-height: 35px;
+                    text-decoration: none;
+
+                }
+
+                #card_half .card .lower .buttons > a:first-child {
+                    margin-left: 20px;
+                }

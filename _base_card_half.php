@@ -15,12 +15,14 @@
         <div class="break -box">
 
         </div>
-        <div class="cost">
-            16 190 руб.
-        </div>
-        <div class="buttons">
-            <a class="-green" href="#">Забронировать</a>
-            <a href="#">Подробнее</a>
+        <div class="lower">
+            <div class="cost">
+                16 190 руб.
+            </div>
+            <div class="buttons">
+                <a class="-green" href="#">Забронировать</a>
+                <a href="#">Подробнее</a>
+            </div>
         </div>
     </div>
     <? endforeach; ?>
