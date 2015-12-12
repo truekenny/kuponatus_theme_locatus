@@ -4,7 +4,7 @@ Locatus.Demo = (function ($) {
      */
     function disableLinks() {
         $('a').click(function(e) {
-            alert('Это ссылка, но в макете она никуда не ведет');
+            alert('Это ссылка, но в макете она никуда не ведёт');
             e.preventDefault();
         });
     }

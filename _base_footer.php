@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: kenny
- * Date: 12.12.15
- * Time: 15:29
- */
+<div id="base_footer" class="-small">
+    Локатус &copy; 2015
+    <a href="#"><span>О проекте</span></a>
+    <a href="#"><span>Сотрудничество</span></a>
+</div>
+
