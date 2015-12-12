@@ -8,11 +8,13 @@
     <title>Locatus</title>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/-global.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/-global.css">
+
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/_header.css">
     <link rel="stylesheet" type="text/css" href="css/_menu.css">
+
     <link rel="stylesheet" type="text/css" href="css/_base.css">
     <link rel="stylesheet" type="text/css" href="css/_base_title.css">
     <link rel="stylesheet" type="text/css" href="css/_base_filter.css">
@@ -23,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="css/_base_card_full.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_half.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_third.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_more.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_pages.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_footer.css">
+
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 

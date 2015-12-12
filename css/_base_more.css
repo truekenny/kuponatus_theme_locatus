@@ -1,0 +1,29 @@
+#base_more {
+    margin: 20px;
+
+    height: 57px;
+
+    border: 1px solid #6A7A82;
+    border-radius: 3px;
+}
+
+    #base_more a {
+        margin: 0 auto;
+        padding-left: 20px;
+
+        display: inline-block;
+        height: 57px;
+
+        background-image: url("../images/more.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        color: #6A7A82;
+        font-weight: 600;
+        line-height: 57px;
+        text-decoration-style: dashed;
+    }
+
+        #base_more a span {
+            color: #ffffff;
+        }
+        
