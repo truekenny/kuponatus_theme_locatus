@@ -22,17 +22,8 @@
     }
 
         #card_full .image .super {
-            width: 88px;
-            height: 26px;
-            position: relative;
             top: -1px;
             left: -1px;
-
-            background-color: #FFF46E;
-            border-radius: 3px;
-            color: #424242;
-            font-size: 14px;
-            line-height: 26px;
         }
 
     #card_full .text {

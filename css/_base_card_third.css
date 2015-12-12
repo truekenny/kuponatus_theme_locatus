@@ -1,1 +1,152 @@
+#card_third {
+    margin: 20px;
 
+    overflow: hidden;
+}
+
+    #card_third > div {
+        float: left;
+    }
+
+    #card_third > div:nth-child(3n) {
+        margin-left: 20px;
+    }
+
+    #card_third > div:nth-child(3n + 2) {
+        margin-left: 20px; /* 620 - размер блока, куда надо поместить 3 карточки, не делится 3 без остатка */
+    }
+
+    #card_third .card {
+        width: 206px;
+        height: 528px;
+        position: relative;
+
+        background-color: white;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+        #card_third .card .image {
+            height: 206px;
+
+            border-bottom: 1px solid #EDEDED;
+            background-size: cover;
+            background-position: center center;
+        }
+
+            #card_third .card .image .super {
+                top: 20px;
+                left: 20px;
+            }
+
+        #card_third .card .text {
+            padding: 0 20px;
+
+            height: 215px;
+            position: relative;
+
+            overflow: hidden;
+        }
+
+            #card_third .card .text h2 {
+                margin-bottom: 14px;
+
+                font-size: 25px;
+                font-weight: 200;
+            }
+
+            #card_third .card .text p {
+                margin-top: 14px;
+
+                color: #7f7f7f;
+                font-weight: 200;
+                line-height: 1.3;
+            }
+
+        #card_third .card .lower {
+            margin-top: -20px;
+            padding-top: 0;
+            padding-bottom: 8px;
+
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+
+            background-color: #ffffff;
+            border-top: 1px solid #EDEDED;
+        }
+
+            #card_third .card .lower:hover {
+                background-color: #F7F7F7;
+            }
+
+            #card_third .card .lower:after {
+                content: ' ';
+
+                width: 100%;
+                height: 40px;
+                display: block;
+                position: absolute;
+                top: -41px;
+
+                background: linear-gradient(to bottom, transparent 0%, white 60%, white 100%);
+                z-index: 10; /* Под #card_third .card .lower .break */
+            }
+            #card_third .card .lower .break {
+                margin: 0 auto -2px;
+
+                width: 50px;
+                height: 19px;
+                position: relative;
+                top: -10px;
+
+                background: #ffffff url("../images/expand.png") no-repeat center center;
+                border: 1px solid #EDEDED;
+                border-radius: 3px;
+                cursor: pointer;
+                z-index: 20; /* Над #card_third .card .lower:after */
+            }
+
+            #card_third .card .lower .red {
+                margin-left: 20px;
+                margin-bottom: 3px;
+
+                color: red;
+                font-size: 15px;
+                font-weight: 200;
+                text-decoration: line-through;
+            }
+
+            #card_third .card .lower .cost {
+                padding-left: 20px;
+
+                font-size: 19px;
+            }
+
+            #card_third .card .lower > p {
+                margin: 5px 0 0 20px;
+
+                color: #7f7f7f;
+            }
+
+            #card_third .card .lower .buttons {
+                margin-top: 15px;
+                margin-left: 20px;
+            }
+
+                #card_third .card .lower .buttons > a {
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    padding: 0 6px;
+
+                    display: inline-block;
+                    height: 35px;
+
+                    border: 1px solid #e6e6e6;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-weight: 200;
+                    line-height: 35px;
+                    text-decoration: none;
+
+                }

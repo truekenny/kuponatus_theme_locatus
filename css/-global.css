@@ -84,3 +84,16 @@ select.-input {
     background-position: 94% center;
     background-repeat: no-repeat;
 }
+
+.-super {
+    width: 88px;
+    height: 26px;
+    position: relative;
+
+    background-color: #FFF46E;
+    border-radius: 3px;
+    color: #424242;
+    font-size: 14px;
+    line-height: 26px;
+}
+
