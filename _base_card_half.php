@@ -12,10 +12,9 @@
                 шнурки более тёмного цвета, чем сами ботинки. У обуви имеется подворот, который можно убрать.
             </p>
         </div>
-        <div class="break -box">
 
-        </div>
         <div class="lower">
+            <div class="break -box"></div>
             <div class="cost">
                 16 190 руб.
             </div>
