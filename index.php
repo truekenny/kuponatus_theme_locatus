@@ -35,7 +35,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
     <? if(!HelperDeveloper::isDevelop()): ?>
-        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <? endif; ?>
 
     <script type="text/javascript">var Locatus = {};</script>
