@@ -1,0 +1,48 @@
+#base_pages {
+    margin: 20px 20px 50px;
+}
+
+    #base_pages ul {
+        padding: 0;
+        margin: 0;
+
+        color: #ffffff;
+        font-weight: 200;
+        line-height: 36px;
+        list-style-type: none;
+        letter-spacing: 1px;
+    }
+
+        #base_pages ul li {
+            margin-left: 5px;
+            margin-right: 5px;
+
+            display: inline-block;
+
+            background-color: #3A4D57;
+            border-radius: 3px;
+        }
+
+        #base_pages ul li.active {
+            background-color: #6A7A82;
+            font-weight: 400;
+        }
+
+        #base_pages ul li:first-child {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+
+        #base_pages ul li:last-child {
+            margin-left: 15px;
+        }
+
+            #base_pages ul li a {
+                padding: 0 15px;
+
+                display: inline-block;
+
+                color: #ffffff;
+                text-decoration: none;
+                letter-spacing: normal;
+            }
