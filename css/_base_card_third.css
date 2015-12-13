@@ -89,7 +89,7 @@
                 position: absolute;
                 top: -41px;
 
-                background: linear-gradient(to bottom, transparent 0%, white 60%, white 100%);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 60%, #ffffff 100%);
                 z-index: 10; /* Под #card_third .card .lower .break */
             }
             #card_third .card .lower .break {
