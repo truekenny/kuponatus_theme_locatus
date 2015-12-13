@@ -1,4 +1,3 @@
-#body,
-#header {
-    min-width: 1400px;
+@media (max-width: 1480px) {  /* 1450 + 30 (максимальный размер скролла) */
+
 }

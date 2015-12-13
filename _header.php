@@ -18,6 +18,6 @@
         Войти
     </a>
     <a class="city -right" href="#">
-        <button class="-green">Москва</button>
+        <button class="-green">Санкт-Петербург</button>
     </a>
 </div>

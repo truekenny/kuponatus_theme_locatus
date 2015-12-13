@@ -85,6 +85,7 @@
         padding-left: 26px;
 
         height: 35px;
+        max-width: 170px;
 
         background-image: url("../images/city.png");
         background-position: 10px center;
@@ -92,4 +93,8 @@
         border: 0;
         border-radius: 3px;
         line-height: 1;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
