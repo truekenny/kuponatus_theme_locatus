@@ -58,6 +58,5 @@
         <? require '_menu.php'; ?>
         <? require '_base.php'; ?>
     </div>
-    <? require '_map.php'; ?>
 </body>
 </html>

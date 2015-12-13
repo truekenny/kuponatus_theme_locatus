@@ -1,6 +1,6 @@
 @media (max-width: 1430px) { /* 1400 + 30 (максимальный размер скролла) */
     #header .search {
-        width: calc(100% - 715px);
+        width: calc(100% - 725px);
     }
 }
 
@@ -23,4 +23,37 @@
     #header .search {
         width: calc(100% - 350px);
     }
+
+    #map {
+        height: 500px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+        #map::after {
+            content: ' ';
+
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            background: linear-gradient(to bottom, transparent 0%, rgb(67, 87, 98) 90%, rgb(67, 87, 98) 100%);
+            z-index: 10;
+        }
+
+        #map::before {
+            content: ' ';
+
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            background: linear-gradient(to top, transparent 0%, rgb(67, 87, 98) 90%, rgb(67, 87, 98) 100%);
+            z-index: 10;
+        }
 }
