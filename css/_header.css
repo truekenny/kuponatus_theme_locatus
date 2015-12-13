@@ -3,6 +3,7 @@
     height: 67px;
     position: fixed;
     top: 0;
+    min-width: 700px;
 
     line-height: 67px;
     background-color: white;
@@ -42,9 +43,10 @@
     }
 
 #header .search {
-    padding-top: 10px;
+    border-top: 10px solid transparent;
 
     width: 700px;
+    position: relative;
 }
 
     #header .search > * {
@@ -54,18 +56,21 @@
     #header .search input {
         padding-left: 20px;
 
-        width: 657px;
+        width: 100%;
 
         background-color: #fcfcfc;
         border-left: 1px solid #E3E3E3;
         border-top: 1px solid #E3E3E3;
         border-bottom: 1px solid #E3E3E3;
-        border-right: 0;
+        border-right: 43px solid transparent;
         border-radius: 3px 0 0 3px;
     }
 
     #header .search button {
         width: 43px;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         border: 0;
         border-radius: 0 3px 3px 0;

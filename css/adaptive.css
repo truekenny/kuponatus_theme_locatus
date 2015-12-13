@@ -1,3 +1,26 @@
-@media (max-width: 1480px) {  /* 1450 + 30 (максимальный размер скролла) */
+@media (max-width: 1430px) { /* 1400 + 30 (максимальный размер скролла) */
+    #header .search {
+        width: calc(100% - 715px);
+    }
+}
 
+@media (max-width: 1030px) { /* 1000 + 30 (максимальный размер скролла) */
+    #menu {
+        display: none;
+    }
+
+    #map {
+        left: 700px
+    }
+}
+
+@media (max-width: 880px) { /* 850 + 30 (максимальный размер скролла) */
+    #header .city,
+    #header .coop {
+        display: none;
+    }
+
+    #header .search {
+        width: calc(100% - 350px);
+    }
 }
