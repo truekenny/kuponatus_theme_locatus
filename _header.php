@@ -8,7 +8,7 @@
 
     <form class="search -box">
         <input class="-box" placeholder="Найти">
-        <button class="-box -green" type="submit"><img src="images/search.png" alt=""></button>
+        <button class="-box -green" type="submit"></button>
     </form>
 
     <a class="coop -right" href="#">

@@ -1,11 +1,20 @@
 <!DOCTYPE HTML>
 <?
-    require_once 'classes/HelperDeveloper.php';
+    require_once 'components/HelperDeveloper.php';
+    require_once 'components/MobileDetect.php';
 ?>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Locatus</title>
+
+    <? $detect = new MobileDetect; ?>
+
+    <? if ($detect->isTablet()): ?>
+        <meta name="viewport" content="width=700">
+    <? else: ?>
+        <meta name="viewport" content="width=470">
+    <? endif; ?>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
