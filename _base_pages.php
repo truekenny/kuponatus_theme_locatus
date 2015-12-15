@@ -2,7 +2,7 @@
     <ul>
         <!-- Пробельные символы между <li> добавят лишний отступ -->
         <li><a href="#">Назад</a></li><?
-        foreach(range(1, 6) as $i):
+        foreach(range(1, 3) as $i):
             ?><li><a href="#"><?= $i ?></a></li><?
         endforeach;
         ?>...<?

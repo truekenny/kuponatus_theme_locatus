@@ -26,6 +26,10 @@
             color: #424242;
         }
 
+            .base-card-high .header h2 span {
+                font-weight: 400;
+            }
+
         .base-card-high .header p {
             margin: 9px 0 0;
 

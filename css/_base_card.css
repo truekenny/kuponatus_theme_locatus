@@ -1,4 +1,4 @@
-#card {
+.base-card {
     margin: 20px;
     padding: 20px 0 0;
 
@@ -7,18 +7,18 @@
     overflow: hidden;
 }
 
-    #card .header {
+    .base-card .header {
         min-height: 174px;
         padding: 0 20px;
     }
 
-        #card .header img {
+        .base-card .header img {
             max-width: 196px;
 
             border-radius: 3px;
         }
 
-        #card .header h2 {
+        .base-card .header h2 {
             margin: 0 0 14px;
 
             font-size: 25px;
@@ -26,14 +26,14 @@
             color: #424242;
         }
 
-        #card .header a {
+        .base-card .header a {
 
             font-size: 16px;
             font-weight: 200;
             color: #5a5a5a;
         }
 
-        #card .header p {
+        .base-card .header p {
             margin: 14px 0 0;
             padding-left: 26px;
 
@@ -46,7 +46,7 @@
             background-repeat: no-repeat;
         }
 
-    #card .line {
+    .base-card .line {
         padding: 8px 20px;
 
         border-top: 1px solid #EDEDED;
@@ -55,32 +55,32 @@
         line-height: 35px;
     }
 
-    #card .line:hover {
+    .base-card .line:hover {
         background-color: #F7F7F7;
     }
 
-        #card .line > div {
+        .base-card .line > div {
             float: left;
         }
 
-        #card .line .name,
-        #card .line .more {
+        .base-card .line .name,
+        .base-card .line .more {
             width: 150px;
         }
 
-            #card .line .more a {
+            .base-card .line .more a {
                 text-decoration-style: dashed;
             }
 
-        #card .line .price {
+        .base-card .line .price {
             width: 320px;
         }
 
-            #card .line .price span:first-child {
+            .base-card .line .price span:first-child {
                 font-weight: bold;
             }
 
-            #card .line .price span.button {
+            .base-card .line .price span.button {
                 padding: 0 6px;
                 margin-left: 30px;
 
@@ -92,7 +92,7 @@
                 cursor: pointer;
             }
 
-            #card .line .price span.button:hover {
+            .base-card .line .price span.button:hover {
                 background-color: #52d048;
                 border-color: transparent;
                 color: #ffffff;

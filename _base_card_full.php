@@ -1,4 +1,4 @@
-<div id="card_full">
+<div class="base-card-full">
     <div class="image -box" style="background-image: url('images/_DELME_card_full.jpg');">
         <div class="super -super -center">
             Суперцена

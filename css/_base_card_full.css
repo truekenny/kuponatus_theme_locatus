@@ -1,4 +1,4 @@
-#card_full {
+.base-card-full {
     margin: 20px;
     padding: 20px 0 20px 20px;
 
@@ -7,11 +7,11 @@
     overflow: hidden;
 }
 
-    #card_full > div {
+    .base-card-full > div {
         float: left;
     }
 
-    #card_full .image {
+    .base-card-full .image {
         height: 193px;
         width: 196px;
 
@@ -21,18 +21,18 @@
         border-radius: 3px;
     }
 
-        #card_full .image .super {
+        .base-card-full .image .super {
             top: -1px;
             left: -1px;
         }
 
-    #card_full .text {
+    .base-card-full .text {
         padding-left: 20px;
 
         width: 444px;
     }
 
-        #card_full .text h2 {
+        .base-card-full .text h2 {
             margin-top: 7px;
             margin-bottom: 15px;
 
@@ -40,7 +40,7 @@
             font-weight: 200;
         }
 
-        #card_full .text > p {
+        .base-card-full .text > p {
             margin-top: 15px;
             margin-bottom: 20px;
             padding-bottom: 35px;
@@ -51,42 +51,42 @@
             line-height: 1.3;
         }
 
-    #card_full .text .lower {
+    .base-card-full .text .lower {
         overflow: hidden;
     }
 
-        #card_full .text .lower > div {
+        .base-card-full .text .lower > div {
             float: left;
         }
 
-            #card_full .text .lower .price {
+            .base-card-full .text .lower .price {
                 width: 196px;
             }
 
-                #card_full .text .lower .price .red {
+                .base-card-full .text .lower .price .red {
                     color: red;
                     font-size: 15px;
                     font-weight: 200;
                     text-decoration: line-through;
                 }
 
-                #card_full .text .lower .price .bold {
+                .base-card-full .text .lower .price .bold {
                     padding-left: 5px;
 
                     font-size: 19px;
                 }
 
-                #card_full .text .lower .price p {
+                .base-card-full .text .lower .price p {
                     margin: 5px 0 0;
 
                     color: #7f7f7f;
                 }
 
-            #card_full .text .lower .buttons {
+            .base-card-full .text .lower .buttons {
                 width: 216px;
             }
 
-                #card_full .text .lower .buttons > a {
+                .base-card-full .text .lower .buttons > a {
                     margin-left: 10px;
                     padding: 0 6px;
 

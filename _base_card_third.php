@@ -1,3 +1,4 @@
+<!-- Отображение base-card-third карточек не предусмотрено на телефоне -->
 <div class="base-card-third">
 
     <? foreach(range(1, 3)as $i): ?>

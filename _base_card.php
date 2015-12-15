@@ -1,4 +1,4 @@
-<div id="card">
+<div class="base-card">
     <div class="header">
         <img src="images/_DELME_card_1.jpg" alt="" align="right">
         <h2>Бильярдный клуб "Империя"</h2>
