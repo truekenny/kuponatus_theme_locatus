@@ -88,6 +88,7 @@
 
         .base-card-high .line .more {
             width: 40px;
+            white-space: nowrap;
         }
 
             .base-card-high .line .more a {

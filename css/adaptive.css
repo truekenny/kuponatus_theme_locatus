@@ -57,7 +57,7 @@
             height: 5px;
             position: absolute;
             left: 0;
-            top: 0;
+            top: -1px;
 
             background: linear-gradient(to top, rgba(67, 87, 98, 0) 0%, rgb(67, 87, 98) 90%, rgb(67, 87, 98) 100%);
             z-index: 10;
