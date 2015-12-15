@@ -1,5 +1,5 @@
 <div class="base-filter">
-    <div class="block active">
+    <div class="block margin active">
         Активные фильтры <a class="dashed" href="#">Сброс</a>
     </div>
     <div class="block">
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div class="block">
+    <div class="block margin">
         <h4>Выберите класс автомобиля</h4>
         <div class="row no-margin-bottom">
             <? foreach(range(1, 6) as $i): ?>

@@ -79,5 +79,46 @@
         width: 470px;
     }
 
+        .base-filter .block {
+            padding-bottom: 0;
+        }
+
+            .base-filter .block.margin {
+                padding-bottom: 20px;
+            }
+
+        .base-filter .row div {
+            width: 185px;
+        }
+
+        .base-filter .row div.double {
+            width: 390px;
+        }
+
+        .base-filter input.mini {
+            width: 160px;
+        }
+
+        .base-filter .row div.double,
+        .base-filter .row div.margin {
+            margin-bottom: 20px;
+        }
+
+        .base-filter .row div.double.margin {
+            margin-left: 0;
+        }
+
+        .base-filter .block .image.double {
+            width: 185px;
+        }
+
+            .base-filter .block .image {
+                margin-left: 0 !important;
+            }
+
+            .base-filter .block .image:nth-child(2n) {
+                margin-left: 20px !important;
+            }
+
 }
 

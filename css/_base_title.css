@@ -12,6 +12,7 @@
         background-color: rgba(67, 87, 98, 0.7);
         border-bottom: 1px solid #3D484E;
         line-height: 67px;
+        overflow: hidden;
     }
 
         .base-title .bread a {
@@ -19,7 +20,7 @@
 
             border: 1px solid #636B71;
             border-radius: 3px;
-            color: white;
+            color: #ffffff !important;
             text-decoration: none;
         }
 
