@@ -1,4 +1,4 @@
-#yellow {
+.base-yellow {
     margin: 20px;
     padding: 30px;
 
@@ -9,22 +9,22 @@
     font-weight: 200;
 }
 
-    #yellow > * {
+    .base-yellow > * {
         margin: 0 auto;
 
         width: 400px;
         display: block;
     }
 
-    #yellow p {
+    .base-yellow p {
         color: #ffffff;
     }
 
-        #yellow p span {
+        .base-yellow p span {
             font-weight: 400;
         }
 
-    #yellow a {
+    .base-yellow a {
         margin-top: 17px;
 
         height: 62px;

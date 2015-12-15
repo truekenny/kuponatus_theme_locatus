@@ -1,18 +1,18 @@
-#card_half {
+.base-card-half {
     margin: 20px;
 
     overflow: hidden;
 }
 
-    #card_half > div {
+    .base-card-half > div {
         float: left;
     }
 
-    #card_half > div:nth-child(2n) {
+    .base-card-half > div:nth-child(2n) {
         margin-left: 20px;
     }
 
-    #card_half .card {
+    .base-card-half .card {
         width: 320px;
         height: 638px;
         position: relative;
@@ -22,7 +22,7 @@
         overflow: hidden;
     }
 
-        #card_half .card .image {
+        .base-card-half .card .image {
             height: 321px;
 
             border-bottom: 1px solid #EDEDED;
@@ -30,7 +30,7 @@
             background-position: center center;
         }
 
-        #card_half .card .text {
+        .base-card-half .card .text {
             padding: 0 20px;
 
             height: 215px;
@@ -39,14 +39,14 @@
             overflow: hidden;
         }
 
-            #card_half .card .text h2 {
+            .base-card-half .card .text h2 {
                 margin-bottom: 14px;
 
                 font-size: 25px;
                 font-weight: 200;
             }
 
-            #card_half .card .text p {
+            .base-card-half .card .text p {
                 margin-top: 14px;
 
                 color: #7f7f7f;
@@ -54,7 +54,7 @@
                 line-height: 1.3;
             }
 
-        #card_half .card .lower {
+        .base-card-half .card .lower {
             margin-top: -20px;
             padding-top: 0;
             padding-bottom: 8px;
@@ -67,11 +67,11 @@
             border-top: 1px solid #EDEDED;
         }
 
-            #card_half .card .lower:hover {
+            .base-card-half .card .lower:hover {
                 background-color: #F7F7F7;
             }
 
-            #card_half .card .lower:after {
+            .base-card-half .card .lower:after {
                 content: ' ';
 
                 width: 100%;
@@ -81,9 +81,9 @@
                 top: -41px;
 
                 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 60%, #ffffff 100%);
-                z-index: 10; /* Под #card_half .card .lower .break */
+                z-index: 10; /* Под .base-card-half .card .lower .break */
             }
-            #card_half .card .lower .break {
+            .base-card-half .card .lower .break {
                 margin: 0 auto -2px;
 
                 width: 50px;
@@ -95,21 +95,21 @@
                 border: 1px solid #EDEDED;
                 border-radius: 3px;
                 cursor: pointer;
-                z-index: 20; /* Над #card_half .card .lower:after */
+                z-index: 20; /* Над .base-card-half .card .lower:after */
             }
 
-            #card_half .card .lower .cost {
+            .base-card-half .card .lower .cost {
                 padding-left: 20px;
 
                 font-size: 19px;
             }
 
-            #card_half .card .lower .buttons {
+            .base-card-half .card .lower .buttons {
                 margin-top: 6px;
                 margin-left: 20px;
             }
 
-                #card_half .card .lower .buttons > a {
+                .base-card-half .card .lower .buttons > a {
                     margin-right: 10px;
                     margin-bottom: 10px;
                     padding: 0 6px;

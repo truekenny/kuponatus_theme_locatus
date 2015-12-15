@@ -4,6 +4,7 @@
     }
 }
 
+/* Сокращенный вид */
 @media (max-width: 1030px) { /* 1000 + 30 (максимальный размер скролла) */
     #menu {
         display: none;
@@ -14,6 +15,7 @@
     }
 }
 
+/* Планшет */
 @media (max-width: 880px) { /* 850 + 30 (максимальный размер скролла) */
     #header {
         width: 700px;
@@ -61,3 +63,21 @@
             z-index: 10;
         }
 }
+
+/* Телефон */
+@media (max-width: 699px) { /* Размер меньше чем планшет на 1 пиксель */
+    #header {
+        width: 470px;
+        min-width: 470px;
+    }
+
+        #header .search {
+            visibility: hidden;
+        }
+
+    #base {
+        width: 470px;
+    }
+
+}
+

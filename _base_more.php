@@ -1,4 +1,4 @@
-<div id="base_more" class="-center">
+<div class="base-more -center">
     <a href="#">
         <span>Показать еще</span>
     </a>

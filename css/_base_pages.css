@@ -1,8 +1,8 @@
-#base_pages {
+.base-pages {
     margin: 20px 20px 50px;
 }
 
-    #base_pages ul {
+    .base-pages ul {
         padding: 0;
         margin: 0;
 
@@ -13,7 +13,7 @@
         letter-spacing: 1px;
     }
 
-        #base_pages ul li {
+        .base-pages ul li {
             margin-left: 5px;
             margin-right: 5px;
 
@@ -23,26 +23,26 @@
             border-radius: 3px;
         }
 
-        #base_pages ul li.active {
+        .base-pages ul li.active {
             background-color: #6A7A82;
             font-weight: 400;
         }
 
-        #base_pages ul li:first-child {
+        .base-pages ul li:first-child {
             margin-left: 0;
             margin-right: 15px;
         }
 
-        #base_pages ul li:last-child {
+        .base-pages ul li:last-child {
             margin-left: 15px;
         }
 
-            #base_pages ul li a {
+            .base-pages ul li a {
                 padding: 0 15px;
 
                 display: inline-block;
 
-                color: #ffffff;
+                color: #ffffff !important;
                 text-decoration: none;
                 letter-spacing: normal;
             }

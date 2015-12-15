@@ -1,22 +1,22 @@
-#card_third {
+.base-card-third {
     margin: 20px;
 
     overflow: hidden;
 }
 
-    #card_third > div {
+    .base-card-third > div {
         float: left;
     }
 
-    #card_third > div:nth-child(3n) {
+    .base-card-third > div:nth-child(3n) {
         margin-left: 20px;
     }
 
-    #card_third > div:nth-child(3n + 2) {
+    .base-card-third > div:nth-child(3n + 2) {
         margin-left: 20px; /* 620 - размер блока, куда надо поместить 3 карточки, не делится 3 без остатка */
     }
 
-    #card_third .card {
+    .base-card-third .card {
         width: 206px;
         height: 528px;
         position: relative;
@@ -26,7 +26,7 @@
         overflow: hidden;
     }
 
-        #card_third .card .image {
+        .base-card-third .card .image {
             height: 206px;
 
             border-bottom: 1px solid #EDEDED;
@@ -34,12 +34,12 @@
             background-position: center center;
         }
 
-            #card_third .card .image .super {
+            .base-card-third .card .image .super {
                 top: 20px;
                 left: 20px;
             }
 
-        #card_third .card .text {
+        .base-card-third .card .text {
             padding: 0 20px;
 
             height: 215px;
@@ -48,14 +48,14 @@
             overflow: hidden;
         }
 
-            #card_third .card .text h2 {
+            .base-card-third .card .text h2 {
                 margin-bottom: 14px;
 
                 font-size: 25px;
                 font-weight: 200;
             }
 
-            #card_third .card .text p {
+            .base-card-third .card .text p {
                 margin-top: 14px;
 
                 color: #7f7f7f;
@@ -63,7 +63,7 @@
                 line-height: 1.3;
             }
 
-        #card_third .card .lower {
+        .base-card-third .card .lower {
             margin-top: -20px;
             padding-top: 0;
             padding-bottom: 8px;
@@ -76,11 +76,11 @@
             border-top: 1px solid #EDEDED;
         }
 
-            #card_third .card .lower:hover {
+            .base-card-third .card .lower:hover {
                 background-color: #F7F7F7;
             }
 
-            #card_third .card .lower:after {
+            .base-card-third .card .lower:after {
                 content: ' ';
 
                 width: 100%;
@@ -90,9 +90,9 @@
                 top: -41px;
 
                 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 60%, #ffffff 100%);
-                z-index: 10; /* Под #card_third .card .lower .break */
+                z-index: 10; /* Под .base-card-third .card .lower .break */
             }
-            #card_third .card .lower .break {
+            .base-card-third .card .lower .break {
                 margin: 0 auto -2px;
 
                 width: 50px;
@@ -104,10 +104,10 @@
                 border: 1px solid #EDEDED;
                 border-radius: 3px;
                 cursor: pointer;
-                z-index: 20; /* Над #card_third .card .lower:after */
+                z-index: 20; /* Над .base-card-third .card .lower:after */
             }
 
-            #card_third .card .lower .red {
+            .base-card-third .card .lower .red {
                 margin-left: 20px;
                 margin-bottom: 3px;
 
@@ -117,24 +117,24 @@
                 text-decoration: line-through;
             }
 
-            #card_third .card .lower .cost {
+            .base-card-third .card .lower .cost {
                 padding-left: 20px;
 
                 font-size: 19px;
             }
 
-            #card_third .card .lower > p {
+            .base-card-third .card .lower > p {
                 margin: 5px 0 0 20px;
 
                 color: #7f7f7f;
             }
 
-            #card_third .card .lower .buttons {
+            .base-card-third .card .lower .buttons {
                 margin-top: 15px;
                 margin-left: 20px;
             }
 
-                #card_third .card .lower .buttons > a {
+                .base-card-third .card .lower .buttons > a {
                     margin-right: 10px;
                     margin-bottom: 10px;
                     padding: 0 6px;

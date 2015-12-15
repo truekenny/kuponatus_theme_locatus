@@ -1,4 +1,4 @@
-#base_more {
+.base-more {
     margin: 20px;
 
     height: 57px;
@@ -7,7 +7,7 @@
     border-radius: 3px;
 }
 
-    #base_more a {
+    .base-more a {
         margin: 0 auto;
         padding-left: 25px;
 
@@ -23,6 +23,6 @@
         text-decoration-style: dashed;
     }
 
-        #base_more a span {
+        .base-more a span {
             color: #ffffff;
         }

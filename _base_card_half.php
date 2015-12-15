@@ -1,4 +1,4 @@
-<div id="card_half">
+<div class="base-card-half">
 
     <? foreach(range(1, 2)as $i): ?>
     <div class="card">

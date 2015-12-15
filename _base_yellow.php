@@ -1,4 +1,4 @@
-<div id="yellow" class="-box">
+<div class="base-yellow -box">
     <p class="-center">
         <span>Сомневайтесь в выборе?</span> Локатус поможет  Вам подобрать салон красоты
     </p>

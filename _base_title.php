@@ -1,4 +1,4 @@
-<div id="base-title">
+<div class="base-title">
     <div class="bread -box">
         <a class="-small" href="#">Главная</a>
         <img src="images/bread.png" alt=""> <!-- Не получается сделать эту картинку как a:before, потому что она отображается внутри border -->

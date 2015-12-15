@@ -1,4 +1,4 @@
-#base_footer {
+.base-footer {
     margin: 20px 0 0;
     padding: 40px 20px;
 
@@ -7,16 +7,16 @@
     font-weight: 200;
 }
 
-    #base_footer a {
+    .base-footer a {
         margin-left: 20px;
 
         color: #6A7A82;
     }
 
-    #base_footer a:first-child {
+    .base-footer a:first-child {
         margin-left: 30px;
     }
 
-        #base_footer a span {
+        .base-footer a span {
             color: #ffffff;
         }

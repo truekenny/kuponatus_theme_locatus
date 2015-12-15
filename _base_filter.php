@@ -1,4 +1,4 @@
-<div id="base-filter" xmlns="http://www.w3.org/1999/html">
+<div class="base-filter">
     <div class="block active">
         Активные фильтры <a class="dashed" href="#">Сброс</a>
     </div>

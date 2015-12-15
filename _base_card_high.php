@@ -1,4 +1,4 @@
-<div id="card_high">
+<div class="base-card-high">
     <div class="header">
         <img src="images/_DELME_card_2.jpg" alt="" align="right">
         <h2>Эконом класс от <span>149 руб.</span></h2>

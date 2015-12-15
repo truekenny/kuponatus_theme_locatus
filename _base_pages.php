@@ -1,4 +1,4 @@
-<div id="base_pages">
+<div class="base-pages">
     <ul>
         <!-- Пробельные символы между <li> добавят лишний отступ -->
         <li><a href="#">Назад</a></li><?

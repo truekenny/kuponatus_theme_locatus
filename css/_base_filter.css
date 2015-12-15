@@ -1,4 +1,4 @@
-#base-filter {
+.base-filter {
     margin: 20px;
 
     background-color: white;
@@ -6,13 +6,13 @@
     overflow: hidden;
 }
 
-    #base-filter .block {
+    .base-filter .block {
         padding: 25px 20px;
 
         border-top: 1px solid #ECECEC;
     }
 
-    #base-filter .active {
+    .base-filter .active {
         background-color: #F7F7F7;
         border: 0;
         cursor: pointer;
@@ -20,19 +20,19 @@
         font-weight: bold;
     }
 
-        #base-filter .active a.dashed {
+        .base-filter .active a.dashed {
             margin-left: 20px;
         }
 
-        #base-filter .active a.dashed,
-        #base-filter .block .dashed a {
+        .base-filter .active a.dashed,
+        .base-filter .block .dashed a {
             border-bottom: 1px dashed #9E9E9E;
             font-weight: 200;
             font-size: 15px;
             text-decoration: none;
         }
 
-    #base-filter .block h4 {
+    .base-filter .block h4 {
         margin: 0 0 20px;
 
         font-size: 12px;
@@ -46,12 +46,12 @@
         cursor: pointer;
     }
 
-    #base-filter .block h4.no-hide {
+    .base-filter .block h4.no-hide {
         background-image: none;
         cursor: default;
     }
 
-    #base-filter input.maxi {
+    .base-filter input.maxi {
         width: 100%;
 
         background-image: url("../images/clear.png");
@@ -59,40 +59,40 @@
         background-repeat: no-repeat;
     }
 
-    #base-filter input.mini {
+    .base-filter input.mini {
         width: 63px;
     }
 
-    #base-filter .row {
+    .base-filter .row {
         /*padding: 3px;*/
 
         overflow: hidden;
     }
 
-    #base-filter .row > div {
+    .base-filter .row > div {
         width: 88px;
         float: left;
     }
 
-    #base-filter .row div.margin {
+    .base-filter .row div.margin {
         margin-left: 20px;
     }
 
-    #base-filter .row div.double {
+    .base-filter .row div.double {
         width: 192px;
     }
 
-        #base-filter .row div.double select{
+        .base-filter .row div.double select{
             width: 100%;
         }
 
-    #base-filter .list {
+    .base-filter .list {
         margin-bottom: -10px !important;
 
         overflow: hidden;
     }
 
-        #base-filter .list > a {
+        .base-filter .list > a {
             padding: 6px;
             margin: 0 10px 10px 0;
 
@@ -104,40 +104,40 @@
             text-decoration: none;
         }
 
-    #base-filter .list.of-buttons > a {
+    .base-filter .list.of-buttons > a {
         border: 1px solid #E3E3E3;
     }
 
-        #base-filter .list.of-buttons > a.checked {
+        .base-filter .list.of-buttons > a.checked {
             border-color: transparent;
             box-shadow: inset 0 1px 1px #4AC042;
         }
 
 
-    #base-filter .list.of-texts > a {
+    .base-filter .list.of-texts > a {
         padding: 0;
         margin: 0 0 10px 0;
 
         width: 50%;
     }
 
-        #base-filter .list.of-texts > a.checked {
+        .base-filter .list.of-texts > a.checked {
             font-weight: bold;
         }
 
-            #base-filter .list.of-texts.line > a {
+            .base-filter .list.of-texts.line > a {
                 width: 100%;
             }
 
-                #base-filter .list.of-texts.line > a span {
+                .base-filter .list.of-texts.line > a span {
                     color: #9E9E9E;
                 }
 
-                    #base-filter .list.of-texts > a.checked span {
+                    .base-filter .list.of-texts > a.checked span {
                         font-weight: normal;
                     }
 
-    #base-filter .block .wide-line {
+    .base-filter .block .wide-line {
         margin-bottom: 16px;
 
         overflow: hidden;
@@ -148,7 +148,7 @@
         background-repeat: repeat-x;
     }
 
-        #base-filter .block .wide-line a {
+        .base-filter .block .wide-line a {
             padding-right: 5px;
 
             float: left;
@@ -158,17 +158,17 @@
             background-color: #ffffff;
         }
 
-        #base-filter .block .wide-line a + a {
+        .base-filter .block .wide-line a + a {
             padding-right: 0;
             padding-left: 5px;
             text-decoration: none;
         }
 
-    #base-filter .block .no-margin-bottom {
+    .base-filter .block .no-margin-bottom {
         margin-bottom: -20px;
     }
 
-    #base-filter .block .image {
+    .base-filter .block .image {
         margin-bottom: 20px;
 
         height: 124px;
@@ -183,12 +183,12 @@
         background-size: cover;
     }
 
-        #base-filter .block .image:nth-child(3n),
-        #base-filter .block .image:nth-child(3n + 2) {
+        .base-filter .block .image:nth-child(3n),
+        .base-filter .block .image:nth-child(3n + 2) {
             margin-left: 20px;
         }
 
-            #base-filter .block .image p {
+            .base-filter .block .image p {
                 margin-top: 69px;
                 margin-bottom: 0;
 
@@ -198,7 +198,7 @@
                 text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black;
             }
 
-            #base-filter .block .image p + p {
+            .base-filter .block .image p + p {
                 margin-top: 7px;
                 font-weight: normal;
             }

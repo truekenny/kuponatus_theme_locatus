@@ -1,4 +1,4 @@
-#card_high {
+.base-card-high {
     margin: 20px;
     padding: 20px 0 0;
 
@@ -7,18 +7,18 @@
     overflow: hidden;
 }
 
-    #card_high .header {
+    .base-card-high .header {
         min-height: 174px;
         padding: 0 20px;
     }
 
-        #card_high .header img {
+        .base-card-high .header img {
             max-width: 196px;
 
             border-radius: 3px;
         }
 
-        #card_high .header h2 {
+        .base-card-high .header h2 {
             margin: 0;
 
             font-size: 25px;
@@ -26,7 +26,7 @@
             color: #424242;
         }
 
-        #card_high .header p {
+        .base-card-high .header p {
             margin: 9px 0 0;
 
             font-size: 16px;
@@ -34,7 +34,7 @@
             color: #7F7F7F;
         }
 
-    #card_high .line {
+    .base-card-high .line {
         padding: 8px 20px;
 
         border-top: 1px solid #EDEDED;
@@ -43,15 +43,15 @@
         line-height: 35px;
     }
 
-    #card_high .line:hover {
+    .base-card-high .line:hover {
         background-color: #F7F7F7;
     }
 
-        #card_high .line > div {
+        .base-card-high .line > div {
             float: left;
         }
 
-        #card_high .line .info {
+        .base-card-high .line .info {
             width: 260px;
 
             font-size: 15px;
@@ -59,46 +59,46 @@
             line-height: 22px;
         }
 
-            #card_high .line .info p {
+            .base-card-high .line .info p {
                 margin: 0;
 
                 color: #424242;
             }
 
-            #card_high .line .info .name {
+            .base-card-high .line .info .name {
                 margin-top: 7px;
             }
 
-            #card_high .line .info .link {
+            .base-card-high .line .info .link {
             }
 
-            #card_high .line .info .phone {
+            .base-card-high .line .info .phone {
                 margin-top: 5px;
             }
 
-            #card_high .line .info .address {
+            .base-card-high .line .info .address {
                 color: #7F7F7F;
             }
 
 
 
-        #card_high .line .more {
+        .base-card-high .line .more {
             width: 40px;
         }
 
-            #card_high .line .more a {
+            .base-card-high .line .more a {
                 text-decoration-style: dashed;
             }
 
-        #card_high .line .price {
+        .base-card-high .line .price {
             width: 320px;
         }
 
-            #card_high .line .price span:first-child {
+            .base-card-high .line .price span:first-child {
                 font-weight: bold;
             }
 
-            #card_high .line .price span.button {
+            .base-card-high .line .price span.button {
                 padding: 0 6px;
                 margin-left: 30px;
 
@@ -110,7 +110,7 @@
                 cursor: pointer;
             }
 
-            #card_high .line .price span.button:hover {
+            .base-card-high .line .price span.button:hover {
                 background-color: #52d048;
                 border-color: transparent;
                 color: #ffffff;

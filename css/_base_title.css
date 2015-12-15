@@ -1,10 +1,10 @@
-#base-title {
+.base-title {
     background-image: url("../images/_DELME_title.png");
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
-    #base-title .bread {
+    .base-title .bread {
         padding-left: 40px;
 
         height: 67px;
@@ -14,7 +14,7 @@
         line-height: 67px;
     }
 
-        #base-title .bread a {
+        .base-title .bread a {
             padding: 4px 6px;
 
             border: 1px solid #636B71;
@@ -23,21 +23,21 @@
             text-decoration: none;
         }
 
-            #base-title .bread a + a {
+            .base-title .bread a + a {
                 margin-left: 40px;
             }
 
-    #base-title .pure {
+    .base-title .pure {
         height: 244px;
     }
 
-    #base-title .text {
+    .base-title .text {
         padding: 30px 40px 20px;
 
         background: linear-gradient(to bottom, rgba(67, 87, 98, 0.7) 0%, rgb(67, 87, 98) 160px, rgb(67, 87, 98) 100%);
     }
 
-        #base-title .text h1 {
+        .base-title .text h1 {
             margin: 0;
 
             color: #ffffff;
@@ -47,7 +47,7 @@
             letter-spacing: 1px;
         }
 
-        #base-title .text p {
+        .base-title .text p {
             margin-bottom: 0;
 
             color: white;
