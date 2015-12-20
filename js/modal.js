@@ -18,10 +18,18 @@ Locatus.Modal = (function ($) {
 
     /**
      * Вычисляет выравнивание модального окна
-     * @param _class
+     * @param element
      */
-    function marginModal(_class) {
-        var _window = $('.' + _class).find('.window');
+    function marginModal(element) {
+        var _window;
+
+        if(typeof element == 'string') {
+            _window = $('.' + element).find('.window');
+        }
+        else {
+            _window = $(element).find('.window');
+        }
+
         var height_Window = _window.height();
         var heightWindow = $(window).height();
 
@@ -58,6 +66,13 @@ Locatus.Modal = (function ($) {
 
         $(window).resize(function () {
             marginModal('modal.show');
+        });
+
+        $('.modal .window .list .header').click(function () {
+            $(this).toggleClass('show');
+            marginModal($(this).parents('.modal'));
+
+
         });
     }
 

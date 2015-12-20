@@ -1,21 +1,21 @@
-.modal .window .header {
+.modal .window > .header {
     padding: 40px 20px 30px 30px;
 }
 
-    .modal .window .header img {
+    .modal .window > .header img {
         width: 196px;
 
         border-radius: 3px;
     }
 
-    .modal .window .header h1 {
+    .modal .window > .header h1 {
         margin: 0 0 20px;
 
         font-size: 30px;
         font-weight: 200;
     }
 
-    .modal .window .header p {
+    .modal .window > .header p {
         padding-left: 22px;
 
         background-position: left center;
@@ -24,19 +24,93 @@
         font-weight: 100;
     }
 
-        .modal .window .header p.link {
+        .modal .window > .header p.link {
             background-image: url("../images/link.png");
         }
 
-        .modal .window .header p.address {
+        .modal .window > .header p.address {
             background-image: url("../images/card.png");
         }
 
-        .modal .window .header p.time {
+        .modal .window > .header p.time {
             background-image: url("../images/time.png");
         }
 
-        .modal .window .header p.phone {
+        .modal .window > .header p.phone {
             background-image: url("../images/phone.png");
         }
+
+.modal .window .list .header {
+    padding: 0 30px;
+
+    height: 56px;
+
+    border-top: 1px solid #EDEDED;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 56px;
+    background-image: url("../images/expand.png");
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+}
+
+.modal .window .list .header.show {
+    background-image: url("../images/hide.png");
+}
+
+
+    .modal .window .list .header + .line {
+        background: linear-gradient(to bottom, #cccccc 0%, #F7F7F7 3px);
+    }
+
+.modal .window .list .line {
+    background-color: #F7F7F7;
+    overflow: hidden;
+}
+
+    .modal .window .list .header ~ .line {
+        display: none;
+    }
+
+        .modal .window .list .header.show ~ .line {
+            display: block;
+        }
+
+    .modal .window .list .line > * {
+        float: left;
+        height: 56px;
+
+        border-top: 1px solid #EDEDED;
+        line-height: 56px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+        .modal .window .list .line .name {
+            padding-left: 30px;
+
+            width: 390px;
+        }
+
+        .modal .window .list .line .price {
+            padding-left: 10px;
+
+            width: 120px;
+
+            font-weight: bold;
+        }
+
+        .modal .window .list .line .buttons {
+            padding-left: 10px;
+
+            width: 150px;
+        }
+
+            .modal .window .list .line .buttons a {
+                padding: 10px;
+
+                border-radius: 3px;
+                text-decoration: none;
+            }
 
