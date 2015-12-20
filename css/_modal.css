@@ -32,11 +32,16 @@
     z-index: 100;
 }
 
+    .modal.show {
+        display: block;
+    }
+
     .modal form {
         margin: 100px auto;
 
         width: 660px;
         position: relative;
+        max-height: 100%;
 
         background-color: #ffffff;
         border-radius: 3px;
@@ -169,7 +174,7 @@
                     }
 
     .modal form .bottom {
-        padding: 20px 40px 40px;
+        padding: 20px 0 32px 40px;
 
         background-color: #F7F7F7;
         overflow: hidden;
@@ -196,6 +201,7 @@
 
             font-weight: bold;
             line-height: 26px;
+            white-space: nowrap;
         }
 
             .modal form .bottom span:first-line {

@@ -3,8 +3,8 @@ Locatus.Modal = (function ($) {
      * Показывает/скрывает модальное окно по классу
      * @param _class
      */
-    function handlerShowModal(_class) {
-        $('.' + _class).toggle();
+    function handlerToggleModal(_class) {
+        $('.' + _class).toggleClass('show');
         marginModal(_class);
     }
 
@@ -13,7 +13,7 @@ Locatus.Modal = (function ($) {
      * @param blockInside
      */
     function handlerHideModal(blockInside) {
-        $(blockInside).parents('.modal').hide();
+        $(blockInside).parents('.modal').removeClass('show');
     }
 
     /**
@@ -31,13 +31,30 @@ Locatus.Modal = (function ($) {
         form.css('margin-top', marginTop + 'px');
     }
 
+    /**
+     *  Скрыть все модальные окна
+     */
+    function hideAll() {
+        $('.modal').removeClass('show');
+    }
+
     function init() {
         $('#modal-demo span').click(function () {
-            handlerShowModal($(this).data('class'));
+            handlerToggleModal($(this).data('class'));
         });
 
         $('.modal .close').click(function () {
             handlerHideModal(this);
+        });
+
+        $(document).keydown(function (e) {
+            e.keyCode == 27 && hideAll();
+        });
+
+        $(".modal form").niceScroll({cursorcolor: '#dddddd'});
+
+        $(window).resize(function () {
+            marginModal('modal.show');
         });
     }
 

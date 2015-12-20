@@ -44,6 +44,7 @@
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nice-scroll.min.js"></script>
 
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
