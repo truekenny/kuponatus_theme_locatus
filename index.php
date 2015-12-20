@@ -39,6 +39,8 @@
     <link rel="stylesheet" type="text/css" href="css/_base_footer.css">
 
     <link rel="stylesheet" type="text/css" href="css/_modal.css">
+    <link rel="stylesheet" type="text/css" href="css/_modal_form.css">
+    <link rel="stylesheet" type="text/css" href="css/_modal_list.css">
 
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
@@ -74,5 +76,6 @@
     </div>
 
     <? require '_modal_form.php'; ?>
+    <? require '_modal_list.php'; ?>
 </body>
 </html>

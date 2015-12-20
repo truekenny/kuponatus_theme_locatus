@@ -21,14 +21,14 @@ Locatus.Modal = (function ($) {
      * @param _class
      */
     function marginModal(_class) {
-        var form = $('.' + _class).find('form');
-        var heightForm = form.height();
+        var _window = $('.' + _class).find('.window');
+        var height_Window = _window.height();
         var heightWindow = $(window).height();
 
-        var marginTop = parseInt((heightWindow - heightForm) / 2);
+        var marginTop = parseInt((heightWindow - height_Window) / 2);
         marginTop = Math.max(marginTop, 0);
 
-        form.css('margin-top', marginTop + 'px');
+        _window.css('margin-top', marginTop + 'px');
     }
 
     /**
@@ -51,7 +51,7 @@ Locatus.Modal = (function ($) {
             e.keyCode == 27 && hideAll();
         });
 
-        $(".modal form").niceScroll({cursorcolor: '#dddddd'});
+        $(".modal .window").niceScroll({cursorcolor: '#dddddd'});
 
         $(window).resize(function () {
             marginModal('modal.show');

@@ -1,11 +1,12 @@
 <div id="modal-demo">
-    Модальное окно<br>
-    <span data-class="js-modal-form">Форма</span>
+    Модальное окно
+    <br><span data-class="js-modal-form">Форма</span>
+    <br><span data-class="js-modal-list">Список</span>
 </div>
 
 <!-- Отображение modal окон не предусмотрено на телефоне -->
 <div class="modal js-modal-form">
-    <form action="#">
+    <form class="window" action="#">
         <div class="close" title="Закрыть клавишей ESC"></div>
         <div class="top">
             <h1>Выбор района</h1>
