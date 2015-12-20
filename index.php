@@ -76,6 +76,7 @@
     </div>
 
     <? require '_modal_form.php'; ?>
-    <? require '_modal_list.php'; ?>
+    <? require '_modal_list.php'; // Шапка (.header-lines) ?>
+    <? require '_modal_list_2.php'; // Другая шапка (.header-text) ?>
 </body>
 </html>

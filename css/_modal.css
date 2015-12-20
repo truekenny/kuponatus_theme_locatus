@@ -9,7 +9,8 @@
 
     background-color: #ffffff;
     font-weight: 100;
-    z-index: 10000;
+    line-height: 1.7;
+    z-index: 99;
 }
 
     #modal-demo span {

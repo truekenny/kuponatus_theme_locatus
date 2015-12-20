@@ -1,7 +1,8 @@
 <div id="modal-demo">
-    Модальное окно
+    Примеры модальных окн
     <br><span data-class="js-modal-form">Форма</span>
     <br><span data-class="js-modal-list">Список</span>
+    <br><span data-class="js-modal-list-2">Список (2)</span>
 </div>
 
 <!-- Отображение modal окон не предусмотрено на телефоне -->
