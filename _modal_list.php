@@ -1,5 +1,5 @@
 <!-- Отображение modal окон не предусмотрено на телефоне -->
-<div class="modal show js-modal-list">
+<div class="modal js-modal-list">
     <div class="window -effect8">
         <div class="close" title="Закрыть клавишей ESC"></div>
 
