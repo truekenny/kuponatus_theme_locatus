@@ -68,11 +68,19 @@ Locatus.Modal = (function ($) {
             marginModal('modal.show');
         });
 
+        // Распахнуть/свернуть одну линию предложений
         $('.modal .window .list .header').click(function () {
             $(this).toggleClass('show');
             marginModal($(this).parents('.modal'));
+        });
 
+        $('.modal').click(function (e) {
+            // Обрабытывать клик только непосредственно по .modal
+            if (e.target !== this) {
+                return;
+            }
 
+            hideAll();
         });
     }
 
