@@ -6,7 +6,7 @@
 
 <!-- Отображение modal окон не предусмотрено на телефоне -->
 <div class="modal js-modal-form">
-    <form class="window" action="#">
+    <form class="window -effect8" action="#">
         <div class="close" title="Закрыть клавишей ESC"></div>
         <div class="top">
             <h1>Выбор района</h1>

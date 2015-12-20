@@ -1,0 +1,42 @@
+.modal .window .header {
+    padding: 40px 20px 30px 30px;
+}
+
+    .modal .window .header img {
+        width: 196px;
+
+        border-radius: 3px;
+    }
+
+    .modal .window .header h1 {
+        margin: 0 0 20px;
+
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    .modal .window .header p {
+        padding-left: 22px;
+
+        background-position: left center;
+        background-repeat: no-repeat;
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+        .modal .window .header p.link {
+            background-image: url("../images/link.png");
+        }
+
+        .modal .window .header p.address {
+            background-image: url("../images/card.png");
+        }
+
+        .modal .window .header p.time {
+            background-image: url("../images/time.png");
+        }
+
+        .modal .window .header p.phone {
+            background-image: url("../images/phone.png");
+        }
+

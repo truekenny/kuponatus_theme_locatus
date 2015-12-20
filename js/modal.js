@@ -51,7 +51,10 @@ Locatus.Modal = (function ($) {
             e.keyCode == 27 && hideAll();
         });
 
-        $(".modal .window").niceScroll({cursorcolor: '#dddddd'});
+        $(".modal .window").niceScroll({
+            cursorcolor: '#dddddd',
+            horizrailenabled: false
+        });
 
         $(window).resize(function () {
             marginModal('modal.show');
