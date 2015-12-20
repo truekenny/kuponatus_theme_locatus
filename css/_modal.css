@@ -10,11 +10,12 @@
     background-color: #ffffff;
     font-weight: 100;
     line-height: 1.7;
+    white-space: nowrap;
     z-index: 99;
 }
 
     #modal-demo span {
-        border-bottom: 1px solid blue;
+        border-bottom: 1px dashed blue;
         cursor: pointer;
         font-weight: 200;
     }
