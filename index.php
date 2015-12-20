@@ -38,6 +38,8 @@
     <link rel="stylesheet" type="text/css" href="css/_base_pages.css">
     <link rel="stylesheet" type="text/css" href="css/_base_footer.css">
 
+    <link rel="stylesheet" type="text/css" href="css/_modal.css">
+
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
@@ -49,12 +51,14 @@
 
     <script type="text/javascript">var Locatus = {};</script>
     <script src="js/demo.js" type="text/javascript"></script>
+    <script src="js/modal.js" type="text/javascript"></script>
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="js/map.js" type="text/javascript"></script>
     <? endif; ?>
     <script type="text/javascript">
         $(document).ready(function () {
             Locatus.Demo.init();
+            Locatus.Modal.init();
             <? if(!HelperDeveloper::isDevelop()): ?>
                 Locatus.Map.init();
             <? endif; ?>
@@ -67,5 +71,7 @@
         <? require '_menu.php'; ?>
         <? require '_base.php'; ?>
     </div>
+
+    <? require '_modal_form.php'; ?>
 </body>
 </html>

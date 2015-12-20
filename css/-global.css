@@ -75,6 +75,10 @@
     font-size: 16px;
 }
 
+    .-input option {
+        padding: 10px 15px;
+    }
+
 select.-input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -96,4 +100,3 @@ select.-input {
     font-size: 14px;
     line-height: 26px;
 }
-
