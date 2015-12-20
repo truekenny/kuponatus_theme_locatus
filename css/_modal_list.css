@@ -203,12 +203,16 @@
             width: 120px;
 
             font-weight: bold;
+            text-align: right;
         }
 
         .modal .window .list .line .buttons {
             padding-left: 10px;
+            padding-right: 20px;
 
             width: 150px;
+
+            text-align: right;
         }
 
             .modal .window .list .line .buttons a {
