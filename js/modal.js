@@ -5,7 +5,12 @@ Locatus.Modal = (function ($) {
      */
     function handlerToggleModal(_class) {
         $('.' + _class).toggleClass('show');
+
         marginModal(_class);
+        // Для тех браузеров, которые не могут вычислить высоту сразу
+        setTimeout(function(){
+            marginModal(_class);
+        }, 100);
     }
 
     /**
@@ -37,6 +42,8 @@ Locatus.Modal = (function ($) {
         marginTop = Math.max(marginTop, 0);
 
         _window.css('margin-top', marginTop + 'px');
+
+        _window.css('max-height', heightWindow + 'px');
     }
 
     /**

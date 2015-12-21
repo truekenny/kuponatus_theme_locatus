@@ -134,7 +134,7 @@
         float: left;
     }
 
-    .modal .window .bottom button {
+    .modal .window .bottom a {
         margin-left: 170px;
         padding: 0 20px;
 
@@ -144,6 +144,8 @@
         box-shadow: 0 0 7px rgba(82, 208, 72, 0.7);
         font-size: 18px;
         font-weight: 200;
+        line-height: 53px;
+        text-decoration: none;
     }
 
     .modal .window .bottom span {

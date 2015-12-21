@@ -94,7 +94,7 @@
 
         </div>
         <div class="bottom">
-            <button class="-green -box" type="submit">Выбрать</button>
+            <a href="#" class="-green -box">Выбрать</a>
             <span>
                 Бильярдный клуб Империя<br>
                 Русский Бильярд 200 руб./час
