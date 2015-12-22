@@ -45,8 +45,11 @@
     <link rel="stylesheet" type="text/css" href="css/_map.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
+    <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.nice-scroll.min.js"></script>
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
 
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -55,6 +58,7 @@
     <script type="text/javascript">var Locatus = {};</script>
     <script src="js/demo.js" type="text/javascript"></script>
     <script src="js/modal.js" type="text/javascript"></script>
+    <script src="js/slider.js" type="text/javascript"></script>
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="js/map.js" type="text/javascript"></script>
     <? endif; ?>
@@ -62,6 +66,7 @@
         $(document).ready(function () {
             Locatus.Demo.init();
             Locatus.Modal.init();
+            Locatus.Slider.init();
             <? if(!HelperDeveloper::isDevelop()): ?>
                 Locatus.Map.init();
             <? endif; ?>

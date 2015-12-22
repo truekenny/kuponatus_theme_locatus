@@ -12,6 +12,16 @@
         border-top: 1px solid #ECECEC;
     }
 
+        .base-filter .block .range {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+
+            .base-filter .block .range .noUi-connect {
+                background-color: #52d048;
+            }
+
     .base-filter .active {
         background-color: #F7F7F7;
         border: 0;

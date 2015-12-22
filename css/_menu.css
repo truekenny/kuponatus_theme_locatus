@@ -57,6 +57,14 @@
         text-align: right;
     }
 
+    #menu .range {
+        margin: 20px 0;
+    }
+
+        #menu .range .noUi-connect {
+            background-color: #52d048;
+        }
+
     #menu .list {
         margin-bottom: -10px !important;
 

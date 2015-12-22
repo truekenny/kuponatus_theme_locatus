@@ -89,7 +89,11 @@
             padding-bottom: 20px;
         }
 
-    .base-filter .row div {
+        .base-filter .block .range {
+            padding-left: 20px !important;
+        }
+
+    .base-filter .row > div {
         width: 185px;
     }
 

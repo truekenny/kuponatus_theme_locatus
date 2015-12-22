@@ -14,8 +14,9 @@
     <div class="block">
         <h4>Цена, руб.</h4>
         <div class="row -small">
-            <div>от <input class="mini -box -input" type="text" value="100"></div>
-            <div class="margin -aright">до <input class="mini -box -input" type="text" value="500"></div>
+            <div>от <input class="mini js-slider-selected-min -box -input" type="text" value="100"></div>
+            <div class="margin -aright">до <input class="mini js-slider-selected-max -box -input" type="text" value="500"></div>
+
             <div class="double margin">
                 <select class="-box -input">
                     <option>Время работы</option>
@@ -29,6 +30,11 @@
                     <option>Кладбище</option>
                     <option>Камень встреч</option>
                 </select>
+            </div>
+
+            <div class="range double margin -box" >
+                <div class="js-slider" data-min="0" data-max="900">
+                </div>
             </div>
         </div>
     </div>
