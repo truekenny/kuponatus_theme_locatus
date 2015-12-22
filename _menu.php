@@ -12,7 +12,7 @@
             от <input class="mini js-slider-selected-min -input" type="text" value="100">
             до <input class="mini js-slider-selected-max -input" type="text" value="15000">
         </p>
-        <div class="range js-slider" data-min="0" data-max="20000">
+        <div class="range js-slider" data-min="0" data-max="20000" data-step="1000">
         </div>
         <p>
             <input class="-checkbox" type="checkbox" id="UniqueID"><label for="UniqueID">В наличии</label>

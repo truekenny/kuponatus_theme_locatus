@@ -33,7 +33,7 @@
             </div>
 
             <div class="range double margin -box" >
-                <div class="js-slider" data-min="0" data-max="900">
+                <div class="js-slider" data-min="0" data-max="900" data-step="100">
                 </div>
             </div>
         </div>
