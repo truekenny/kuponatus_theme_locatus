@@ -1,5 +1,5 @@
 <div id="modal-demo">
-    Примеры модальных окн
+    Примеры модальных окон
     <br><span data-class="js-modal-form">Форма</span>
     <br><span data-class="js-modal-list">Список</span>
     <br><span data-class="js-modal-list-2">Список (2)</span>
