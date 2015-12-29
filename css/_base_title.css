@@ -1,6 +1,7 @@
 .base-title {
-    background-image: url("../images/_DELME_title.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center
     overflow: hidden;
 }
 
