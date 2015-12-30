@@ -1,5 +1,5 @@
 <? foreach(range(1, 4)as $j): ?>
-<div class="base-card-high">
+<div class="base-card-high base-card-lines">
 
     <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика
          Этот блок должен быть внутри блока с классом supplier -->
@@ -49,6 +49,9 @@
             <span class="button -green">Забронировать</span>
         </div>
     </div>
+
+    <? require '_base_card_lines.php'; ?>
+
     <? endforeach; ?>
 
 </div>

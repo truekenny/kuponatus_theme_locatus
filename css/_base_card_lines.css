@@ -1,0 +1,52 @@
+.base-card-lines .lines .line {
+    padding: 8px 20px;
+
+    border-top: 1px solid #EDEDED;
+    overflow: hidden;
+    font-weight: 200;
+    line-height: 35px;
+}
+
+.base-card-lines .lines .line:hover {
+    background-color: #F7F7F7;
+}
+
+    .base-card-lines .lines .line > div {
+        float: left;
+    }
+
+    .base-card-lines .lines .line .name,
+    .base-card-lines .lines .line .more {
+        width: 150px;
+    }
+
+        .base-card-lines .lines .line .more a {
+            text-decoration-style: dashed;
+        }
+
+    .base-card-lines .lines .line .price {
+        width: 320px;
+    }
+
+        .base-card-lines .lines .line .price span:first-child {
+            font-weight: bold;
+        }
+
+        .base-card-lines .lines .line .price span.button {
+            padding: 0 6px;
+            margin-left: 30px;
+
+            height: 35px;
+            display: inline-block;
+
+            border: 1px solid #E6E6E6;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .base-card-lines .lines .line .price span.button:hover {
+            background-color: #52d048;
+            border-color: transparent;
+            color: #ffffff;
+        }
+

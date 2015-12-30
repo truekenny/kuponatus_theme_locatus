@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="css/_base_filter.css">
     <link rel="stylesheet" type="text/css" href="css/_base_h1.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card_lines.css">
     <link rel="stylesheet" type="text/css" href="css/_base_yellow.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_high.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_full.css">

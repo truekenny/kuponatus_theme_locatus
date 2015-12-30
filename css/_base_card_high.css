@@ -38,7 +38,7 @@
             color: #7F7F7F;
         }
 
-    .base-card-high .line {
+    .base-card-high > .line {
         padding: 8px 20px;
 
         border-top: 1px solid #EDEDED;
@@ -47,15 +47,15 @@
         line-height: 35px;
     }
 
-    .base-card-high .line:hover {
+    .base-card-high > .line:hover {
         background-color: #F7F7F7;
     }
 
-        .base-card-high .line > div {
+        .base-card-high > .line > div {
             float: left;
         }
 
-        .base-card-high .line .info {
+        .base-card-high > .line .info {
             width: 260px;
 
             font-size: 15px;
@@ -63,47 +63,47 @@
             line-height: 22px;
         }
 
-            .base-card-high .line .info p {
+            .base-card-high > .line .info p {
                 margin: 0;
 
                 color: #424242;
             }
 
-            .base-card-high .line .info .name {
+            .base-card-high > .line .info .name {
                 margin-top: 7px;
             }
 
-            .base-card-high .line .info .link {
+            .base-card-high > .line .info .link {
             }
 
-            .base-card-high .line .info .phone {
+            .base-card-high > .line .info .phone {
                 margin-top: 5px;
             }
 
-            .base-card-high .line .info .address {
+            .base-card-high > .line .info .address {
                 color: #7F7F7F;
             }
 
 
 
-        .base-card-high .line .more {
+        .base-card-high > .line .more {
             width: 40px;
             white-space: nowrap;
         }
 
-            .base-card-high .line .more a {
+            .base-card-high > .line .more a {
                 text-decoration-style: dashed;
             }
 
-        .base-card-high .line .price {
+        .base-card-high > .line .price {
             width: 320px;
         }
 
-            .base-card-high .line .price span:first-child {
+            .base-card-high > .line .price span:first-child {
                 font-weight: bold;
             }
 
-            .base-card-high .line .price span.button {
+            .base-card-high > .line .price span.button {
                 padding: 0 6px;
                 margin-left: 30px;
 
@@ -115,7 +115,7 @@
                 cursor: pointer;
             }
 
-            .base-card-high .line .price span.button:hover {
+            .base-card-high > .line .price span.button:hover {
                 background-color: #52d048;
                 border-color: transparent;
                 color: #ffffff;
