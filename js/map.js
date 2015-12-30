@@ -1,9 +1,7 @@
 Locatus.Map = (function ($) {
     var map;
-    var contentMap;
 
     var points = [];
-    var contentPoints = [];
 
     ymaps.ready(initMap);
 
@@ -42,7 +40,7 @@ Locatus.Map = (function ($) {
         clusterBalloonContentBody = clusterBalloonContentBody || '';
         var escapeUrl = Locatus.Functions.escapeHtml(url);
 
-        $([[map, points], [contentMap, contentPoints]]).each(function () {
+        $([[map, points]]).each(function () {
             var placemark = new ymaps.Placemark(coords, {
                 hintContent: hint,
                 clusterCaption: clusterCaption ? clusterCaption : hint,
@@ -102,7 +100,7 @@ Locatus.Map = (function ($) {
      * Определяет для точек кластеры
      */
     function browseClusters() {
-        $([[map, points], [contentMap, contentPoints]]).each(function () {
+        $([[map, points]]).each(function () {
             var clusters = {};
 
             var map = this[0];
@@ -134,7 +132,7 @@ Locatus.Map = (function ($) {
      * @param {string} color Цвет
      */
     function setColorPoint(index, color) {
-        $([points, contentPoints]).each(function () {
+        $([points]).each(function () {
             if(typeof this[index-1] == "undefined") {
                 return;
             }
@@ -156,7 +154,6 @@ Locatus.Map = (function ($) {
         };
 
         map = new ymaps.Map("map", mapInit);
-        contentMap = new ymaps.Map("content-map", mapInit);
 
         // Пример
         /*

@@ -4,7 +4,6 @@ Locatus.Functions = (function ($) {
     }
 
     function escapeHtml(text) {
-        console.log(text);
         var map = {
             '&': '&amp;',
             '<': '&lt;',
