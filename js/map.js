@@ -126,7 +126,7 @@ Locatus.Map = (function ($) {
                 }
 
                 if (typeof clusters[cluster] == "undefined") {
-                    clusters[cluster] = new ymaps.Clusterer();
+                    clusters[cluster] = new ymaps.Clusterer({preset: 'islands#darkGreenClusterIcons'});
                 }
 
                 clusters[cluster].add(this);
