@@ -8,13 +8,13 @@ Locatus.Supplier = (function ($) {
         body.on('mouseenter', '.js-supplier', function () {
             var point = $(this).find('.point');
 
-            Locatus.Map.setColorPoint($(point).data('id'), 'green');
+            Locatus.Map.selectPoint($(point).data('id'), true);
         });
 
         body.on('mouseleave', '.js-supplier', function () {
             var point = $(this).find('.point');
 
-            Locatus.Map.setColorPoint($(point).data('id'), 'red');
+            Locatus.Map.selectPoint($(point).data('id'), false);
         });
     }
 

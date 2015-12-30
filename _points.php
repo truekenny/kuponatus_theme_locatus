@@ -14,7 +14,7 @@
         ></div>
 
     <!-- Кластер 500: тестирует кластер с 500 точками и полным описанием -->
-    <? foreach (range(1, 500) as $i): ?>
+    <? foreach (range(1, 50) as $i): ?>
         <div class='point'
              data-x='<?= NumberHelper::rand(55.7722 - .001, 55.7722 + .001) ?>'
              data-y='<?= NumberHelper::rand(37.6155 - .001, 37.6155 + .001) ?>'

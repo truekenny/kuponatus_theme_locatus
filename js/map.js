@@ -3,6 +3,11 @@ Locatus.Map = (function ($) {
 
     var points = [];
 
+    var pointHref = [
+        'images/mark.png',
+        'images/mark_selected.png'
+    ];
+
     ymaps.ready(initMap);
 
     /**
@@ -45,7 +50,13 @@ Locatus.Map = (function ($) {
                 hintContent: hint,
                 clusterCaption: clusterCaption ? clusterCaption : hint,
                 balloonContentBody: clusterBalloonContentBody + "<br><a href='" + escapeUrl + "'>" + escapeUrl + "</a>"
-            }, {iconColor: 'red'});
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: pointHref[0],
+                iconImageSize: [54, 46],
+                iconImageOffset: [-19, -46]
+
+            });
 
             this[0].geoObjects.add(placemark);
             this[1].push(placemark);
@@ -68,14 +79,14 @@ Locatus.Map = (function ($) {
             placemark.events.add(['mouseenter'], function (e) {
                 var id = placemark.options.get('id');
 
-                setColorPoint(id, 'green');
+                selectPoint(id, true);
                 $('.js-supplier.id-' + id).addClass('hover');
             });
 
             placemark.events.add(['mouseleave'], function (e) {
                 var id = placemark.options.get('id');
 
-                setColorPoint(id, 'red');
+                selectPoint(id, false);
                 $('.js-supplier.id-' + id).removeClass('hover');
             });
 
@@ -110,6 +121,7 @@ Locatus.Map = (function ($) {
                 var cluster = this.options.get('cluster');
 
                 if(typeof cluster == "undefined" || cluster == '') {
+
                     return;
                 }
 
@@ -127,17 +139,17 @@ Locatus.Map = (function ($) {
     }
 
     /**
-     * Устанавливает новый цвет для точки
+     * Устанавливает выбана ли точка
      * @param {Number} index Индекс точки
-     * @param {string} color Цвет
+     * @param {boolean} selected Точка выбрана
      */
-    function setColorPoint(index, color) {
+    function selectPoint(index, selected) {
         $([points]).each(function () {
             if(typeof this[index-1] == "undefined") {
                 return;
             }
 
-            this[index - 1].options.set({iconColor: color});
+            this[index - 1].options.set({iconImageHref: pointHref[selected ? 1 : 0]});
         });
     }
 
@@ -171,7 +183,7 @@ Locatus.Map = (function ($) {
 
     return {
         init: init,
-        setColorPoint: setColorPoint,
+        selectPoint: selectPoint,
         addPoint: addPointAsynchronous
     }
 })(jQuery);
