@@ -133,24 +133,26 @@
         width: 116px;
     }
 
-    .base-card .line {
+/* base-card-lines */
+
+    .base-card-lines .lines .line {
         position: relative;
         height: 80px;
     }
 
-        .base-card .line .more {
+        .base-card-lines .lines .line .more {
             position: absolute;
             left: 20px;
             top: 44px;
         }
 
-        .base-card .line .price {
+        .base-card-lines .lines .line .price {
             width: 160px;
             position: absolute;
             right: 20px;
         }
 
-            .base-card .line .price span {
+            .base-card-lines .lines .line .price span {
                 display: block;
                 float: right;
             }
@@ -161,22 +163,22 @@
         min-height: 104px;
     }
 
-    .base-card-high .line {
+    .base-card-high > .line {
         position: relative;
     }
 
-        .base-card-high .line > div {
+        .base-card-high > .line > div {
             float: none;
         }
 
-        .base-card-high .line .price {
+        .base-card-high > .line .price {
             width: 160px;
             position: absolute;
             right: 20px;
             top: 10px;
         }
 
-            .base-card-high .line .price span {
+            .base-card-high > .line .price span {
                 display: block;
                 float: right;
             }
