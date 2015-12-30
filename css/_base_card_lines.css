@@ -36,7 +36,7 @@
             font-weight: bold;
         }
 
-        .base-card-lines .lines .line .price span.button {
+        .base-card-lines .lines .line .price .button {
             padding: 0 6px;
             margin-left: 30px;
 
@@ -46,11 +46,12 @@
             border: 1px solid #E6E6E6;
             border-radius: 3px;
             cursor: pointer;
+            text-decoration: none;
         }
 
-        .base-card-lines .lines .line .price span.button:hover {
+        .base-card-lines .lines .line .price .button:hover {
             background-color: #52d048;
             border-color: transparent;
-            color: #ffffff;
+            color: #ffffff !important;
         }
 

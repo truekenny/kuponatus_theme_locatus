@@ -46,7 +46,7 @@
         </div>
         <div class="price -aright">
             <span>от 400 руб./час</span>
-            <span class="button -green">Забронировать</span>
+            <a class="button -green" href="#">Забронировать</a>
         </div>
     </div>
 
