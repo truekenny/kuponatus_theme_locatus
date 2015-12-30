@@ -42,7 +42,7 @@
             </p>
         </div>
         <div class="more">
-            <a href="#">Цены</a>
+            <a class="js-lines no-demo" href="#">Цены</a>
         </div>
         <div class="price -aright">
             <span>от 400 руб./час</span>

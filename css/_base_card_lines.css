@@ -1,3 +1,11 @@
+.base-card-lines .line + .lines {
+    display: none;
+}
+
+.base-card-lines .line.js-expanded + .lines {
+    display: block;
+}
+
 .base-card-lines .lines .line {
     padding: 8px 20px;
 

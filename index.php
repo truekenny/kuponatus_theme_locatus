@@ -62,16 +62,19 @@
     <script src="js/functions.js" type="text/javascript"></script>
     <script src="js/modal.js" type="text/javascript"></script>
     <script src="js/slider.js" type="text/javascript"></script>
+    <script src="js/lines.js" type="text/javascript"></script>
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="js/supplier.js" type="text/javascript"></script>
         <script src="js/map.js" type="text/javascript"></script>
     <? endif; ?>
     <script type="text/javascript">
         $(document).ready(function () {
+            // Чтобы отключить режим Демо надо закомментировать следуюшую строку, также можно удалить ссылку на js/demo.js
             Locatus.Demo.init();
             Locatus.Functions.init();
             Locatus.Modal.init();
             Locatus.Slider.init();
+            Locatus.Lines.init();
             <? if(!HelperDeveloper::isDevelop()): ?>
                 Locatus.Supplier.init();
                 Locatus.Map.init();

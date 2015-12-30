@@ -4,6 +4,11 @@ Locatus.Demo = (function ($) {
      */
     function disableLinks() {
         $('a').click(function(e) {
+            if($(this).hasClass('no-demo')) {
+
+                return;
+            }
+
             alert('Это ссылка, но в макете она никуда не ведёт');
             e.preventDefault();
         });
