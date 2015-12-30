@@ -20,7 +20,7 @@ Locatus.Map = (function ($) {
             );
 
             $(this).attr('data-id', id);
-            $(this).parent('div.supplier').addClass('id-' + id);
+            $(this).parent('div').addClass('id-' + id).addClass('js-supplier');
         });
     }
 
@@ -69,14 +69,14 @@ Locatus.Map = (function ($) {
                 var id = placemark.options.get('id');
 
                 setColorPoint(id, 'green');
-                $('.supplier.id-' + id).addClass('hover');
+                $('.js-supplier.id-' + id).addClass('hover');
             });
 
             placemark.events.add(['mouseleave'], function (e) {
                 var id = placemark.options.get('id');
 
                 setColorPoint(id, 'red');
-                $('.supplier.id-' + id).removeClass('hover');
+                $('.js-supplier.id-' + id).removeClass('hover');
             });
 
         });
