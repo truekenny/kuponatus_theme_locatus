@@ -1,4 +1,7 @@
 Locatus.Modal = (function ($) {
+    /** @type {number} Минимальный отступ модального окна от верхней и нижней части страницы, пх */
+    var minMargin = 10;
+
     /**
      * Показывает/скрывает модальное окно по классу
      * @param _class
@@ -39,11 +42,11 @@ Locatus.Modal = (function ($) {
         var heightWindow = $(window).height();
 
         var marginTop = parseInt((heightWindow - height_Window) / 2);
-        marginTop = Math.max(marginTop, 0);
+        marginTop = Math.max(marginTop, minMargin);
 
         _window.css('margin-top', marginTop + 'px');
 
-        _window.css('max-height', heightWindow + 'px');
+        _window.css('max-height', (heightWindow - minMargin * 2) + 'px');
     }
 
     /**
