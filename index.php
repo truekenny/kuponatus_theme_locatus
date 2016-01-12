@@ -82,7 +82,7 @@
         });
     </script></head>
 
-<body id="body">
+<body id="body" class="-no-menu-DEMO">
     <? require '_header.php'; ?>
     <div class="content">
         <? require '_menu.php'; ?>
