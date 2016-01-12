@@ -1,5 +1,5 @@
 @media (max-width: 1430px) { /* 1400 + 30 (максимальный размер скролла) */
-    #header .search {
+    #header .search-wrapper {
         width: calc(100% - 725px);
     }
 }
@@ -26,7 +26,7 @@
         display: none;
     }
 
-    #header .search {
+    #header .search-wrapper {
         width: calc(100% - 350px);
     }
 
@@ -71,7 +71,7 @@
         min-width: 470px;
     }
 
-        #header .search {
+        #header .search-wrapper {
             visibility: hidden;
         }
 

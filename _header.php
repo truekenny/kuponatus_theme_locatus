@@ -6,10 +6,14 @@
         Л<img src="images/logo.png" alt="">катус
     </a>
 
-    <form class="search -box">
-        <input class="-box" placeholder="Найти">
-        <button class="-box -green" type="submit"></button>
-    </form>
+    <div class="search-wrapper">
+        <form class="search -box">
+            <input class="-box" placeholder="Найти">
+            <button class="-box -green" type="submit"></button>
+        </form>
+    </div>
+
+    <? // include '_header_search.php'; ?>
 
     <a class="coop -right" href="#">
         Сотрудничество
@@ -21,3 +25,5 @@
         <span class="-green">Санкт-Петербург</span>
     </a>
 </div>
+
+<? // include '_yandex_search.php'; ?>
