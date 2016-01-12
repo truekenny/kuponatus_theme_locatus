@@ -30,4 +30,4 @@
     </a>
 </div>
 
-<? // include '_yandex_search.php'; ?>
+<? include '_yandex_search.php'; ?>

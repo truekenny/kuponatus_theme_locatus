@@ -55,11 +55,13 @@
     position: relative;
 }
 
-    #header .search > * {
+    #header .search > *,
+    #body #header .ya-site-form__input-text {
         height: 44px;
     }
 
-    #header .search input {
+    #header .search input,
+    #body #header .ya-site-form__input-text {
         padding-left: 20px;
 
         width: 100%;
@@ -74,7 +76,12 @@
         box-sizing: border-box; /* Иначе перекрывается в normalize.css */
     }
 
-    #header .search button {
+        #body #header .ya-site-form__input-text {
+            border-radius: 3px;
+            border-right-color: transparent !important;
+        }
+
+    #header /* .search */ button {
         width: 43px;
         position: absolute;
         top: 0;
@@ -87,6 +94,20 @@
         border-radius: 0 3px 3px 0;
         line-height: 1;
     }
+
+    .ya-site-form__search-input-layout-r {
+        position: relative;
+        width: 1px;
+
+        box-sizing: border-box;
+    }
+
+        #header .ya-site-form button {
+            height: 44px;
+            top: 11px;
+            right: 1px;
+        }
+
 
 #header .city,
 #header .login,
