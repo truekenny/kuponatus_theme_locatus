@@ -6,6 +6,10 @@
     #ya-site-form0 .ya-site-form__search-input {
         padding: 0;
     }
+
+    #ya-site-form0 .ya-site-suggest-list {
+        margin-top: -12px;
+    }
 </style>
 <script type="text/javascript">
     (function (w, d, c) {
