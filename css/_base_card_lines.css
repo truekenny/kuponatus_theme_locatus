@@ -24,6 +24,15 @@
         width: 150px;
     }
 
+        .base-card-lines .lines .line.no-more .name {
+            width: 300px;
+        }
+
+        .base-card-lines .lines .line.no-more .more {
+            display: none;
+        }
+
+
         .base-card-lines .lines .line .more a {
             text-decoration-style: dashed;
         }
