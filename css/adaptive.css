@@ -137,8 +137,12 @@
 
     .base-card-lines .lines .line {
         position: relative;
-        height: 80px;
+        min-height: 80px;
     }
+
+        .base-card-lines .lines .line.no-more .name {
+            width: 230px;
+        }
 
         .base-card-lines .lines .line .more {
             position: absolute;
