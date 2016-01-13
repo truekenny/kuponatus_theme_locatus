@@ -79,7 +79,8 @@
         overflow: hidden;
     }
 
-    .base-filter .row > div {
+    .base-filter .row > div,
+    .base-filter .row > a {
         width: 88px;
         float: left;
     }
@@ -88,11 +89,13 @@
         margin-left: 20px;
     }
 
-    .base-filter .row div.double {
+    .base-filter .row div.double,
+    .base-filter .row a.double {
         width: 192px;
     }
 
-        .base-filter .row div.double select{
+        .base-filter .row div.double select,
+        .base-filter .row a.double select {
             width: 100%;
         }
 
@@ -181,6 +184,7 @@
     .base-filter .block .image {
         margin-bottom: 20px;
 
+        display: block;
         height: 124px;
 
         background-color: #999;
@@ -191,6 +195,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        text-decoration: none;
     }
 
         .base-filter .block .image:nth-child(3n),
