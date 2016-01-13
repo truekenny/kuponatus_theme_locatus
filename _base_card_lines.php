@@ -19,9 +19,11 @@
         </div>
     <? endforeach; ?>
 
-    <div class="line">
+    <div class="line no-more">
         <div class="name">
-            Кафе и бар
+            <? foreach(range(1, 10)as $i): ?>
+                <a href="#">Кафе и бар <?= str_repeat('а', rand(0, 8)) ?></a>
+            <? endforeach; ?>
         </div>
         <div class="more">
             <a href="#">Подробнее</a>

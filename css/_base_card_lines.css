@@ -22,6 +22,8 @@
     .base-card-lines .lines .line .name,
     .base-card-lines .lines .line .more {
         width: 150px;
+
+        overflow: hidden;
     }
 
         .base-card-lines .lines .line.no-more .name {
@@ -32,6 +34,20 @@
             display: none;
         }
 
+
+        .base-card-lines .lines .line .name a {
+            white-space: nowrap;
+        }
+
+            .base-card-lines .lines .line .name a:after {
+                content: ',';
+
+                padding-right: 10px;
+            }
+
+            .base-card-lines .lines .line .name a:last-child:after {
+                content: '';
+            }
 
         .base-card-lines .lines .line .more a {
             text-decoration-style: dashed;
