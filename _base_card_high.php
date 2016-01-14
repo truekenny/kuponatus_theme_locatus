@@ -1,8 +1,7 @@
 <? foreach(range(1, 4)as $j): ?>
 <div class="base-card-high base-card-lines">
 
-    <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика
-         Этот блок должен быть внутри блока с классом supplier -->
+    <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика -->
     <div class='point'
          data-x='<?= NumberHelper::rand(55.7522 - .1, 55.7522 + .1) ?>'
          data-y='<?= NumberHelper::rand(37.6155 - .1, 37.6155 + .1) ?>'
@@ -20,8 +19,8 @@
 
 
     <div class="header">
-        <img src="images/_DELME_card_2.jpg" alt="" align="right">
-        <h2>Эконом класс от <span>149 руб.</span></h2>
+        <a href="#"><img src="images/_DELME_card_2.jpg" alt="" align="right"></a>
+        <h2><a href="#">Эконом класс от <span>149 руб.</span></a></h2>
         <p>Renault Logan, Kia Rio, Hyundai Solar</p>
     </div>
 
@@ -29,7 +28,7 @@
     <div class="line">
         <div class="info">
             <p class="name">
-                Компания "Аренда Авто"
+                <a href="#">Компания "Аренда Авто"</a>
             </p>
             <p class="link -small">
                 <a href="#">imperia-club.xom</a>
