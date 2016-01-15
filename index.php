@@ -52,6 +52,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.nice-scroll.min.js"></script>
     <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/browserclass.js"></script>
 
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -79,10 +80,13 @@
                 Locatus.Supplier.init();
                 Locatus.Map.init();
             <? endif; ?>
+            /*setTimeout(function() {
+                console.log($('body').attr('class'));
+            }, 1000);*/
         });
     </script></head>
 
-<body id="body" class="-no-menu-DEMO">
+<body id="body"><!-- class="-no-menu" -->
     <? require '_header.php'; ?>
     <div class="content">
         <? require '_menu.php'; ?>

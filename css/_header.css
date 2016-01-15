@@ -77,8 +77,17 @@
     }
 
         #body #header .ya-site-form__input-text {
+            padding-bottom: 0;
+            padding-top: 0;
+
             border-radius: 3px 0 0 3px;
             border-right-width: 0;
+            box-sizing: border-box;
+        }
+
+        /* В мобильном Сафари поле ввода вышел на 1 пиксель, чем должно быть */
+        #body.safari.ipad #header .ya-site-form__input-text {
+            padding-top: 1px;
         }
 
     #header /* .search */ button,
