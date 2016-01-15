@@ -77,8 +77,8 @@
     }
 
         #body #header .ya-site-form__input-text {
-            border-radius: 3px;
-            border-right-color: transparent !important;
+            border-radius: 3px 0 0 3px;
+            border-right-width: 0;
         }
 
     #header /* .search */ button,
@@ -98,15 +98,12 @@
 
     #body #header .ya-site-form__submit {
         height: 44px;
-        top: 12px;
+        position: static;
 
         background-color: #52d048;
     }
 
     .ya-site-form__search-input-layout-r {
-        position: relative;
-        width: 1px;
-
         box-sizing: border-box;
     }
 

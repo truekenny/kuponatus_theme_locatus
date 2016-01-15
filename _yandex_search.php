@@ -10,6 +10,10 @@
     #ya-site-form0 .ya-site-suggest-list {
         margin-top: -12px;
     }
+
+    #ya-site-form0 .ya-site-form__submit {
+        margin-left: 0;
+    }
 </style>
 <script type="text/javascript">
     (function (w, d, c) {
