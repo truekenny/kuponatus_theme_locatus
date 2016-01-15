@@ -49,10 +49,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.nice-scroll.min.js"></script>
-    <script type="text/javascript" src="js/nouislider.min.js"></script>
-    <script type="text/javascript" src="js/browserclass.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.nice-scroll.min.js"></script>
+    <script type="text/javascript" src="js/vendor/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/vendor/browserclass.js"></script>
 
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

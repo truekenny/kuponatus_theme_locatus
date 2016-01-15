@@ -85,7 +85,7 @@
             box-sizing: border-box;
         }
 
-        /* В мобильном Сафари поле ввода вышел на 1 пиксель, чем должно быть */
+        /* В мобильном Safari поле ввода вышел на 1 пиксель, чем должно быть */
         #body.safari.ipad #header .ya-site-form__input-text {
             padding-top: 1px;
         }
