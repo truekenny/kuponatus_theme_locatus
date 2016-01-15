@@ -24,12 +24,6 @@
         h.parentNode.insertBefore(s, h);
         (w[c] || (w[c] = [])).push(function () {
             Ya.Site.Form.init();
-
-            setTimeout(function() {
-                $('.ya-site-form__search-input-layout-r').html(
-                    '<button class="-box -green" type="submit"></button>'
-                );
-            }, 100);
         })
     })(window, document, 'yandex_site_callbacks');
 </script>

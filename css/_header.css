@@ -81,7 +81,8 @@
             border-right-color: transparent !important;
         }
 
-    #header /* .search */ button {
+    #header /* .search */ button,
+    #body #header .ya-site-form__submit {
         width: 43px;
         position: absolute;
         top: 0;
@@ -95,19 +96,19 @@
         line-height: 1;
     }
 
+    #body #header .ya-site-form__submit {
+        height: 44px;
+        top: 12px;
+
+        background-color: #52d048;
+    }
+
     .ya-site-form__search-input-layout-r {
         position: relative;
         width: 1px;
 
         box-sizing: border-box;
     }
-
-        #header .ya-site-form button {
-            height: 44px;
-            top: 11px;
-            right: 1px;
-        }
-
 
 #header .city,
 #header .login,
