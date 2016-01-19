@@ -1,4 +1,4 @@
-<div id="modal-demo">
+<div id="modal-demo" class="-aright">
     Примеры модальных окон
     <br><span data-class="js-modal-form">Форма</span>
     <br><span data-class="js-modal-list">Список</span>
