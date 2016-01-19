@@ -1,0 +1,93 @@
+.base-company {
+    margin: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+    .base-company > * {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .base-company h2 {
+        color: #424242;
+        font-size: 30px;
+        font-weight: 200;
+        line-height: 1.333;
+    }
+
+    .base-company h3 {
+        color: rgb(66, 66, 66);
+        font-size: 22px;
+        line-height: 1.364;
+        font-weight: 400;
+    }
+
+    .base-company h4 {
+        margin-bottom: 15px;
+
+        font-weight: bold;
+    }
+
+    .base-company p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .base-company blockquote {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 60px;
+
+        color: #666;
+        line-height: 1.5;
+        font-weight: 200;
+        font-style: italic;
+        background-image: url("../images/quote.png");
+        background-position: left 6px;
+        background-repeat: no-repeat;
+    }
+
+    .base-company img {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        width: calc(100% - 40px);
+        max-width: 100%;
+
+        border-radius: 3px;
+    }
+
+    .base-company img + p {
+        margin-top: 6px;
+        padding-left: 45px;
+
+        font-size: 12px;
+        color: #aaa;
+        line-height: 1.5;
+    }
+
+        .base-company img + p a {
+            color: #aaa !important;
+        }
+
+    .base-company ul {
+        padding-left: 0;
+
+        list-style: none;
+        line-height: 1.8;
+    }
+
+    .base-company ul li:before {
+        content: '– ';
+
+        position: relative;
+        top: 2px;
+
+        color: #52D048;
+        font-size: 20px;
+    }

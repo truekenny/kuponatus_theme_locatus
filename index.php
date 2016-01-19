@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="css/_base_more.css">
     <link rel="stylesheet" type="text/css" href="css/_base_pages.css">
     <link rel="stylesheet" type="text/css" href="css/_base_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_company.css">
 
     <link rel="stylesheet" type="text/css" href="css/_modal.css">
     <link rel="stylesheet" type="text/css" href="css/_modal_form.css">

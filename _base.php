@@ -10,6 +10,7 @@
     <? require '_base_card_half.php'; ?>
     <? require '_base_card_third.php'; ?>
     <? require '_base_more.php'; ?>
+    <? require '_base_company.php'; ?>
     <? require '_base_pages.php'; ?>
     <? require '_base_footer.php'; ?>
 </div>
