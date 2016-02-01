@@ -1,0 +1,23 @@
+.base-categories {
+    margin: 20px;
+    padding: 10px 20px;
+
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    line-height: 40px;
+}
+
+    .base-categories > a {
+        padding: 4px 6px;
+        margin-right: 6px;
+
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .base-categories > a.-green {
+        box-shadow: 0 0 3px #52d048;
+    }

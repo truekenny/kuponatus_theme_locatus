@@ -33,6 +33,11 @@
             color: #5a5a5a;
         }
 
+        .base-card .header span.light {
+            color: #999;
+            font-weight: 200;
+        }
+
         .base-card .header p {
             margin: 14px 0 0;
             padding-left: 26px;
