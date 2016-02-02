@@ -21,16 +21,19 @@
         <form action="#">
             <input type="text" placeholder="Что нужно найти? Например, нигерийский массаж"><!--
             --><input type="submit" value="">
-        </form>
-        <div class="results">
-            <div class="line">
-                <div class="text">
-                    Нигерийский массаж <span>Массаж</span>
-                </div>
-                <div class="count">
-                    Найдено: 121
-                </div>
+
+            <div class="results">
+                <? foreach (range(1, 4) as $i): ?>
+                <a href="#" class="line">
+                    <div class="text">
+                        <b>Ниге</b>рийский массаж <span>Массаж</span>
+                    </div>
+                    <div class="count">
+                        Найдено: <?= str_repeat('5', rand(1, 4)); ?>
+                    </div>
+                </a>
+                <? endforeach; ?>
             </div>
-        </div>
+        </form>
     </div>
 </div>
