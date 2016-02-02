@@ -10,11 +10,11 @@
     </div>
 
     <div class="title">
-
+        <h1>Поиск организаций и услуг в <a href="#">Москве</a></h1>
     </div>
 
     <div class="subtitle">
-
+        <h2>Среди 10&thinsp;200 организаций и 57&thinsp;000 услуг</h2>
     </div>
 
     <div class="search">
