@@ -19,7 +19,7 @@
         Москву, где пробыл год.
     </p>
     <h2>Вы ещё не знакомы друг с другом.</h2>
-    <img src="images/_DELME_company.jpg" alt="">
+    <img src="../../images/_DELME_company.jpg" alt="">
     <p>
         &copy; 2014 Flickr. Автор Сергеев Иван. <a href="#">Источник</a>
     </p>

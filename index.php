@@ -89,17 +89,17 @@
     </script></head>
 
 <body id="body"><!-- class="-no-menu" -->
-    <? require '_header.php'; ?>
+    <? require 'web/main/_header.php'; ?>
     <div class="content">
-        <? require '_menu.php'; ?>
-        <? require '_base.php'; ?>
+        <? require 'web/main/_menu.php'; ?>
+        <? require 'web/main/_base.php'; ?>
     </div>
 
-    <? require '_modal_form.php'; ?>
-    <? require '_modal_list.php'; // Шапка (.header-lines) ?>
-    <? require '_modal_list_2.php'; // Другая шапка (.header-text) ?>
+    <? require 'web/main/_modal_form.php'; ?>
+    <? require 'web/main/_modal_list.php'; // Шапка (.header-lines) ?>
+    <? require 'web/main/_modal_list_2.php'; // Другая шапка (.header-text) ?>
 
-    <? require '_points.php'; ?>
+    <? require 'web/main/_points.php'; ?>
 </body>
 </html>
 

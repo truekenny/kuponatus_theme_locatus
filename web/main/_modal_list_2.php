@@ -4,7 +4,7 @@
         <div class="close" title="Закрыть клавишей ESC"></div>
 
         <div class="header-text">
-            <div class="image -box" style="background-image: url('images/_DELME_card_full.jpg');">
+            <div class="image -box" style="background-image: url('../../images/_DELME_card_full.jpg');">
                 <div class="super -super -center">
                     Суперцена
                 </div>

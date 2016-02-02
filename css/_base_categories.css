@@ -14,10 +14,12 @@
 
         border: 1px solid #ccc;
         border-radius: 3px;
+        font-weight: 200;
         text-decoration: none;
         white-space: nowrap;
     }
 
     .base-categories > a.-green {
         box-shadow: 0 0 3px #52d048;
+        font-weight: 400;
     }
