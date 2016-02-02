@@ -119,6 +119,8 @@
                 padding-left: 30px;
 
                 width: calc(100% - 95px - 30px);
+                position: absolute;
+                top: 0;
 
                 color: #555;
                 border-radius: 3px 0 0 3px;
@@ -132,6 +134,8 @@
 
             .header .search form input[type=submit] {
                 width: 95px;
+                position: absolute;
+                right: 0;
 
                 background-color: #52D048;
                 background-image: url("../images/start_search.png");
@@ -142,6 +146,7 @@
 
             .header .search form .results {
                 position: absolute;
+                top: 65px;
                 width: calc(100% - 95px);
                 display: none;
 
