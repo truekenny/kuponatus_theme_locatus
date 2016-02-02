@@ -19,6 +19,10 @@ require_once 'components/NumberHelper.php';
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/start.css">
+    <link rel="stylesheet" type="text/css" href="css/_start_header.css">
+    <link rel="stylesheet" type="text/css" href="css/_start_table.css">
+    <link rel="stylesheet" type="text/css" href="css/_start_footer.css">
 
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.nice-scroll.min.js"></script>
@@ -41,8 +45,13 @@ require_once 'components/NumberHelper.php';
 
 <body id="body">
 
+<? require 'web/start/header.php'; ?>
+
 <div class="content">
+    <? require 'web/start/table.php'; ?>
 </div>
+
+<? require 'web/start/footer.php'; ?>
 
 </body>
 </html>
