@@ -92,3 +92,45 @@
             font-size: 22px;
             font-weight: 100;
         }
+
+    .header .search {
+        height: 65px;
+    }
+
+        .header .search form {
+            margin: 0 auto;
+
+            width: 700px;
+            height: inherit;
+        }
+
+            .header .search form input {
+                padding: 0;
+                margin: 0;
+
+                height: inherit;
+
+                border: 0;
+                font-size: 18px;
+            }
+        
+            .header .search form input[type=text] {
+                padding-left: 20px;
+
+                width: calc(100% - 95px - 20px);
+
+                color: #555;
+                border-radius: 3px 0 0 3px;
+
+            }
+
+            .header .search form input[type=submit] {
+                width: 95px;
+
+                background-color: #52D048;
+                background-image: url("../images/start_search.png");
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                border-radius: 0 3px 3px 0;
+            }
+

@@ -18,6 +18,19 @@
     </div>
 
     <div class="search">
-
+        <form action="#">
+            <input type="text" placeholder="Что нужно найти? Например, нигерийский массаж"><!--
+            --><input type="submit" value="">
+        </form>
+        <div class="results">
+            <div class="line">
+                <div class="text">
+                    Нигерийский массаж <span>Массаж</span>
+                </div>
+                <div class="count">
+                    Найдено: 121
+                </div>
+            </div>
+        </div>
     </div>
 </div>
