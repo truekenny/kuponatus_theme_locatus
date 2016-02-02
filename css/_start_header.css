@@ -35,3 +35,25 @@
             border: 1px solid #8F9497;
             border-radius: 3px;
         }
+
+    .header .logo {
+        height: 100px;
+
+        text-align: center;
+    }
+
+        .header .logo a {
+            color: white;
+            font-size: 33px;
+            font-family: "Code";
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-decoration: none;
+        }
+
+            .header .logo a img {
+                margin-right: 5px;
+
+                position: relative;
+                top: 16px;
+            }
