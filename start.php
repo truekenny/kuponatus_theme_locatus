@@ -45,13 +45,13 @@ require_once 'components/NumberHelper.php';
 
 <body id="body">
 
-<? require 'web/start/header.php'; ?>
+<? require 'web/start/_header.php'; ?>
 
 <div class="content">
-    <? require 'web/start/table.php'; ?>
+    <? require 'web/start/_table.php'; ?>
 </div>
 
-<? require 'web/start/footer.php'; ?>
+<? require 'web/start/_footer.php'; ?>
 
 </body>
 </html>
