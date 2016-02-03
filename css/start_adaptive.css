@@ -80,9 +80,9 @@
 }
 
 /* Телефон */
-@media (max-width: 659px) { /* Размер меньше чем планшет на 1 пиксель */
+@media (max-width: 699px) { /* Размер меньше чем планшет на 1 пиксель */
     body {
-        min-width: 430px;
+        min-width: 470px;
     }
 
     .header .user a.border {
@@ -92,6 +92,25 @@
     .header .search form {
         width: 315px;
     }
+
+
+    .header .search form input[type=text]:focus + input {
+        border-radius: 0 3px 0 0;
+    }
+
+    .header .search form .results {
+        width: 100%;
+    }
+
+    .header .search form .results .line .text {
+        width: calc(100% - 30px);
+    }
+
+    .header .search form .results .line .text span,
+    .header .search form .results .line .count {
+        display: none;
+    }
+
 
     .table {
         width: 430px;

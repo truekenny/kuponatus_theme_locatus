@@ -12,9 +12,9 @@ require_once 'components/NumberHelper.php';
     <? $detect = new MobileDetect; ?>
 
     <? if ($detect->isTablet()): ?>
-        <meta name="viewport" content="width=660">
+        <meta name="viewport" content="width=700">
     <? else: ?>
-        <meta name="viewport" content="width=430">
+        <meta name="viewport" content="width=470">
     <? endif; ?>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
