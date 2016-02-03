@@ -67,3 +67,9 @@
             .footer .data .social a {
                 margin-left: 8px;
             }
+
+                .footer .data .social a img {
+                    filter: invert(70%);
+                    -webkit-filter: invert(70%);
+                }
+
