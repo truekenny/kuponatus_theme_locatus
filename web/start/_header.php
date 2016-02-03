@@ -1,4 +1,4 @@
-<div class="header-image" style="background-image: url('../images/start_header.png');"></div>
+<div class="header-image" style="background-image: url('../images/_DELME_start_header.jpg');"></div>
 <div class="header">
     <div class="user">
         <a href="#">Войти</a>
