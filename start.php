@@ -12,9 +12,9 @@ require_once 'components/NumberHelper.php';
     <? $detect = new MobileDetect; ?>
 
     <? if ($detect->isTablet()): ?>
-        <meta name="viewport" content="width=700">
+        <meta name="viewport" content="width=660">
     <? else: ?>
-        <meta name="viewport" content="width=470">
+        <meta name="viewport" content="width=430">
     <? endif; ?>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -23,6 +23,7 @@ require_once 'components/NumberHelper.php';
     <link rel="stylesheet" type="text/css" href="css/_start_header.css">
     <link rel="stylesheet" type="text/css" href="css/_start_table.css">
     <link rel="stylesheet" type="text/css" href="css/_start_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/start_adaptive.css">
 
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.nice-scroll.min.js"></script>

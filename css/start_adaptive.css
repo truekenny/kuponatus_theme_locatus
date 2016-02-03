@@ -1,0 +1,124 @@
+/* Сокращенный вид */
+@media (max-width: 1230px) { /* 1200 + 30 (максимальный размер скролла) */
+    .table {
+        width: 960px;
+    }
+
+    .table .cell {
+        width: calc(33.3% - 20px);
+    }
+
+    .table .cell:nth-child(4n + 1) {
+        margin-left: 30px;
+    }
+
+    .table .cell:nth-child(3n + 1) {
+        margin-left: 0;
+    }
+
+    .footer {
+        width: 960px;
+    }
+}
+
+/* Планшет */
+@media (max-width: 990px) { /* 960 + 30 (максимальный размер скролла) */
+    .table {
+        width: 660px;
+    }
+
+    .table .cell {
+        width: calc(50% - 15px);
+    }
+
+    .table .cell:nth-child(4n + 1) {
+        margin-left: 30px;
+    }
+
+    .table .cell:nth-child(3n + 1) {
+        margin-left: 30px;
+    }
+
+    .table .cell:nth-child(2n + 1) {
+        margin-left: 0;
+    }
+
+    .footer {
+        width: 660px;
+    }
+
+    .footer .text p {
+        width: 545px;
+    }
+
+    .footer .data {
+        position: relative;
+    }
+
+    .footer .data .info {
+        width: 320px;
+    }
+
+    .footer .data .contact {
+    }
+
+    .footer .data .links {
+        position: absolute;
+        top: 68px;
+        left: 320px;
+
+        white-space: nowrap;
+    }
+
+    .footer .data .social {
+        width: 175px;
+    }
+}
+
+/* Телефон */
+@media (max-width: 659px) { /* Размер меньше чем планшет на 1 пиксель */
+    .table {
+        width: 430px;
+    }
+
+    .table .cell {
+        margin-left: 0 !important;
+
+        width: 100%;
+    }
+
+    .footer {
+        width: 430px;
+    }
+
+    .footer .text p {
+        width: 370px;
+    }
+
+    .footer .data > * {
+        width: 25%;
+        position: absolute;
+
+        white-space: nowrap;
+    }
+
+    .footer .data .info {
+        top: 120px;
+        left: 0;
+    }
+
+    .footer .data .contact {
+        top: 0;
+        left: 0;
+    }
+
+    .footer .data .links {
+        top: 68px;
+        left: 0;
+    }
+
+    .footer .data .social {
+        top: 0;
+        right: 0;
+    }
+}
