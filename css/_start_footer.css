@@ -1,1 +1,69 @@
+.footer {
+    margin: 0 auto;
 
+    width: 1200px;
+
+    font-weight: 200;
+}
+
+    .footer .text {
+        border-bottom: 1px solid #E6E6E6;
+    }
+
+        .footer .text p {
+            margin: 0 auto;
+            padding: 70px 0;
+
+            width: 790px;
+
+            font-size: 17px;
+            line-height: 1.647;
+        }
+
+    .footer .data > * {
+        padding: 55px 0;
+
+        float: left;
+        width: 25%;
+    }
+
+        .footer .data .info {
+            font-size: 15px;
+            color: #9e9e9e;
+            line-height: 1.5;
+        }
+
+            .footer .data .info p {
+                margin: 10px 0 0;
+
+                font-size: 14px;
+            }
+
+        .footer .data .contact {
+            font-weight: bold;
+        }
+
+            .footer .data .contact p {
+                margin: 10px 0 0;
+            }
+
+                .footer .data .contact p a {
+                    color: inherit;
+                    font-weight: 200;
+                }
+
+        .footer .data .links a {
+            color: inherit;
+        }
+
+            .footer .data .links a + a {
+                margin-left: 30px;
+            }
+
+        .footer .data .social {
+            text-align: right;
+        }
+
+            .footer .data .social a {
+                margin-left: 8px;
+            }
