@@ -1,1 +1,74 @@
+.table {
+    margin: 65px auto 20px;
+    padding-bottom: 20px;
+
+    width: 1200px;
+
+    border-bottom: 1px solid #E6E6E6;
+    overflow: hidden;
+}
+
+    .table .cell {
+        margin-left: 30px;
+
+        float: left;
+        width: calc(25% - 23px); /* 30 * 3 / 4  – три отступа по 30px на четыре элемента */
+        height: 235px;
+
+        overflow: hidden;
+    }
+
+    .table .cell:nth-child(4n + 1) {
+        margin-left: 0;
+    }
+
+        .table .head {
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+            .table .cell .head h3 {
+                padding-left: 50px;
+
+                width: 100%;
+                height: 50px;
+                display: table;
+
+                background-position: 0 50%;
+                background-repeat: no-repeat;
+                line-height: 1.25;
+                overflow: hidden;
+            }
+
+                .table .cell .head h3 a {
+                    display: table-cell;
+
+                    color: inherit;
+                    font-size: 20px;
+                    font-weight: 200;
+                    text-decoration: none;
+                    vertical-align: middle;
+                }
+
+        .table .cell p {
+            line-height: 1.25;
+        }
+
+            .table .cell p a {
+                color: inherit;
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+                .table .cell p a:after {
+                    content: '/';
+
+                    margin: 0 5px 0 10px;
+
+                    color: #B8B8B8;
+                }
+
+                .table .cell p a:last-child:after {
+                    display: none;
+                }
 
