@@ -23,6 +23,10 @@
 
 /* Планшет */
 @media (max-width: 990px) { /* 960 + 30 (максимальный размер скролла) */
+    .header .search form {
+        width: 550px;
+    }
+
     .table {
         width: 660px;
     }
@@ -77,6 +81,18 @@
 
 /* Телефон */
 @media (max-width: 659px) { /* Размер меньше чем планшет на 1 пиксель */
+    body {
+        min-width: 430px;
+    }
+
+    .header .user a.border {
+        display: none;
+    }
+
+    .header .search form {
+        width: 315px;
+    }
+
     .table {
         width: 430px;
     }
