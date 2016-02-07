@@ -23,7 +23,8 @@
 
 /* Планшет */
 @media (max-width: 990px) { /* 960 + 30 (максимальный размер скролла) */
-    .header .search form {
+    .header .search form,
+    #body #ya-site-form0 {
         width: 550px;
     }
 
@@ -89,7 +90,8 @@
         display: none;
     }
 
-    .header .search form {
+    .header .search form,
+    #body #ya-site-form0 {
         width: 315px;
     }
 

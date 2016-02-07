@@ -21,6 +21,7 @@ require_once 'components/NumberHelper.php';
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/start.css">
     <link rel="stylesheet" type="text/css" href="css/_start_header.css">
+    <link rel="stylesheet" type="text/css" href="css/_start_header_yandex.css">
     <link rel="stylesheet" type="text/css" href="css/_start_table.css">
     <link rel="stylesheet" type="text/css" href="css/_start_footer.css">
     <link rel="stylesheet" type="text/css" href="css/start_adaptive.css">

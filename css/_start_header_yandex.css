@@ -1,0 +1,42 @@
+#body #ya-site-form0 {
+    margin: 0 auto !important;
+
+    width: 700px;
+}
+
+#ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+    padding-left: 30px;
+
+    height: 70px;
+
+    color: #555;
+    border: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#body #ya-site-form0 .ya-site-form__submit_type_image {
+    margin-left: 0;
+
+    height: 70px;
+    width: 100px;
+
+    background-color: #52D048;
+    background-image: url("../images/start_search.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 0 3px 3px 0;
+}
+
+#ya-site-form0 .ya-site-suggest-items li {
+    padding-left: 30px;
+
+    height: 30px;
+
+    line-height: 30px;
+}
+
+#ya-site-form0 .ya-site-suggest-items li * {
+    height: 30px;
+
+    line-height: 30px;
+}
