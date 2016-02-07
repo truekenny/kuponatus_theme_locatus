@@ -96,6 +96,7 @@
     </div>
 
     <? require 'web/main/_modal_form.php'; ?>
+    <? require 'web/main/_modal_city.php'; ?>
     <? require 'web/main/_modal_list.php'; // Шапка (.header-lines) ?>
     <? require 'web/main/_modal_list_2.php'; // Другая шапка (.header-text) ?>
 

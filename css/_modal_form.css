@@ -82,7 +82,12 @@
                 color: #9c9c9c;
                 font-size: 14px;
                 font-style: italic;
+                line-height: 20px;
             }
+
+                .modal .window .top .row .field span a {
+                    color: inherit !important;
+                }
 
             .modal .window .top .row .field .select,
             .modal .window .top .row .field .select > * {
