@@ -1,9 +1,9 @@
 <div id="header">
     <a class="menu-switcher -center" href="#">
-        <img src="../../images/menu.png" alt="">
+        <img src="images/menu.png" alt="">
     </a>
     <a class="logo" href="#">
-        Л<img src="../../images/logo.png" alt="">катус
+        Л<img src="images/logo.png" alt="">катус
     </a>
 
     <div class="search-wrapper ya-site-form ya-site-form_inited_no"

@@ -4,7 +4,7 @@
         <div class="close" title="Закрыть клавишей ESC"></div>
 
         <div class="header-lines">
-            <img align="right" src="../../images/_DELME_card_1.jpg" alt="">
+            <img align="right" src="images/_DELME_card_1.jpg" alt="">
             <h1>Бильярдный клуб «Империя»</h1>
             <p class="link"><a href="#">gold-shar.ru</a></p>
             <p class="address">г. Москва, ул. Онежская, д. 34, корп. 1</p>

@@ -60,12 +60,12 @@
     <div class="block">
         <h4>Рисунок</h4>
         <p class="list of-buttons big">
-            <a class="-small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
-            <a class="checked -green -small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
-            <a class="-small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
-            <a class="-small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
-            <a class="-small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
-            <a class="-small" href="#"><img src="../../images/_DELME_size.png" alt=""></a>
+            <a class="-small" href="#"><img src="images/_DELME_size.png" alt=""></a>
+            <a class="checked -green -small" href="#"><img src="images/_DELME_size.png" alt=""></a>
+            <a class="-small" href="#"><img src="images/_DELME_size.png" alt=""></a>
+            <a class="-small" href="#"><img src="images/_DELME_size.png" alt=""></a>
+            <a class="-small" href="#"><img src="images/_DELME_size.png" alt=""></a>
+            <a class="-small" href="#"><img src="images/_DELME_size.png" alt=""></a>
         </p>
     </div>
     <div class="block type">
