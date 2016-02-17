@@ -27,6 +27,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/_base.css">
     <link rel="stylesheet" type="text/css" href="css/_base_title.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_yandex_result.css">
     <link rel="stylesheet" type="text/css" href="css/_base_categories.css">
     <link rel="stylesheet" type="text/css" href="css/_base_filter.css">
     <link rel="stylesheet" type="text/css" href="css/_base_h1.css">
