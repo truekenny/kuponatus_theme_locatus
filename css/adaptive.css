@@ -225,6 +225,12 @@
         display: none;
     }
 
+/* base-yandex-result */
+
+    #body .b-serp-item__text {
+        padding-left: 0;
+    }
+
 /* DEMO */
 
     .modal,

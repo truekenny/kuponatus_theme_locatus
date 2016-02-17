@@ -1,8 +1,128 @@
 .base-yandex-result {
     margin: 20px;
-    padding-left: 20px;
 
     background-color: #ffffff;
     border-radius: 3px;
     overflow: hidden;
 }
+
+    #body .base-yandex-result #ya-site-results {
+        font-family: 'Roboto' !important;
+        font-weight: 200;
+    }
+
+    /* Список */
+
+    #ya-site-results .b-serp-item__title-link:link,
+    #ya-site-results .b-serp-item__title-link {
+        color: #404040 !important;
+        font-size: 20px !important;
+        font-weight: 200;
+        text-decoration: none;
+    }
+
+        #ya-site-results .b-serp-item__title-link:link b,
+        #ya-site-results .b-serp-item__title-link b {
+            font-weight: 400;
+        }
+
+        #ya-site-results .b-serp-item__title-link:hover {
+            text-decoration: underline;
+        }
+
+    body #ya-site-results .b-serp-url,
+    body #ya-site-results .b-direct .url,
+    body #ya-site-results .b-direct .url a:link,
+    body #ya-site-results .b-direct .url a:visited {
+        color: #404040;
+    }
+
+    body .b-body-items {
+        padding: 0;
+    }
+
+    body .b-serp-item:first-child {
+        border-top: 1px solid #ededed;
+    }
+
+    body .b-serp-item {
+        margin: 0;
+        padding: 10px 20px;
+
+        border-bottom: 1px solid #ededed;
+    }
+
+        body .b-serp-item:hover {
+            background-color: #F7F7F7;
+        }
+
+    #ya-site-results .b-serp-item__title {
+        padding-left: 20px;
+    }
+
+    body .b-serp-item__number {
+        padding-left: 10px;
+    }
+
+    body .l-page_layout_70-30 .l-page__left {
+        padding-right: 0;
+    }
+
+    #body .b-serp-item__links {
+        display: none;
+    }
+
+    #body .b-serp-item__text {
+        margin-top: 5px;
+        padding-left: 20px;
+
+        color: #7f7f7f;
+        font-size: 16px;
+        font-weight: 200 !important;
+    }
+
+        #body .b-serp-item__text b {
+            font-weight: 400;
+        }
+
+    /* Пагинатор */
+
+    body .b-pager__pages {
+        margin-top: 18px;
+
+        line-height: 40px;
+    }
+
+    #body #ya-site-results .b-pager__page,
+    #body #ya-site-results .b-pager__current,
+    #body #ya-site-results .b-pager__prev,
+    #body #ya-site-results .b-pager__next,
+    #body #ya-site-results .b-pager__sorted > a {
+        padding: 4px 6px;
+
+        background-color: white;
+        border: 1px solid #ededed;
+        border-radius: 3px;
+        color: #404040 !important;
+        text-decoration: none;
+    }
+
+        #body #ya-site-results .b-pager__page:hover,
+        #body #ya-site-results .b-pager__current,
+        #body #ya-site-results .b-pager__prev:hover,
+        #body #ya-site-results .b-pager__next:hover,
+        #body #ya-site-results .b-pager__sorted > b,
+        #body #ya-site-results .b-pager__sorted > a:hover {
+            padding: 4px 6px;
+
+            background-color: #52d048;
+            border-color: transparent;
+            border-radius: 3px;
+            box-shadow: 0 0 3px #52d048;
+            color: white !important;
+        }
+
+    #body .g-gap-horizontal {
+        margin-left: 20px;
+    }
+
