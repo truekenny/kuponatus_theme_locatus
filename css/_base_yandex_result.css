@@ -12,10 +12,13 @@
     }
 
     /* Список */
+    #body #ya-site-results .b-serp-item__title-link:link,
+    #body #ya-site-results .b-serp-item__title-link {
+        color: #404040 !important;
+    }
 
     #ya-site-results .b-serp-item__title-link:link,
     #ya-site-results .b-serp-item__title-link {
-        color: #404040 !important;
         font-size: 20px !important;
         font-weight: 200;
         text-decoration: none;
