@@ -145,6 +145,8 @@
         }
 
         .base-card-lines .lines .line .more {
+            padding-left: 0;
+
             position: absolute;
             left: 20px;
             top: 44px;

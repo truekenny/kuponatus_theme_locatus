@@ -9,7 +9,7 @@
             <div class="name">
                 Кафе и бар
             </div>
-            <div class="more">
+            <div class="more -box">
                 <?= rand(10, 1000) ?> предложений
             </div>
             <div class="price -aright">

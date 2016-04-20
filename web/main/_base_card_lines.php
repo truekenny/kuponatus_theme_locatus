@@ -9,7 +9,7 @@
             <div class="name">
                 Кафе и бар
             </div>
-            <div class="more">
+            <div class="more -box">
                 <a href="#">Меню</a>
             </div>
             <div class="price -aright">

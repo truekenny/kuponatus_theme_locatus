@@ -24,6 +24,11 @@
         width: 150px;
 
         overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .base-card-lines .lines .line .more {
+        padding-left: 5px;
     }
 
         .base-card-lines .lines .line.no-more .name {
