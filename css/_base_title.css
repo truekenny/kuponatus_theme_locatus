@@ -59,3 +59,8 @@
             letter-spacing: 0.5px; /* Стоит заменить на что-нибудь более валидное */
         }
 
+            #body .base-title .text p a {
+                color: white;
+                font-style: italic;
+            }
+
