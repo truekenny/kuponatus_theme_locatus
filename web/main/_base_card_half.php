@@ -1,8 +1,8 @@
 <div class="base-card-half">
 
-    <? foreach(range(1, 2)as $i): ?>
+    <? foreach(range(1, rand(1, 6))as $i): ?>
     <div class="card">
-        <div class="image -box" style="background-image: url('images/_DELME_card_half_<?= $i ?>.jpg');">
+        <div class="image -box" style="background-image: url('images/_DELME_card_half_<?= $i % 2 + 1 ?>.jpg');">
 
         </div>
         <div class="text -box">

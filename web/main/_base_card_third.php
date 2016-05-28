@@ -1,9 +1,9 @@
 <!-- Отображение base-card-third карточек не предусмотрено на телефоне -->
 <div class="base-card-third">
 
-    <? foreach(range(1, 3)as $i): ?>
+    <? foreach(range(1, rand(1, 9))as $i): ?>
         <div class="card">
-            <div class="image -box" style="background-image: url('images/_DELME_card_third_<?= $i ?>.jpg');">
+            <div class="image -box" style="background-image: url('images/_DELME_card_third_<?= $i % 3 + 1 ?>.jpg');">
                 <? if($i == 2): ?>
                     <div class="super -super -center">Суперцена</div>
                 <? endif; ?>

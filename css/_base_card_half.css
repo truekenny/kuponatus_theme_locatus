@@ -12,6 +12,10 @@
         margin-left: 20px;
     }
 
+        .base-card-half > div:nth-child(2) ~ div {
+            margin-top: 20px;
+        }
+
     .base-card-half .card {
         width: 320px;
         height: 638px;

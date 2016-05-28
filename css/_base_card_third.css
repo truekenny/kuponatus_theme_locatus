@@ -16,6 +16,10 @@
         margin-left: 20px; /* 620 - размер блока, куда надо поместить 3 карточки, не делится 3 без остатка */
     }
 
+        .base-card-third > div:nth-child(3) ~ div {
+            margin-top: 20px;
+        }
+
     .base-card-third .card {
         width: 206px;
         height: 528px;
