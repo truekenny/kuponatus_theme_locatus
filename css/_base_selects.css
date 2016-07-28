@@ -1,0 +1,67 @@
+.base-selects {
+    margin: 20px;
+}
+    .base-selects > div {
+        margin-right: 1%;
+
+        width: 24.25%;
+        height: 40px;
+        float: left;
+
+        background-color: white;
+        background-image: url("../images/arrow_down.png");
+        background-repeat: no-repeat;
+        background-position: right 6px center;
+        border-radius: 8px;
+        cursor: pointer;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    .base-selects > div:last-child {
+        margin-right: 0;
+    }
+
+        .base-selects > div > span:before,
+        .base-selects > div > span:after {
+            content: '--';
+
+            padding: 0 8px;
+        }
+
+        .base-selects > div > div {
+            display: none;
+
+            position: relative;
+            z-index: 100;
+            overflow-y: hidden;
+
+            background-color: #eee;
+            border-bottom: 2px solid #aaa;
+        }
+
+            .base-selects > div > div > a {
+                padding: 0 8px;
+
+                display: block;
+
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .base-selects > div > div > a:hover {
+                background-color: white;
+            }
+
+    .base-selects > div.open {
+        border-radius: 8px 8px 0 0;
+        background-color: #eee;
+        background-image: url("../images/arrow_up.png");
+    }
+        .base-selects > div.open > div {
+            display: block;
+        }
+

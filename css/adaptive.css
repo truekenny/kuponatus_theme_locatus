@@ -246,6 +246,12 @@
         padding-left: 0;
     }
 
+/* base-selects */
+    .base-selects > div > span:before,
+    .base-selects > div > span:after {
+        display: none;
+    }
+
 /* DEMO */
 
     .modal,
