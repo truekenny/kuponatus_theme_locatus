@@ -1,5 +1,5 @@
 <? foreach(range(1, 4)as $j): ?>
-<div class="base-card-high base-card-lines">
+<div class="base-card-high base-card-lines -can-overflow">
 
     <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика -->
     <div class='point'
@@ -22,6 +22,8 @@
         <a href="#"><img src="images/_DELME_card_2.jpg" alt="" align="right"></a>
         <h2><a href="#">Эконом класс от <span>149 руб.</span></a></h2>
         <p>Renault Logan, Kia Rio, Hyundai Solar</p>
+
+        <? require '_popup.php'; ?>
     </div>
 
     <? foreach(range(1, 2)as $i): ?>

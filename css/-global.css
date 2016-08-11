@@ -112,3 +112,7 @@ select.-input {
 .-no-menu #map {
     left: 700px
 }
+
+.-can-overflow {
+    overflow: visible !important;
+}

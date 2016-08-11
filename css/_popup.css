@@ -1,0 +1,115 @@
+.popup {
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+    display: inline-block;
+}
+
+    .popup > div {
+        padding: 6px 8px;
+
+        display: inline-block;
+        position: relative;
+
+        background-color: limegreen;
+        color: #ffffff;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .popup .close {
+        position: absolute;
+
+        left: 597px;
+        top: 45px;
+        height: 15px;
+        width: 15px;
+        display: none;
+        z-index: 21;
+
+        background-image: url("../images/close.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+        .popup.show .close {
+            display: block;
+        }
+
+    .popup .popup-window {
+        padding: 20px;
+
+        width: 620px;
+        max-height: 400px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 38px;
+
+        background-color: #ffffff;
+        border-radius: 3px;
+        box-shadow: 0 0 40px #555;
+        cursor: default;
+        overflow: hidden;
+        z-index: 20;
+    }
+
+        .popup.show .popup-window,
+        .popup:hover .popup-window {
+            display: block;
+        }
+
+        .popup.hide .popup-window {
+            display: none;
+        }
+
+            .popup .popup-window h2 {
+                margin-bottom: 8px;
+
+                font-size: 33px;
+            }
+
+        .popup .popup-window .one-line {
+            margin-bottom: 10px;
+
+            font-weight: 200;
+            overflow: hidden;
+        }
+
+            .popup .popup-window .one-line > div {
+                float: left;
+            }
+
+            .popup .popup-window .one-line .left {
+                width: 430px;
+            }
+
+                .popup .popup-window .one-line .left p {
+                    font-size: 15px;
+                }
+
+                .popup .popup-window .one-line .left p.bold {
+                    font-weight: 400;
+                    color: #000000;
+                    text-decoration: underline;
+                }
+
+            .popup .popup-window .one-line .right {
+                padding: 10px 0;
+
+                width: 150px;
+
+                text-align: right;
+            }
+
+                .popup .popup-window .one-line .right a {
+                    padding: 6px 8px;
+
+                    background-color: limegreen;
+                    border-radius: 3px;
+                    color: #ffffff !important;
+                    text-decoration: none;
+                }
+
+

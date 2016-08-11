@@ -247,10 +247,30 @@
     }
 
 /* base-selects */
+
     .base-selects > div > span:before,
     .base-selects > div > span:after {
         display: none;
     }
+
+/* popup */
+
+    .popup .popup-window {
+        width: 390px;
+    }
+
+    .popup .close {
+        left: 363px;
+    }
+
+    .popup .popup-window .one-line .left,
+    .popup .popup-window .one-line .right {
+        width: 100%;
+    }
+
+        .popup .popup-window .one-line .left p {
+            text-align: justify;
+        }
 
 /* DEMO */
 
