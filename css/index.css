@@ -10,4 +10,6 @@
 
 #body > .content {
     margin-top: 67px;
+
+    overflow: hidden;
 }

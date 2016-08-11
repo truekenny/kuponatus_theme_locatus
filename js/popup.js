@@ -1,9 +1,17 @@
 Locatus.Popup = (function ($) {
     function init() {
-        $(".popup > div").on('click', function (e) {
+        var popupButton = $(".popup > div");
+
+        popupButton.on('click', function (e) {
             if ($(e.target).hasClass('button')) {
-                $('.popup').removeClass('show');
+                $('.popup').removeClass('show hide');
                 $(this).parent().addClass('show');
+            }
+        });
+
+        popupButton.on('mousemove', function (e) {
+            if ($(e.target).hasClass('button')) {
+                $('.popup').removeClass('hide');
             }
         });
 
@@ -13,9 +21,6 @@ Locatus.Popup = (function ($) {
 
             // Настильно скрываю элемент, который под :hover виден
             popup.addClass("hide");
-            setTimeout(function () {
-                popup.removeClass('hide');
-            }, 100);
         });
 
         $(".popup .popup-window").niceScroll({
