@@ -194,24 +194,28 @@
                                 <input placeholder="Поиск района" class="-box">
                             </p>
                             <ul>
+<!--
                                 <li>Аэропорт</li>
                                 <li>Аэропорт</li>
+-->
                             </ul>
                         </div>
                         <div class="selector-options"> <!-- options -->
                             <? foreach(range(1, 10) as $i): ?>
-                                <div> <!-- option -->
+                                <div data-id="<?= $i ?>"> <!-- option -->
                                     <div> <!-- name -->
                                         Комедия <?= $i ?>
                                     </div>
+                                    <? /*
                                     <div> <!-- ad.info -->
                                         от 123 руб.
                                     </div>
+                                    */ ?>
                                 </div>
                             <? endforeach; ?>
                         </div>
                         <div class="selector-footer">
-                            123
+                            <a href="#" class="no-demo -green">Выбрать</a>
                         </div>
                     </div>
                 </div>

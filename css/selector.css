@@ -39,7 +39,7 @@
             border: 1px solid #CCCCCC;
             border-radius: 3px;
             box-shadow: 0 3px 5px #ccc;
-            z-index: 30;
+            z-index: 20;
         }
 
             .selector.show + div > div > div.selector-header { /* header */
@@ -79,6 +79,20 @@
                         line-height: 30px;
                     }
 
+                    .selector.show + div > div > div.selector-header > ul > li:after {
+                        content: " ";
+
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+                        top: 2px;
+                        left: 5px;
+
+                        background-image: url("../images/clear.png");
+                    }
+
+
             .selector + div > div > div.selector-options { /* options */
                 max-height: 250px;
 
@@ -90,6 +104,10 @@
                     display: table;
                     width: 100%;
                 }
+
+                    .selector + div > div > div.selector-options > div.hide { /* option */
+                        display: none;
+                    }
 
                 .selector + div > div > div.selector-options > div:hover { /* option */
                     background-color: #eee;
@@ -108,7 +126,19 @@
                         padding-left: 20px;
                     }
 
-                    .selector + div > div > div.selector-options > div > div:last-child { /* name, ad.info */
+                    .selector.multi + div > div > div.selector-options > div > div:first-child { /* name, ad.info */
+                        padding-left: 50px;
+
+                        background-image: url("../images/check_off.png");
+                        background-position: 20px center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .selector.multi + div > div > div.selector-options > div.on > div:first-child { /* name, ad.info */
+                        background-image: url("../images/check_on.png");
+                    }
+
+                    .selector + div > div > div.selector-options > div > div + div { /* name, ad.info */
                         padding-right: 20px;
 
                         text-align: right;
@@ -119,6 +149,15 @@
 
                 border-top: 1px solid #CCCCCC;
             }
+
+                .selector + div > div > div.selector-footer a {
+                    padding: 8px 10px;
+
+                    border-radius: 3px;
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+
 
 .selector-color { /* Цветной блок */
     width: 22px;
