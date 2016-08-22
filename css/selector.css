@@ -1,0 +1,85 @@
+.selector {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    height: 40px;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 40px;
+    background-image: url("../images/arrow.png");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selector.show {
+    border-color: limegreen;
+}
+
+    .selector + div {
+        display: none;
+        height: 0;
+        overflow: visible;
+        position: relative;
+    }
+
+    .selector.show + div { /* wrapper */
+        display: block;
+    }
+
+        .selector + div > div { /* options */
+            width: 250px;
+            max-height: 250px;
+            position: absolute;
+
+            background-color: #ffffff;
+            border: 1px solid #CCCCCC;
+            border-radius: 3px;
+            box-shadow: 0 3px 5px #ccc;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 30;
+        }
+
+            .selector + div > div > div { /* option */
+                display: table;
+                width: 100%;
+            }
+
+            .selector + div > div > div:hover { /* option */
+                background-color: #eee;
+            }
+
+                .selector + div > div > div > div { /* name, ad.info */
+                    display: table-cell;
+                    height: 40px;
+
+                    font-size: 15px;
+                    font-weight: 200;
+                    line-height: 40px;
+                }
+
+                .selector + div > div > div > div:first-child { /* name, ad.info */
+                    padding-left: 20px;
+                }
+
+                .selector + div > div > div > div:last-child { /* name, ad.info */
+                    padding-right: 20px;
+
+                    text-align: right;
+                }
+
+.selector-color { /* Цветной блок */
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+
+    border-radius: 20px;
+}
+

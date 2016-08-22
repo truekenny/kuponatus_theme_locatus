@@ -51,6 +51,7 @@
     <link rel="stylesheet" type="text/css" href="css/_modal_list.css">
 
     <link rel="stylesheet" type="text/css" href="css/_map.css">
+    <link rel="stylesheet" type="text/css" href="css/selector.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
 
     <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
@@ -72,6 +73,7 @@
     <script src="js/lines.js" type="text/javascript"></script>
     <script src="js/selects.js" type="text/javascript"></script>
     <script src="js/popup.js" type="text/javascript"></script>
+    <script src="js/selector.js" type="text/javascript"></script>
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="js/supplier.js" type="text/javascript"></script>
         <script src="js/map.js" type="text/javascript"></script>
@@ -86,6 +88,7 @@
             Locatus.Lines.init();
             Locatus.Selects.init();
             Locatus.Popup.init();
+            Locatus.Selector.init();
             <? if(!HelperDeveloper::isDevelop()): ?>
                 Locatus.Supplier.init();
                 Locatus.Map.init();

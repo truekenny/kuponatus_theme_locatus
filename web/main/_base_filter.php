@@ -1,4 +1,4 @@
-<div class="base-filter">
+<div class="base-filter -can-overflow">
     <div class="block margin active">
         Активные фильтры <a class="dashed" href="#">Сброс</a>
     </div>
@@ -120,7 +120,7 @@
     </div>
 
     <div class="block">
-        <h4>Рисунок</h4>
+        <h4>Простой список</h4>
 
         <div class="row">
             <div class="double">
@@ -133,4 +133,53 @@
             </div>
         </div>
     </div>
+
+    <div class="block -can-overflow">
+        <h4>Примеры сложных списков</h4>
+
+        <div class="row -can-overflow">
+            <div class="double">
+                <div class="selector">
+                    Сделайте выбор
+                </div>
+                <div> <!-- wrapper -->
+                    <div> <!-- options -->
+                        <? foreach(range(1, 10) as $i): ?>
+                            <div> <!-- option -->
+                                <div> <!-- name -->
+                                    Комедия <?= $i ?>
+                                </div>
+                                <div> <!-- ad.info -->
+                                    (123)
+                                </div>
+                            </div>
+                        <? endforeach; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="double margin">
+                <div class="selector">
+                    Сделайте выбор
+                </div>
+                <div> <!-- wrapper -->
+                    <div> <!-- options -->
+                        <? foreach(range(1, 10) as $i): ?>
+                            <div> <!-- option -->
+                                <div> <!-- name -->
+                                    <div class="selector-color" style="background-color: lightgreen"></div> Комедия <?= $i ?>
+                                </div>
+                                <div> <!-- ad.info -->
+                                   от 123 руб.
+                                </div>
+                            </div>
+                        <? endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="-clear"></div>
+    </div>
 </div>
+
+
