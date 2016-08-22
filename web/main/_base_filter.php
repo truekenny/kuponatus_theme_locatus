@@ -143,17 +143,19 @@
                     Сделайте выбор
                 </div>
                 <div> <!-- wrapper -->
-                    <div> <!-- options -->
-                        <? foreach(range(1, 10) as $i): ?>
-                            <div> <!-- option -->
-                                <div> <!-- name -->
-                                    Комедия <?= $i ?>
+                    <div>   <!-- window -->
+                        <div class="selector-options"> <!-- options -->
+                            <? foreach(range(1, 10) as $i): ?>
+                                <div> <!-- option -->
+                                    <div> <!-- name -->
+                                        Комедия <?= $i ?>
+                                    </div>
+                                    <div> <!-- ad.info -->
+                                        (123)
+                                    </div>
                                 </div>
-                                <div> <!-- ad.info -->
-                                    (123)
-                                </div>
-                            </div>
-                        <? endforeach; ?>
+                            <? endforeach; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,17 +165,54 @@
                     Сделайте выбор
                 </div>
                 <div> <!-- wrapper -->
-                    <div> <!-- options -->
-                        <? foreach(range(1, 10) as $i): ?>
-                            <div> <!-- option -->
-                                <div> <!-- name -->
-                                    <div class="selector-color" style="background-color: lightgreen"></div> Комедия <?= $i ?>
+                    <div>   <!-- window -->
+                        <div class="selector-options"> <!-- options -->
+                            <? foreach(range(1, 10) as $i): ?>
+                                <div> <!-- option -->
+                                    <div> <!-- name -->
+                                        <div class="selector-color" style="background-color: lightgreen"></div> Комедия <?= $i ?>
+                                    </div>
+                                    <div> <!-- ad.info -->
+                                       от 123 руб.
+                                    </div>
                                 </div>
-                                <div> <!-- ad.info -->
-                                   от 123 руб.
+                            <? endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="double margin">
+                <div class="selector multi">
+                    Сделайте выбор
+                </div>
+                <div> <!-- wrapper -->
+                    <div>   <!-- window -->
+                        <div class="selector-header">
+                            <h3>Выберите район</h3>
+                            <p>
+                                <input placeholder="Поиск района" class="-box">
+                            </p>
+                            <ul>
+                                <li>Аэропорт</li>
+                                <li>Аэропорт</li>
+                            </ul>
+                        </div>
+                        <div class="selector-options"> <!-- options -->
+                            <? foreach(range(1, 10) as $i): ?>
+                                <div> <!-- option -->
+                                    <div> <!-- name -->
+                                        Комедия <?= $i ?>
+                                    </div>
+                                    <div> <!-- ad.info -->
+                                        от 123 руб.
+                                    </div>
                                 </div>
-                            </div>
-                        <? endforeach; ?>
+                            <? endforeach; ?>
+                        </div>
+                        <div class="selector-footer">
+                            123
+                        </div>
                     </div>
                 </div>
             </div>

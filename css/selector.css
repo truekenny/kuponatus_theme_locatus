@@ -31,47 +31,94 @@
         display: block;
     }
 
-        .selector + div > div { /* options */
+        .selector.show + div > div { /* window */
             width: 250px;
-            max-height: 250px;
             position: absolute;
 
             background-color: #ffffff;
             border: 1px solid #CCCCCC;
             border-radius: 3px;
             box-shadow: 0 3px 5px #ccc;
-            cursor: pointer;
-            overflow: hidden;
             z-index: 30;
         }
 
-            .selector + div > div > div { /* option */
-                display: table;
-                width: 100%;
+            .selector.show + div > div > div.selector-header { /* header */
+                padding-left: 20px;
+
+                border-bottom: 1px solid #ccc;
             }
 
-            .selector + div > div > div:hover { /* option */
-                background-color: #eee;
+                .selector.show + div > div > div.selector-header > h3 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+
+                .selector.show + div > div > div.selector-header input {
+                    padding: 5px 10px;
+
+                    width: 90%;
+
+                    border: 1px solid #CCCCCC;
+                    border-radius: 3px;
+                }
+
+                .selector.show + div > div > div.selector-header > ul {
+                    padding: 0;
+
+                    list-style: none;
+                }
+
+                    .selector.show + div > div > div.selector-header > ul > li {
+                        height: 30px;
+
+                        cursor: pointer;
+                        font-size: 15px;
+                        font-weight: 200;
+                        line-height: 30px;
+                    }
+
+            .selector + div > div > div.selector-options { /* options */
+                max-height: 250px;
+
+                cursor: pointer;
+                overflow: hidden;
             }
 
-                .selector + div > div > div > div { /* name, ad.info */
-                    display: table-cell;
-                    height: 40px;
-
-                    font-size: 15px;
-                    font-weight: 200;
-                    line-height: 40px;
+                .selector + div > div > div.selector-options > div { /* option */
+                    display: table;
+                    width: 100%;
                 }
 
-                .selector + div > div > div > div:first-child { /* name, ad.info */
-                    padding-left: 20px;
+                .selector + div > div > div.selector-options > div:hover { /* option */
+                    background-color: #eee;
                 }
 
-                .selector + div > div > div > div:last-child { /* name, ad.info */
-                    padding-right: 20px;
+                    .selector + div > div > div.selector-options > div > div { /* name, ad.info */
+                        display: table-cell;
+                        height: 40px;
 
-                    text-align: right;
-                }
+                        font-size: 15px;
+                        font-weight: 200;
+                        line-height: 40px;
+                    }
+
+                    .selector + div > div > div.selector-options > div > div:first-child { /* name, ad.info */
+                        padding-left: 20px;
+                    }
+
+                    .selector + div > div > div.selector-options > div > div:last-child { /* name, ad.info */
+                        padding-right: 20px;
+
+                        text-align: right;
+                    }
+
+            .selector + div > div > div.selector-footer {
+                padding: 20px;
+
+                border-top: 1px solid #CCCCCC;
+            }
 
 .selector-color { /* Цветной блок */
     width: 22px;

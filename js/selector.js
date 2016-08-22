@@ -11,14 +11,14 @@ Locatus.Lines = (function ($) {
             }
         });
 
-        $('.selector + div > div').niceScroll({
+        $('.selector + div > div > div').niceScroll({
             cursorcolor: '#dddddd',
             horizrailenabled: false
         });
-        $('.selector + div > div > div').on('click', function () {
+        $('.selector + div > div > div > div').on('click', function () {
             var data = $(this).find('div:first-child').html();
 
-            var selector = $(this).parent().parent().prev();
+            var selector = $(this).parents().eq(2).prev();
             selector.html(data);
             selector.removeClass('show');
         });
