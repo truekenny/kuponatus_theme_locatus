@@ -95,6 +95,18 @@
         </div>
     </div>
 
+    <div class="block">
+        <h4>Виды маникюра</h4>
+        <div>
+        <? foreach(range(1, 8) as $i): ?>
+            <div class="wide-line half-line no-dots">
+                <a href="#">СПА-маникюр</a>
+                <a class="-right" href="#">от 300 руб.</a>
+            </div>
+        <? endforeach; ?>
+        </div>
+    </div>
+
     <div class="block margin">
         <h4>Выберите класс автомобиля</h4>
         <div class="row no-margin-bottom">

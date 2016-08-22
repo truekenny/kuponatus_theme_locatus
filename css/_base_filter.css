@@ -10,6 +10,7 @@
         padding: 25px 20px;
 
         border-top: 1px solid #ECECEC;
+        overflow: hidden;
     }
 
         .base-filter .block .range {
@@ -176,6 +177,33 @@
             padding-left: 5px;
             text-decoration: none;
         }
+
+    .base-filter .block .half-line {
+        width: 50%;
+        float: left;
+
+        white-space: nowrap;
+    }
+
+        .base-filter .block .half-line a:first-child {
+            max-width: 150px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+            .base-filter .block .half-line:nth-child(2n+1) a + a {
+                padding-right: 20px;
+            }
+
+            .base-filter .block .half-line:nth-child(2n) a:first-child {
+                padding-left: 20px;
+            }
+
+    .base-filter .block .no-dots {
+        background-image: none;
+    }
 
     .base-filter .block .no-margin-bottom {
         margin-bottom: -20px;

@@ -126,7 +126,16 @@
         width: 160px;
     }
 
-/* base-card */
+    .base-filter .block .half-line {
+        width: 100%;
+    }
+
+    #body .base-filter .block .half-line a {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* base-card */
 
     .base-card .header img,
     .base-card-high .header img {
