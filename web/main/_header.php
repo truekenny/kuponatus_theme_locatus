@@ -3,7 +3,7 @@
         <img src="images/menu.png" alt="">
     </a>
     <a class="logo no-demo" href=".">
-        Л<img src="images/logo.png" alt="">катус
+        <img src="images/logo_full.png" alt="Локатус">
     </a>
 
     <div class="search-wrapper ya-site-form ya-site-form_inited_no"
