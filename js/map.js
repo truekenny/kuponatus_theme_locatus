@@ -102,7 +102,7 @@ Locatus.Map = (function ($) {
      * @param {string} url Ссылка
      */
     function addPointAsynchronous(coords, hint, url) {
-        ymaps.ready(function() {
+        ymaps.ready(function () {
             addPoint(coords, hint, url);
         });
     }
@@ -120,7 +120,7 @@ Locatus.Map = (function ($) {
             $(points).each(function () {
                 var cluster = this.options.get('cluster');
 
-                if(typeof cluster == "undefined" || cluster == '') {
+                if (typeof cluster == "undefined" || cluster == '') {
 
                     return;
                 }
@@ -132,7 +132,7 @@ Locatus.Map = (function ($) {
                 clusters[cluster].add(this);
             });
 
-            for(var key in clusters) {
+            for (var key in clusters) {
                 map.geoObjects.add(clusters[key]);
             }
         });
@@ -145,7 +145,7 @@ Locatus.Map = (function ($) {
      */
     function selectPoint(index, selected) {
         $([points]).each(function () {
-            if(typeof this[index-1] == "undefined") {
+            if (typeof this[index - 1] == "undefined") {
                 return;
             }
 
@@ -176,6 +176,16 @@ Locatus.Map = (function ($) {
 
         browsePoints();
         browseClusters();
+
+        reScale();
+    }
+
+    /**
+     * Изменяет масштаб и центрирует точки на карте
+     */
+    function reScale() {
+        map.setBounds(map.geoObjects.getBounds());
+        map.setZoom(map.getZoom() - 1);
     }
 
     function init() {
