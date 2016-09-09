@@ -1,5 +1,5 @@
 <? foreach(range(1, 4)as $j): ?>
-<div class="base-card-high base-card-lines -can-overflow">
+<div class="base-card-high base-card-lines -can-overflow <?= rand(0, 1) ? 'favorite' : '' ?>">
 
     <!-- По следующему блоку создаётся точка на карте, которая зависит от текущего поставщика -->
     <div class='point'

@@ -11,6 +11,10 @@
     line-height: 35px;
 }
 
+.base-card-lines.favorite .lines .line {
+    padding: 8px 15px;
+}
+
 .base-card-lines .lines .line:hover {
     background-color: #F7F7F7;
 }
