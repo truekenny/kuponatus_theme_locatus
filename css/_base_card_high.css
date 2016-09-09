@@ -7,6 +7,11 @@
     overflow: hidden;
 }
 
+    .base-card-high.favorite {
+        border: solid 5px #8a1a00;
+        background-color: #fefdf5;
+    }
+
     .base-card-high .header {
         min-height: 174px;
         padding: 0 20px;
