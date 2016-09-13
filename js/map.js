@@ -177,15 +177,25 @@ Locatus.Map = (function ($) {
         browsePoints();
         browseClusters();
 
-        reScale();
+        setTimeout(function () {
+            reScale();
+        }, 1);
     }
 
     /**
      * Изменяет масштаб и центрирует точки на карте
      */
     function reScale() {
+        var oldZoom = map.getZoom();
+        var oldCenter = map.getCenter();
+
         map.setBounds(map.geoObjects.getBounds());
         map.setZoom(map.getZoom() - 1);
+
+        // Если масштаб карты стал вмещать больше местности, то надо вернуть старый масштаб
+        if (map.getZoom() < oldZoom) {
+            map.setCenter(oldCenter, oldZoom);
+        }
     }
 
     function init() {
