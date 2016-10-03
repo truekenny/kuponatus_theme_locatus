@@ -1,5 +1,35 @@
 Locatus.Selector = (function ($) {
-    function init() {
+    /**
+     * Инициализиует селекторы
+     */
+    function initSelectors() {
+        // Дополняет варианты выбора порядковым номером, требуется для селекторов с множественным выбором
+        $('.selector.multi').each(function () {
+            var i = 0;
+            $(this).next().find('.selector-options > div').each(function () {
+                i++;
+                $(this).attr('data-id', i);
+            });
+        });
+    }
+
+    /**
+     * Возвращает блок options с указанным значением
+     * @param value
+     * @returns {HTMLElement}
+     */
+    function getOption(value) {
+        var _option = $('<option />');
+        _option.attr('selected', 'selected');
+        _option.val(value);
+
+        return _option;
+    }
+
+    /**
+     * Обрабатывает видимость селекторов, при клике по основному полю
+     */
+    function visibilityHandler() {
         $('.selector').on('click', function () {
             if ($(this).hasClass('show')) {
                 $('.selector').removeClass('show');
@@ -10,16 +40,16 @@ Locatus.Selector = (function ($) {
                 $(this).addClass('show');
             }
         });
+    }
 
-        $('.selector + div > div > div').niceScroll({
-            cursorcolor: '#dddddd',
-            horizrailenabled: false
-        });
-
-        // Обработка выбора
+    /**
+     * Обрабатывает клики по содержимому селектора
+     */
+    function selectHandler() {
         $('.selector + div > div > div.selector-options > div').on('click', function () {
             var selector = $(this).parents().eq(2).prev();
             var data = $(this).find('div:first-child').html();
+            var formSelect = selector.prev();
 
             if (selector.hasClass('multi')) {
                 var option = $(this);
@@ -38,18 +68,51 @@ Locatus.Selector = (function ($) {
             else {
                 selector.html(data);
                 selector.removeClass('show');
+
+                formSelect.empty();
+                formSelect.append(getOption($(this).data('value')));
             }
         });
+    }
 
-        // Удалить из списка выбранных
+    function removeSelectedHandler() {
         $('.selector + div > div > div.selector-header ul').on('click', 'li', function () {
             var selector = $(this).parents().eq(3).prev();
             var option = selector.next().find("div[data-id=" + $(this).data("id") + "]");
 
             option.click();
         });
+    }
 
-        // Фильтрация списка
+    function acceptHandler() {
+        $('.selector + div > div > div.selector-footer a').on('click', function (e) {
+            e.preventDefault();
+
+            var selector = $(this).parents().eq(2).prev();
+            var list = selector.next().find('ul li');
+
+            var result = [];
+
+            list.each(function () {
+                result.push($.trim($(this).html()));
+            });
+
+            selector.html(result.join("; "));
+            selector.removeClass("show");
+
+            // Заполнение селектора формы
+            var formSelect = selector.prev();
+            formSelect.empty();
+            selector.next().find('.on').each(function () {
+                formSelect.append(getOption($(this).data('value')));
+            });
+        });
+    }
+
+    /**
+     * Фильтрация содержимого селектора
+     */
+    function filterHandler() {
         $('.selector + div > div > div.selector-header input').on('keyup change', function () {
             var text = $(this).val();
             var selector = $(this).parents().eq(3).prev();
@@ -62,22 +125,25 @@ Locatus.Selector = (function ($) {
                 }
             });
         });
+    }
 
-        // Кнопка Выбрать
-        $('.selector + div > div > div.selector-footer a').on('click', function (e) {
-            e.preventDefault();
-
-            var selector = $(this).parents().eq(2).prev();
-            var list = selector.next().find('ul li');
-            var result = [];
-
-            list.each(function () {
-                result.push($.trim($(this).html()));
-            });
-
-            selector.html(result.join("; "));
-            selector.removeClass("show");
+    function init() {
+        $('.selector + div > div > div').niceScroll({
+            cursorcolor: '#dddddd',
+            horizrailenabled: false
         });
+
+        initSelectors();
+
+        visibilityHandler();
+
+        selectHandler();
+
+        removeSelectedHandler();
+
+        filterHandler();
+
+        acceptHandler();
     }
 
     return {

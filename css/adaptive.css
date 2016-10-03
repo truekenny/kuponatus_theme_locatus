@@ -81,13 +81,13 @@
 
 /* base-filter */
 
-    .base-filter .block {
+    .base-filter .block:not(.padding) {
         padding-bottom: 0;
     }
 
-        .base-filter .block.margin {
-            padding-bottom: 20px;
-        }
+    .base-filter .block.margin {
+        padding-bottom: 20px;
+    }
 
         .base-filter .block .range {
             padding-left: 20px !important;
@@ -97,30 +97,29 @@
         width: 185px;
     }
 
-        .base-filter .row div.double {
-            width: 390px;
-        }
+    .base-filter .row div.double {
+        width: 390px;
+    }
 
-        .base-filter .row div.double,
-        .base-filter .row div.margin {
-            margin-bottom: 20px;
-        }
+    .base-filter .row div.double {
+        margin-bottom: 20px;
+    }
 
-            .base-filter .row div.double.margin {
-                margin-left: 0;
-            }
+    .base-filter .row > div + div {
+        margin-left: 0;
+    }
 
     .base-filter .block .image.double {
         width: 185px;
     }
 
-        .base-filter .block .image {
-            margin-left: 0 !important;
-        }
+    .base-filter .block .image {
+        margin-left: 0 !important;
+    }
 
-        .base-filter .block .image:nth-child(2n) {
-            margin-left: 20px !important;
-        }
+    .base-filter .block .image:nth-child(2n) {
+        margin-left: 20px !important;
+    }
 
     .base-filter input.mini {
         width: 160px;
@@ -135,7 +134,7 @@
         padding-left: 0;
     }
 
-    /* base-card */
+/* base-card */
 
     .base-card .header img,
     .base-card-high .header img {

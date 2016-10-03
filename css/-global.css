@@ -116,3 +116,7 @@ select.-input {
 .-can-overflow {
     overflow: visible !important;
 }
+
+.-hide {
+    display: none;
+}

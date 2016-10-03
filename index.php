@@ -75,6 +75,7 @@
     <script src="js/selects.js" type="text/javascript"></script>
     <script src="js/popup.js" type="text/javascript"></script>
     <script src="js/selector.js" type="text/javascript"></script>
+    <script src="js/filter.js" type="text/javascript"></script>
     <? if(!HelperDeveloper::isDevelop()): ?>
         <script src="js/supplier.js" type="text/javascript"></script>
         <script src="js/map.js" type="text/javascript"></script>

@@ -14,9 +14,7 @@
     }
 
         .base-filter .block .range {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            padding-right: 20px;
+            padding: 20px;
         }
 
             .base-filter .block .range .noUi-connect {
@@ -26,6 +24,7 @@
     .base-filter .active {
         background-color: #F7F7F7;
         border: 0;
+        border-radius:  3px 3px 0 0;
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
@@ -51,9 +50,6 @@
         text-transform: uppercase;
         letter-spacing: 1px;
 
-        background-image: url("../images/hide.png");
-        background-position: 99.5% center;
-        background-repeat: no-repeat;
         cursor: pointer;
     }
 
@@ -86,7 +82,7 @@
         float: left;
     }
 
-    .base-filter .row div.margin {
+    .base-filter .row > div + div {
         margin-left: 20px;
     }
 
@@ -156,10 +152,6 @@
 
         overflow: hidden;
         white-space: nowrap;
-
-        background-image: url("../images/dot.png");
-        background-position: 0 80%;
-        background-repeat: repeat-x;
     }
 
         .base-filter .block .wide-line a {
@@ -201,10 +193,6 @@
                 padding-left: 20px;
             }
 
-    .base-filter .block .no-dots {
-        background-image: none;
-    }
-
     .base-filter .block .no-margin-bottom {
         margin-bottom: -20px;
     }
@@ -245,3 +233,89 @@
                 margin-top: 7px;
                 font-weight: normal;
             }
+
+    .base-filter .block.applied {
+        background-image: url("../images/expand.png");
+        background-position: right 20px center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .base-filter .block.applied.show {
+        background-image: url("../images/hide.png");
+    }
+
+        .base-filter .block.applied span {
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .base-filter .block.applied span + span {
+            margin-left: 10px;
+        }
+
+        .base-filter .block.applied span:after {
+            content: ' ';
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            position: relative;
+            top: 4px;
+
+            background-image: url("../images/clear.png");
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+
+    .base-filter .block.applied ~ .block.important {
+        display: none;
+    }
+
+    .base-filter .block.applied.show ~ .block.important {
+        display: block;
+    }
+
+    .base-filter .block.buttons {
+        background-color: #435762;
+        border: 0;
+    }
+
+    .base-filter .block .row > button {
+        width: 160px;
+        height: 60px;
+
+        font-size: 20px;
+        font-weight: 200;
+
+        background-color: #FFDD63;
+        border: 0;
+        border-bottom: 3px solid #EEB740;
+        border-radius: 3px;
+    }
+
+        .base-filter .block .row > button:active {
+            border-color: transparent !important;
+        }
+
+    .base-filter .block .row > button.cancel {
+        background-color: #ABABAB;
+        border-bottom-color: #8D8F8E;
+    }
+
+        .base-filter .block .row > button + button {
+            margin-left: 20px;
+        }
+
+
+    .base-filter table.slider {
+        width: 100%;
+    }
+
+        .base-filter table.slider td + td {
+            text-align: right;
+        }
+
+    .base-filter p.checkboxes {
+        margin: 8px 0;
+    }
+

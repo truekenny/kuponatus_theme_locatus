@@ -1,46 +1,80 @@
+<form action="?example">
 <div class="base-filter -can-overflow">
     <div class="block margin active">
         Активные фильтры <a class="dashed" href="#">Сброс</a>
     </div>
+
     <div class="block">
         <h4>Рисунок</h4>
         <div class="row">
+            <!-- Пример текстового блока -->
             <div class="double">
-                <input class="maxi -box -input" type="text" value="Горох">
+                <input name="input1" class="maxi -box -input" type="text" value="Горох">
             </div>
+            <!-- Конец примера текстового блока -->
+        </div>
+    </div>
+
+    <div class="block">
+        <h4>Рисунок</h4>
+        <div class="row">
+            <!-- Пример текстового блока -->
+            <div class="double">
+                <input name="input2" class="maxi -box -input" type="text" value="Горох">
+            </div>
+            <!-- Конец примера текстового блока -->
+
+            <!-- Пример блока с одним флажком -->
+            <div class="double">
+                <p class="checkboxes">
+                    <input name="checkbox" class="-checkbox" type="checkbox" id="UniqueID1" checked="checked"><label for="UniqueID1">С водителем</label><br>
+                </p>
+            </div>
+            <!-- Конец примера блока с одним флажком -->
         </div>
     </div>
 
     <div class="block">
         <h4>Цена, руб.</h4>
-        <div class="row -small">
-            <div>от <input class="mini js-slider-selected-min -box -input" type="text" value="100"></div>
-            <div class="margin -aright">до <input class="mini js-slider-selected-max -box -input" type="text" value="500"></div>
+        <div class="row">
+            <!-- Пример блока со слайдером -->
+            <div class="double">
+                <table class="slider -small">
+                    <tr>
+                        <td>от <input name="costFrom" class="mini js-slider-selected-min -box -input" type="text" value="100">
+                        <td>до <input name="costTo" class="mini js-slider-selected-max -box -input" type="text" value="500">
+                    <tr>
+                        <td colspan="2" class="range">
+                            <div class="js-slider" data-min="0" data-max="900" data-step="100"></div>
+                </table>
+            </div>
+            <!-- Конец примера блока со слайдером -->
 
-            <div class="double margin">
-                <select class="-box -input">
+            <!-- Пример блока со списком -->
+            <div class="double">
+                <select name="time" class="-box -input">
                     <option>Время работы</option>
                     <option>9:00 – 18:00</option>
                     <option>10:00 – 20:00</option>
                 </select>
             </div>
-            <div class="double margin">
-                <select class="-box -input">
+            <!-- Конец примера блока со списком -->
+
+            <!-- Пример блока со списком -->
+            <div class="double">
+                <select name="direction" class="-box -input">
                     <option>Ориентир</option>
                     <option>Кладбище</option>
                     <option>Камень встреч</option>
                 </select>
             </div>
-
-            <div class="range double margin -box" >
-                <div class="js-slider" data-min="0" data-max="900" data-step="100">
-                </div>
-            </div>
+            <!-- Конец примера блока со списком -->
         </div>
     </div>
 
     <div class="block">
         <div class="row -small">
+            <!-- Пример блока со ссылками -->
             <div class="double">
                 <h4 class="no-hide">Цена, руб.</h4>
                 <p class="list of-texts line">
@@ -53,7 +87,10 @@
                     <a href="#">Больше</a>
                 </p>
             </div>
-            <div class="double margin">
+            <!-- Конец примера блока со ссылками -->
+
+            <!-- Пример блока со ссылками-кнопками -->
+            <div class="double">
                 <h4 class="no-hide">Размер дисплея</h4>
                 <p class="list of-buttons">
                     <a class="-small" href="#">2.5 дюйма</a>
@@ -64,17 +101,22 @@
                     <a class="-small" href="#">8 дюймов</a>
                 </p>
             </div>
-            <div class="double margin">
+            <!-- Конец примера блока со ссылками-кнопками -->
+
+            <!-- Пример блока с флажками -->
+            <div class="double">
                 <h4 class="no-hide">Размер дисплея</h4>
-                <p>
-                    <input class="-checkbox" type="checkbox" id="UniqueID1" checked="checked"><label for="UniqueID1">Дизайн</label><br>
-                    <input class="-checkbox" type="checkbox" id="UniqueID2"><label for="UniqueID2">Уход</label><br>
-                    <input class="-checkbox" type="checkbox" id="UniqueID3"><label for="UniqueID3">Маникюр-педикюр</label><br>
+                <p class="checkboxes">
+                    <input name="checkbox1" class="-checkbox" type="checkbox" id="UniqueID1" checked="checked"><label for="UniqueID1">Дизайн</label><br>
+                    <input name="checkbox2" class="-checkbox" type="checkbox" id="UniqueID2"><label for="UniqueID2">Уход</label><br>
+                    <input name="checkbox3" class="-checkbox" type="checkbox" id="UniqueID3"><label for="UniqueID3">Маникюр-педикюр</label><br>
                 </p>
             </div>
+            <!-- Конец примера блока с флажками -->
         </div>
     </div>
 
+    <!-- Пример блока с линиями на всю ширину -->
     <div class="block">
         <h4>Виды маникюра</h4>
         <div class="wide-line">
@@ -94,30 +136,35 @@
             <a class="-right" href="#">от 3 до 500 руб.</a>
         </div>
     </div>
+    <!-- Конец примера блока с линиями на всю ширину -->
 
+    <!-- Пример блока с линиями на половину ширины -->
     <div class="block">
         <h4>Виды маникюра</h4>
         <div>
-        <? foreach(range(1, 8) as $i): ?>
-            <div class="wide-line half-line no-dots">
+        <?php foreach(range(1, 8) as $i): ?>
+            <div class="wide-line half-line">
                 <a href="#">СПА-маникюр</a>
                 <a class="-right" href="#">от 300 руб.</a>
             </div>
-        <? endforeach; ?>
+        <?php endforeach; ?>
         </div>
     </div>
+    <!-- Конец примера блока с линиями на половину ширины -->
 
+    <!-- Пример блока с картинками -->
     <div class="block margin">
         <h4>Выберите класс автомобиля</h4>
         <div class="row no-margin-bottom">
-            <? foreach(range(1, 6) as $i): ?>
-                <a href="#" class="image double" style="background-image: url('images/_DELME_example_<?= $i ?>.jpg')">
+            <?php foreach(range(1, 6) as $i): ?>
+                <a href="#" class="image double" style="background-image: url('/images/_DELME_example_<?= $i ?>.jpg')">
                     <p class="-center">VIP-класс</p>
                     <p class="-center">от 1 200 руб.</p>
                 </a>
-            <? endforeach; ?>
+            <?php endforeach; ?>
         </div>
     </div>
+    <!-- Конец примера блока с картинками -->
 
     <div class="block">
         <h4>Простой список</h4>
@@ -138,15 +185,18 @@
         <h4>Примеры сложных списков</h4>
 
         <div class="row -can-overflow">
+
+            <!-- Пример блока со сложным списком -->
             <div class="double">
+                <select class="-hide" name="example-selector-1" multiple="multiple"></select>
                 <div class="selector">
                     Сделайте выбор
                 </div>
                 <div> <!-- wrapper -->
                     <div>   <!-- window -->
                         <div class="selector-options"> <!-- options -->
-                            <? foreach(range(1, 10) as $i): ?>
-                                <div> <!-- option -->
+                            <?php foreach(range(1, 10) as $i): ?>
+                                <div data-value="Значение линии <?= $i ?>"> <!-- option -->
                                     <div> <!-- name -->
                                         Комедия <?= $i ?>
                                     </div>
@@ -154,21 +204,25 @@
                                         (123)
                                     </div>
                                 </div>
-                            <? endforeach; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Конец примера блока со сложным списком -->
 
-            <div class="double margin">
+            <!-- Пример блока со сложным списком, содержащий цветные элементы (кружки) -->
+            <!-- Это такой же блок как и предыдущий, просто содержит чуть-чуть html-украшашек в блоке name -->
+            <div class="double">
+                <select class="-hide" name="example-selector-2" multiple="multiple"></select>
                 <div class="selector">
                     Сделайте выбор
                 </div>
                 <div> <!-- wrapper -->
                     <div>   <!-- window -->
                         <div class="selector-options"> <!-- options -->
-                            <? foreach(range(1, 10) as $i): ?>
-                                <div> <!-- option -->
+                            <?php foreach(range(1, 10) as $i): ?>
+                                <div data-value="<?= $i ?>"> <!-- option -->
                                     <div> <!-- name -->
                                         <div class="selector-color" style="background-color: lightgreen"></div> Комедия <?= $i ?>
                                     </div>
@@ -176,13 +230,16 @@
                                        от 123 руб.
                                     </div>
                                 </div>
-                            <? endforeach; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Конец примера блока со сложным списком, содержащий цветные элементы (кружки) -->
 
-            <div class="double margin">
+            <!-- Пример блока со сложным списком и возможностью выбрать несколько элементов -->
+            <div class="double">
+                <select class="-hide" name="example-selector-3" multiple="multiple"></select>
                 <div class="selector multi">
                     Сделайте выбор
                 </div>
@@ -201,18 +258,18 @@
                             </ul>
                         </div>
                         <div class="selector-options"> <!-- options -->
-                            <? foreach(range(1, 10) as $i): ?>
-                                <div data-id="<?= $i ?>"> <!-- option -->
+                            <?php foreach(range(1, 10) as $i): ?>
+                                <div data-value="<?= $i ?>"> <!-- option -->
                                     <div> <!-- name -->
                                         Комедия <?= $i ?>
                                     </div>
-                                    <? /*
+                                    <?php /*
                                     <div> <!-- ad.info -->
                                         от 123 руб.
                                     </div>
                                     */ ?>
                                 </div>
-                            <? endforeach; ?>
+                            <?php endforeach; ?>
                         </div>
                         <div class="selector-footer">
                             <a href="#" class="no-demo -green">Выбрать</a>
@@ -220,9 +277,56 @@
                     </div>
                 </div>
             </div>
+            <!-- Конец примера блока со сложным списком и возможностью выбрать несколько элементов -->
         </div>
         <div class="-clear"></div>
     </div>
+
+    <!--
+        Чтобы список доп. фильтров был распахнутым надо следующему блоку добавить класс show
+    -->
+    <div class="block applied padding show-EXAMPLE">
+        <div class="row">
+            <span data-name="important-1">Производитель: Apple</span>
+            <span data-name="important-2">Игра: The Game</span>
+        </div>
+    </div>
+
+    <!-- Скрытые дополнительные блоки фильтров имеют класс important -->
+    <?php foreach (range(1, 3) as $i): ?>
+    <div class="block important">
+        <div class="row">
+            <div class="double">
+                <select name="important-1" class="-box -input">
+                    <option>Производитель</option>
+                    <option>Sony</option>
+                    <option>Samsung</option>
+                    <option>Nike</option>
+                </select>
+            </div>
+            <div class="double">
+                <select name="important-2" class="-box -input">
+                    <option>Производитель</option>
+                    <option>Sony</option>
+                    <option>Samsung</option>
+                    <option>Nike</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
 </div>
 
-
+<div class="base-filter -can-overflow">
+    <div class="block buttons">
+        <div class="row">
+            <button type="submit" class="apply">
+                Применить
+            </button>
+            <button type="reset" class="cancel">
+                Отмена
+            </button>
+        </div>
+    </div>
+</div>
+</form>
