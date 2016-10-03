@@ -8,6 +8,9 @@ Locatus.Map = (function ($) {
         'images/mark_selected.png'
     ];
 
+    /** @type {number} Максимальный масштаб карты */
+    var maxMapScale = 18;
+
     ymaps.ready(initMap);
 
     /**
@@ -161,7 +164,7 @@ Locatus.Map = (function ($) {
 
         var mapInit = {
             center: [mapConfig.data('x'), mapConfig.data('y')],
-            zoom: mapConfig.data('zoom'),
+            zoom: Math.min(mapConfig.data('zoom'), maxMapScale),
             controls: ['zoomControl', 'geolocationControl', 'fullscreenControl']
         };
 
@@ -190,7 +193,7 @@ Locatus.Map = (function ($) {
         var oldCenter = map.getCenter();
 
         map.setBounds(map.geoObjects.getBounds());
-        map.setZoom(map.getZoom() - 1);
+        map.setZoom(Math.min(map.getZoom() - 1, maxMapScale));
 
         // Если масштаб карты стал вмещать больше местности, то надо вернуть старый масштаб
         if (map.getZoom() < oldZoom) {
