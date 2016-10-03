@@ -17,10 +17,6 @@
             padding: 20px;
         }
 
-            .base-filter .block .range .noUi-connect {
-                background-color: #52d048;
-            }
-
     .base-filter .active {
         background-color: #F7F7F7;
         border: 0;
@@ -67,7 +63,11 @@
     }
 
     .base-filter input.mini {
-        width: 63px;
+        padding: 0;
+
+        width: 72px;
+
+        text-align: center;
     }
 
     .base-filter .row {
@@ -147,51 +147,49 @@
                         font-weight: normal;
                     }
 
-    .base-filter .block .wide-line {
-        margin-bottom: 16px;
+    /* Блок со ссылками */
 
-        overflow: hidden;
-        white-space: nowrap;
+    .base-filter .block .links a {
+        margin-bottom: 10px;
+
+        display: table;
+        width: 100%;
+
+        text-decoration: none;
     }
 
-        .base-filter .block .wide-line a {
-            padding-right: 5px;
+    .base-filter .block .links.half a {
+        width: calc(50% - 15px);
 
-            float: left;
-            display: inline-block;
-
-            font-weight: 200;
-            background-color: #ffffff;
-        }
-
-        .base-filter .block .wide-line a + a {
-            padding-right: 0;
-            padding-left: 5px;
-            text-decoration: none;
-        }
-
-    .base-filter .block .half-line {
-        width: 50%;
         float: left;
-
-        white-space: nowrap;
     }
 
-        .base-filter .block .half-line a:first-child {
-            max-width: 150px;
+    .base-filter .block .links.half a:nth-child(2n + 1) {
+        margin-right: 15px;
 
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-decoration: none;
+        clear: both;
+    }
+
+    .base-filter .block .links.half a:nth-child(2n) {
+        margin-left: 15px;
+    }
+
+    .base-filter .block .links a:hover {
+        text-decoration: underline;
+    }
+
+        .base-filter .block .links a > div {
+            display: table-cell;
+
+            /*vertical-align: middle;*/
         }
 
-            .base-filter .block .half-line:nth-child(2n+1) a + a {
-                padding-right: 20px;
-            }
+        .base-filter .block .links a > div + div {
+            padding-left: 10px;
 
-            .base-filter .block .half-line:nth-child(2n) a:first-child {
-                padding-left: 20px;
-            }
+            text-align: right;
+            white-space: nowrap;
+        }
 
     .base-filter .block .no-margin-bottom {
         margin-bottom: -20px;
@@ -306,6 +304,13 @@
             margin-left: 20px;
         }
 
+    .base-filter .block .row > button:hover {
+        background-color: #ffe972;
+    }
+
+    .base-filter .block .row > button.cancel:hover {
+        background-color: #c0c0c0;
+    }
 
     .base-filter table.slider {
         width: 100%;
@@ -319,3 +324,33 @@
         margin: 8px 0;
     }
 
+/* Кастомизация range блока */
+
+#body .noUi-background {
+    background-color: #d3d3d3;
+    box-shadow: none;
+}
+
+#body .noUi-connect {
+    background-color: #52d048;
+    box-shadow: none;
+}
+
+#body .noUi-horizontal {
+    height: 6px;
+}
+
+#body .noUi-horizontal .noUi-handle {
+    height: 20px;
+    width: 20px;
+    top: -8px;
+
+    border-radius: 20px;
+}
+
+#body .noUi-handle::after,
+#body .noUi-handle::before {
+    content: '';
+
+    display: none;
+}

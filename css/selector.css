@@ -14,6 +14,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 200;
 }
 
 .selector.show {
@@ -142,6 +143,7 @@
                         padding-right: 20px;
 
                         text-align: right;
+                        white-space: nowrap;
                     }
 
             .selector + div > div > div.selector-footer {

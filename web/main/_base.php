@@ -1,11 +1,11 @@
 <div id="base">
     <? require '_base_title.php'; ?>
     <? require '_base_yandex_result.php'; ?>
+    <? require '_base_filter.php'; ?>
     <? require '_base_selects.php'; ?>
     <? require '_base_form.php'; ?>
     <? require '_base_categories.php'; ?>
     <? require '_base_card_category.php'; ?>
-    <? require '_base_filter.php'; ?>
     <? require '_base_h1.php'; ?>
     <? require '_map.php'; ?>
     <? require '_base_card.php'; ?>

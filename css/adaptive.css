@@ -125,13 +125,13 @@
         width: 160px;
     }
 
-    .base-filter .block .half-line {
+    #body .base-filter .block .links.half a {
         width: 100%;
-    }
 
-    #body .base-filter .block .half-line a {
-        padding-right: 0;
-        padding-left: 0;
+        float: none;
+        clear: none;
+        margin-left: 0;
+        margin-right: 0;
     }
 
 /* base-card */

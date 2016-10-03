@@ -116,41 +116,24 @@
         </div>
     </div>
 
-    <!-- Пример блока с линиями на всю ширину -->
-    <div class="block">
-        <h4>Виды маникюра</h4>
-        <div class="wide-line">
-            <a href="#">СПА-маникюр</a>
-            <a class="-right" href="#">от 300 до 4 500 руб.</a>
-        </div>
-        <div class="wide-line">
-            <a href="#">Горячий маникюр</a>
-            <a class="-right" href="#">от 30 до 4 500 руб.</a>
-        </div>
-        <div class="wide-line">
-            <a href="#">Аппаратный маникюр</a>
-            <a class="-right" href="#">от 3 000 до 4 500 руб.</a>
-        </div>
-        <div class="wide-line">
-            <a href="#">Увропейский маникюр</a>
-            <a class="-right" href="#">от 3 до 500 руб.</a>
-        </div>
-    </div>
-    <!-- Конец примера блока с линиями на всю ширину -->
 
-    <!-- Пример блока с линиями на половину ширины -->
+    <?php for($ii = 0; $ii <= 3; $ii++): ?>
+    <!-- Пример блока с линиями на всю / половину ширины, управляющий класс half для блока .links -->
     <div class="block">
         <h4>Виды маникюра</h4>
-        <div>
+        <div class="links <?= $ii % 2 ? 'half' : '' ?>">
         <?php foreach(range(1, 8) as $i): ?>
-            <div class="wide-line half-line">
-                <a href="#">СПА-маникюр</a>
-                <a class="-right" href="#">от 300 руб.</a>
-            </div>
+            <a href="#">
+                <div>
+                    <?= str_repeat('СПА-маникюр ', $ii > 1 ? rand(1, 10) : 1) ?>
+                </div>
+                <div>от 1<?= str_repeat('0', rand(1, 9)) ?> руб.</div>
+            </a>
         <?php endforeach; ?>
         </div>
     </div>
     <!-- Конец примера блока с линиями на половину ширины -->
+    <?php endfor; ?>
 
     <!-- Пример блока с картинками -->
     <div class="block margin">
