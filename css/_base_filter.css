@@ -160,9 +160,10 @@
         width: 100%;
 
         font-size: 15px;
-        color: #404040 !important;
+        color: #666 !important;
         line-height: 1.875;
         text-decoration: none;
+        letter-spacing: 0.025em;
     }
 
     .base-filter .block .links.half a {
