@@ -40,6 +40,24 @@ Locatus.Selector = (function ($) {
                 $(this).addClass('show');
             }
         });
+
+        // Сворачивать селекторы, если скроллим не над ними
+        $(window).scroll(function () {
+            if ($('.selector + div:hover').size() == 0) {
+                $('.selector').removeClass('show');
+            }
+        });
+
+        // Сворачивать селекторы, если кликаем за их пределами
+        $(document).mouseup(function (e) {
+            var container = $(".selector.show + div, .selector.show, .selector-scroll");
+
+            if (!container.is(e.target) // Кликаем не по цели
+                && container.has(e.target).length === 0) // Селектор не содержит цели
+            {
+                container.removeClass('show');
+            }
+        });
     }
 
     /**
@@ -69,6 +87,9 @@ Locatus.Selector = (function ($) {
                 selector.html(data);
                 selector.removeClass('show');
 
+                $(this).parent().find('.selected').removeClass('selected');
+                $(this).addClass('selected');
+
                 formSelect.empty();
                 formSelect.append(getOption($(this).data('value')));
             }
@@ -85,7 +106,7 @@ Locatus.Selector = (function ($) {
     }
 
     function acceptHandler() {
-        $('.selector + div > div > div.selector-footer a').on('click', function (e) {
+        $('.selector + div > div > div.selector-footer a.selector-submit').on('click', function (e) {
             e.preventDefault();
 
             var selector = $(this).parents().eq(2).prev();
@@ -128,9 +149,22 @@ Locatus.Selector = (function ($) {
     }
 
     function init() {
-        $('.selector + div > div > div').niceScroll({
-            cursorcolor: '#dddddd',
-            horizrailenabled: false
+        var scrolls = $('.selector + div .selector-options').niceScroll({
+            cursorcolor: '#B0B0B0',
+            horizrailenabled: false,
+            autohidemode: false,
+            cursorwidth: "20px",
+            cursorborderradius: "0",
+            cursorborder: "0",
+            railpadding: {
+                top: 20,
+                right: 0,
+                left: 0,
+                bottom: 20
+            }
+        });
+        $(scrolls).each(function(){
+            $("#" + this.id).addClass('selector-scroll');
         });
 
         initSelectors();

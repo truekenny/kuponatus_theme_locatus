@@ -3,14 +3,8 @@ Locatus.Filter = (function ($) {
      * Скрывает/распахивает «доп. фильтры»
      */
     function visibilityHandler() {
-        $('.base-filter .block.applied').on('click', function (e) {
-            e.preventDefault();
-
-            if (e.target !== this && !$(e.target).hasClass('row')) {
-                return;
-            }
-
-            $(this).toggleClass('show');
+        $('.base-filter .block.applied table td + td').on('click', function (e) {
+            $(this).parents('.applied').toggleClass('show');
         });
     }
 

@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+    .base-filter .-input:focus {
+        border-color: limegreen;
+    }
+
     .base-filter .block {
         padding: 25px 20px;
 
@@ -155,6 +159,9 @@
         display: table;
         width: 100%;
 
+        font-size: 15px;
+        color: #404040 !important;
+        line-height: 1.875;
         text-decoration: none;
     }
 
@@ -243,13 +250,25 @@
         background-image: url("../images/hide.png");
     }
 
-        .base-filter .block.applied span {
-            cursor: pointer;
-            white-space: nowrap;
+        .base-filter .block.applied table {
+            width: 100%;
         }
 
-        .base-filter .block.applied span + span {
-            margin-left: 10px;
+        .base-filter .block.applied table td + td {
+            padding-right: 20px;
+
+            font-weight: 200;
+            text-align: right;
+            text-decoration: underline;
+            vertical-align: middle;
+        }
+
+
+        .base-filter .block.applied span {
+            margin-right: 10px;
+
+            cursor: pointer;
+            white-space: nowrap;
         }
 
         .base-filter .block.applied span:after {
@@ -274,6 +293,8 @@
     }
 
     .base-filter .block.buttons {
+        padding-left: 0;
+
         background-color: #435762;
         border: 0;
     }

@@ -27,7 +27,7 @@
             <!-- Пример блока с одним флажком -->
             <div class="double">
                 <p class="checkboxes">
-                    <input name="checkbox" class="-checkbox" type="checkbox" id="UniqueID1" checked="checked"><label for="UniqueID1">С водителем</label><br>
+                    <input name="checkbox" class="-checkbox" type="checkbox" id="UniqueID0" checked="checked"><label for="UniqueID0">С водителем</label><br>
                 </p>
             </div>
             <!-- Конец примера блока с одним флажком -->
@@ -125,7 +125,7 @@
         <?php foreach(range(1, 8) as $i): ?>
             <a href="#">
                 <div>
-                    <?= str_repeat('СПА-маникюр ', $ii > 1 ? rand(1, 10) : 1) ?>
+                    <?= str_repeat('Биоэпиляция ', $ii > 1 ? rand(1, 10) : 1) ?>
                 </div>
                 <div>от 1<?= str_repeat('0', rand(1, 9)) ?> руб.</div>
             </a>
@@ -173,7 +173,7 @@
             <div class="double">
                 <select class="-hide" name="example-selector-1" multiple="multiple"></select>
                 <div class="selector">
-                    Сделайте выбор
+                    Сделайте … (тип 1)
                 </div>
                 <div> <!-- wrapper -->
                     <div>   <!-- window -->
@@ -189,6 +189,9 @@
                                 </div>
                             <?php endforeach; ?>
                         </div>
+                        <div class="selector-footer">
+                            <a href="#" class="selector-more">еще</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,7 +202,7 @@
             <div class="double">
                 <select class="-hide" name="example-selector-2" multiple="multiple"></select>
                 <div class="selector">
-                    Сделайте выбор
+                    Сделайте … (тип 2)
                 </div>
                 <div> <!-- wrapper -->
                     <div>   <!-- window -->
@@ -224,7 +227,7 @@
             <div class="double">
                 <select class="-hide" name="example-selector-3" multiple="multiple"></select>
                 <div class="selector multi">
-                    Сделайте выбор
+                    Сделайте … (тип 3)
                 </div>
                 <div> <!-- wrapper -->
                     <div>   <!-- window -->
@@ -255,7 +258,7 @@
                             <?php endforeach; ?>
                         </div>
                         <div class="selector-footer">
-                            <a href="#" class="no-demo -green">Выбрать</a>
+                            <a href="#" class="no-demo -green selector-submit">Выбрать</a>
                         </div>
                     </div>
                 </div>
@@ -270,8 +273,15 @@
     -->
     <div class="block applied padding show-EXAMPLE">
         <div class="row">
-            <span data-name="important-1">Производитель: Apple</span>
-            <span data-name="important-2">Игра: The Game</span>
+            <table>
+                <tr><td>
+                <!--
+                <span data-name="important-1">Производитель: Apple</span>
+                <span data-name="important-2">Игра: The Game</span>
+                -->
+                <td>
+                    еще фильтры
+            </table>
         </div>
     </div>
 
