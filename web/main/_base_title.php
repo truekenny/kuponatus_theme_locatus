@@ -1,3 +1,4 @@
+<!-- Если блок .base-title не содержит атрибута style, то блок .pure будет скрыт -->
 <div class="base-title" style="background-image: url('images/_DELME_title.jpg');">
     <div class="bread -box">
         <a class="-small" href="#">Главная</a>

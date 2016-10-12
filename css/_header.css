@@ -112,6 +112,11 @@
         background-color: #52d048;
     }
 
+        #body #header .ya-site-form__submit:hover,
+        #body #header .ya-site-form__submit:active {
+            background-color: #78df4d;
+        }
+
     .ya-site-form__search-input-layout-r {
         box-sizing: border-box;
     }

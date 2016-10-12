@@ -1,0 +1,42 @@
+@media (min-width: 700px) {
+
+    .base-card-lines .lines .line.table {
+        padding-left: 0;
+        padding-right: 0;
+
+        display: table;
+        width: 100%;
+    }
+
+    .base-card-lines .lines .line.table > div {
+        padding-left: 10px;
+
+        display: table-cell;
+        width: auto;
+        float: inherit;
+    }
+
+    .base-card-lines .lines .line.table > div:first-child {
+        padding-left: 20px;
+    }
+
+    .base-card-lines .lines .line.table > div:last-child {
+        padding-right: 20px;
+    }
+
+    .base-card-lines .lines .line.table > div.more {
+        width: 1%;
+
+        text-align: right;
+        white-space: nowrap;
+    }
+    .base-card-lines .lines .line.table > div.price {
+        width: 1%;
+
+        white-space: nowrap;
+    }
+
+    .base-card-lines .lines .line.table .name a {
+        white-space: normal;
+    }
+}

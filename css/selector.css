@@ -106,8 +106,15 @@
             }
 
                 .selector + div > div > div.selector-options > div { /* option */
+                    padding: 5px 0;
+
                     display: table;
                     width: 100%;
+                }
+
+                /* Исправление проблемы nicescroll, при использовании railpadding */
+                .selector + div > div > div.selector-options > div:last-child {
+                    margin-bottom: 40px;
                 }
 
                     .selector + div > div > div.selector-options > div.hide { /* option */
@@ -124,7 +131,7 @@
 
                         font-size: 15px;
                         font-weight: 200;
-                        line-height: 40px;
+                        vertical-align: middle;
                     }
 
                     .selector + div > div > div.selector-options > div > div:first-child { /* name, ad.info */

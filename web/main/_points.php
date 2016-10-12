@@ -2,15 +2,21 @@
     <!--
       Если нет описания data-caption, то оно берется из data-name.
       В конец полного описания data-body вставляется ссылка data-url.
+
+        data-icon-index/data-cluster-icon-index может принимать значения 0 и 1,
+        0 – зеленый цвет, 1 – фиолетовый.
+        Значение по умолчанию – 0
     -->
 
     <!-- Кластер 1: тестирует кластер с одной точкой -->
+
     <div class='point'
          data-x='55.7522'
          data-y='37.6455'
          data-name='Точка из кластера example-1'
          data-url="http://ya.ru/"
          data-cluster="example-1"
+         data-icon-index="1"
         ></div>
 
     <!-- Кластер 500: тестирует кластер с 500 точками и полным описанием -->
@@ -21,6 +27,8 @@
              data-name='Точка из кластера example-50'
              data-url="http://ya.ru/"
              data-cluster="example-50"
+             data-icon-index="1"
+             data-cluster-icon-index="1"
              data-caption="Кратко №<?= $i ?>"
              data-body="Полное описание №<?= $i ?>, ссылка <a href='http://ya.ru'>ya.ru</a>"
             ></div>

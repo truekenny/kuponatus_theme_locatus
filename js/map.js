@@ -5,7 +5,14 @@ Locatus.Map = (function ($) {
 
     var pointHref = [
         'images/mark.png',
-        'images/mark_selected.png'
+        'images/mark_selected.png',
+        'images/preview-mark.png',
+        'images/preview-mark_selected.png'
+    ];
+
+    var clusterHref = [
+        'images/clusterGreen.png',
+        'images/clusterViolet.png',
     ];
 
     /** @type {number} Максимальный масштаб карты */
@@ -24,7 +31,9 @@ Locatus.Map = (function ($) {
                 $(this).data('url'),
                 $(this).data('cluster'),
                 $(this).data('caption'),
-                $(this).data('body')
+                $(this).data('body'),
+                $(this).data('icon-index'),
+                $(this).data('cluster-icon-index')
             );
 
             $(this).attr('data-id', id);
@@ -40,11 +49,16 @@ Locatus.Map = (function ($) {
      * @param {string} cluster Название кластера
      * @param {string} clusterCaption Краткое название точки во всплывающем окне кластера
      * @param {string} clusterBalloonContentBody Описание точки во всплывающем окне кластера
+     * @param {int} iconIndex Индекс картинки маркера
+     * @param {int} clusterIconIndex Индекс картинки кластера
      * @returns {Number} Индекс точки
      *
      * @see Всплывающее окно: https://yastatic.net/doccenter/images/tech-ru/maps/doc/freeze/S66wiqr3L7kQMQRrk8hTvp3iKUM.png
      */
-    function addPoint(coords, hint, url, cluster, clusterCaption, clusterBalloonContentBody) {
+    function addPoint(coords, hint, url, cluster, clusterCaption, clusterBalloonContentBody, iconIndex, clusterIconIndex) {
+        iconIndex = iconIndex || 0;
+        clusterIconIndex = clusterIconIndex || 0;
+
         clusterBalloonContentBody = clusterBalloonContentBody || '';
         var escapeUrl = Locatus.Functions.escapeHtml(url);
 
@@ -55,7 +69,7 @@ Locatus.Map = (function ($) {
                 balloonContentBody: clusterBalloonContentBody + "<br><a href='" + escapeUrl + "'>" + escapeUrl + "</a>"
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: pointHref[0],
+                iconImageHref: pointHref[2 * iconIndex], // Чётные значения - картинки «не выделенные»
                 iconImageSize: [54, 46],
                 iconImageOffset: [-19, -46]
 
@@ -70,6 +84,10 @@ Locatus.Map = (function ($) {
             placemark.options.set({cluster: cluster});
             // Сохраняю для точки url
             placemark.options.set({url: url});
+            // Сохраняю для точки iconIndex
+            placemark.options.set({iconIndex: iconIndex});
+            // Сохраняю для точки clusterIconIndex
+            placemark.options.set({clusterIconIndex: clusterIconIndex});
 
             placemark.events.add(['click'], function (e) {
                 var url = placemark.options.get('url');
@@ -129,7 +147,27 @@ Locatus.Map = (function ($) {
                 }
 
                 if (typeof clusters[cluster] == "undefined") {
-                    clusters[cluster] = new ymaps.Clusterer({preset: 'islands#darkGreenClusterIcons'});
+                    var clusterIconIndex = this.options.get('clusterIconIndex');
+
+                    var clusterIcons = [
+                            {
+                                href: clusterHref[clusterIconIndex],
+                                size: [40, 40],
+                                offset: [-20, -20]
+                            },
+                            {
+                                href: clusterHref[clusterIconIndex],
+                                size: [56, 56],
+                                offset: [-28, -28]
+                            }],
+
+                        clusterNumbers = [40];
+
+                    clusters[cluster] = new ymaps.Clusterer({
+                        // preset: 'islands#darkGreenClusterIcons'
+                        clusterIcons: clusterIcons,
+                        clusterNumbers: clusterNumbers
+                    });
                 }
 
                 clusters[cluster].add(this);
@@ -152,7 +190,9 @@ Locatus.Map = (function ($) {
                 return;
             }
 
-            this[index - 1].options.set({iconImageHref: pointHref[selected ? 1 : 0]});
+            var iconIndex = this[index - 1].options.get('iconIndex');
+
+            this[index - 1].options.set({iconImageHref: pointHref[2 * iconIndex + (selected ? 1 : 0)]});
         });
     }
 
@@ -169,6 +209,22 @@ Locatus.Map = (function ($) {
         };
 
         map = new ymaps.Map("map", mapInit);
+
+        // Отображение текущей позиции
+        ymaps.geolocation.get({
+            provider: 'yandex'
+        }).then(function (result) {
+            // result.geoObjects.options.set('preset', 'islands#redCircleIcon');
+            result.geoObjects.get(0).properties.set({balloonContentBody: 'Мое местоположение'});
+
+            result.geoObjects.options.set('iconLayout', 'default#image');
+            result.geoObjects.options.set('iconImageHref', 'images/yandex-round.png');
+            result.geoObjects.options.set('iconImageSize', [20, 20]);
+            result.geoObjects.options.set('iconImageOffset', [-10, -10]);
+
+            map.geoObjects.add(result.geoObjects);
+        });
+
 
         // Пример
         /*

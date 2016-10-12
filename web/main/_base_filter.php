@@ -181,7 +181,7 @@
                             <?php foreach(range(1, 10) as $i): ?>
                                 <div data-value="Значение линии <?= $i ?>"> <!-- option -->
                                     <div> <!-- name -->
-                                        Комедия <?= $i ?>
+                                        <?= str_repeat("Комедия $i ", $i) ?>
                                     </div>
                                     <div> <!-- ad.info -->
                                         (123)

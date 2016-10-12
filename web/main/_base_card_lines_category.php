@@ -5,12 +5,12 @@
 
 <div class="lines">
     <? foreach(range(1, 10)as $i): ?>
-        <div class="line">
+        <div class="line table">
             <div class="name">
                 <? if(rand(0,1)): ?>
-                    <a href="#">Кафе и <?= str_repeat('бар ', rand(1, 6)) ?></a>
+                    <a href="#">Кафе и <?= str_repeat('бар ', rand(1, 10)) ?></a>
                 <? else: ?>
-                    Кафе и бар
+                    Кафе и <?= str_repeat('бар ', rand(1, 10)) ?>
                 <? endif; ?>
             </div>
             <div class="more -box">

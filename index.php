@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="css/_base_h1.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_lines.css">
+    <link rel="stylesheet" type="text/css" href="css/_base_card_lines_table.css">
     <link rel="stylesheet" type="text/css" href="css/_base_yellow.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_high.css">
     <link rel="stylesheet" type="text/css" href="css/_base_card_full.css">
@@ -58,7 +59,7 @@
     <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
 
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery.nice-scroll.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.nicescroll.js"></script>
     <script type="text/javascript" src="js/vendor/nouislider.min.js"></script>
     <script type="text/javascript" src="js/vendor/browserclass.js"></script>
 

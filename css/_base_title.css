@@ -30,8 +30,13 @@
             }
 
     .base-title .pure {
+        display: none;
         height: 244px;
     }
+
+        .base-title[style] .pure {
+            display: block;
+        }
 
     .base-title .text {
         padding: 30px 40px 20px;
