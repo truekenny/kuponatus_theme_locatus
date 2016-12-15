@@ -6,7 +6,7 @@
     </div>
 
     <div class="logo">
-        <a href="#">Л<img src="images/start_logo.png">катус</a>
+        <a href="#"><img src="images/logo_full_start.png" alt="Локатус"></a>
     </div>
 
     <div class="title">
